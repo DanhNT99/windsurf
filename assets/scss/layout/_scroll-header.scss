@@ -1,5 +1,6 @@
 .header-activity {
     background-color: $color-text1;
+    transition: background-color 0.5s ease;
     .header__top  {
         .header__top-left {
             .header__top-support {

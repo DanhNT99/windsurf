@@ -26,6 +26,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+    transition: background-color 0.5s ease;
     .header__top  {
         align-items: center;
         justify-content: space-between;
@@ -108,6 +109,18 @@ body {
                     left: -100%;
                     padding: 15px 0px;
                     border: 1px solid $color-border;
+                    transition: opacity 1s ease;
+                    animation: drop-hide 1s forwards ease;
+                    @keyframes drop-hide {
+                        from {
+                            display: block;
+                            opacity: 1;
+                        }
+                        to {
+                            display: none;
+                            opacity: 0;
+                        }
+                    }
                     &::before {
                         content: "";
                         position: absolute;
@@ -131,6 +144,21 @@ body {
                         }
                     }
                 }
+                .close {
+                    animation: drop-hide 0.5s forwards ease;
+                    display: block;
+                }
+                .show {
+                    animation: drop-display 0.5s forwards ease;
+                       @keyframes drop-display {
+                           from {
+                               opacity: 0;
+                           }
+                           to {
+                               opacity: 1;
+                           }
+                       }
+                   }
             }
         }
         .header__link-search {
