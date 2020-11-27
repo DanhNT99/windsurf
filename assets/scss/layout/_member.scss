@@ -1,0 +1,14 @@
+.member {
+    padding: 80px 0px;
+    .member__top {
+        .member__top-sub {
+            color: $color-border;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .member__top-title {
+            color: $color-text2;
+        }
+    }
+}

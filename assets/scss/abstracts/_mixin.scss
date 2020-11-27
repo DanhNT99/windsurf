@@ -1,0 +1,8 @@
+@mixin linkActivity {
+        background-color: $color-hover;
+        border: 1px solid transparent;
+        margin-right: 10px;
+        &:hover {
+            background-color: #0bc1b8;
+        }
+}

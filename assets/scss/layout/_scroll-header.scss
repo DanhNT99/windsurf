@@ -1,0 +1,88 @@
+.header-activity {
+    background-color: $color-text1;
+    .header__top  {
+        .header__top-left {
+            .header__top-support {
+                li {
+                    p {
+                        color: $color-text2;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    a {
+                        color: $color-text2;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .header__top-right {
+            .header__list-icon {
+                .header__icon-item {
+                    i {
+                        color: $color-text2;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header__bottom {
+        .navbar-brand {
+            color: $color-text2;
+            .header__logo-icon {
+                color:  $color-hover;
+            }
+        }
+        .navbar-nav{
+            .nav-item {
+                &:nth-child(1) {
+                    a {
+                        color:  $color-hover;
+                    }
+                }
+                .nav-link{
+                    color: $color-text2;
+                    &:hover {
+                        color: $color-hover;
+                    }
+                    opacity: 1;
+                }
+                .dropdown-menu {
+                    .dropdown-item {
+                        color: $color-text2;
+                        font-size: 17px;
+                        transition: all 0.5s ease;
+                        opacity: 0.9;
+                        &:hover {
+                            color: $color-hover;
+                            background-color: $color-text1;
+                        }
+                    }
+                }
+            }
+        }
+        .header__link-search {
+            color: $color-text2;
+            border: 1px solid $color-text2;
+            &:hover {
+                color: $color-text1;
+                background-color: $color-hover;
+                border-color: transparent;
+            }
+        }
+        .icon-moon {
+            color: $color-text2;
+        }
+        .btn-bar {
+            background-color: $color-hover;
+            color: $color-text1;
+            padding: 6px 7px;
+        }
+    }
+}

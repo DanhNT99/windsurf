@@ -1,0 +1,65 @@
+.abilities {
+    background-color: $bg-grey;
+    padding: 100px 0px;
+    &__container{
+        .abilities__top {
+            .abilities__top-sub {
+                color: $color-border;
+                font-weight: 700;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            .abilities__top-title {
+                font-size: 45px;
+                color: $color-text2;
+            }
+        }
+        .abilities__item{
+            background-clip: content-box;
+            border-radius: 20px;
+            &:hover {
+                background-color: $color-text1;
+            }
+            .abilities__item-box {
+                padding: 50px 40px;
+                .abilities__item-icon {
+                    font-size: 30px;
+                    color: $color-hover;
+                }
+                .abilites__item-title {
+                    display: block;
+                    color: $color-text2;
+                    font-family: 'Jost-Bold';
+                    font-size: 25px;
+                    transition: color 0.5s ease;
+                    &:hover {
+                        color: $color-hover;
+                        text-decoration: none;
+                    }
+                }
+                .abilities__item-detail {
+                    font-size: 17px;
+                    color: $color-text2;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1068px) {
+    .abilities {
+        &__container{
+            .abilities__top {
+                .abilities__top-title {
+                    font-size: 35px;
+                }
+            }
+            .abilities__item{
+                .abilities__item-box {
+                    .abilites__item-title {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
