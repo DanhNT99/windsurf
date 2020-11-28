@@ -90,6 +90,7 @@ body {
         }
         .navbar-nav {
             .nav-item {
+                position: relative;
                 &:nth-child(1) {
                     a {
                         opacity: 1;
@@ -99,66 +100,49 @@ body {
                     color: $color-text1;
                     opacity: 0.8;
                     font-size: 19px;
+                    cursor: pointer;
                 }
                 .icon-down {
                     font-size: 13px;
                 } 
-                .dropdown-menu {
+                .menu-dropdown {
+                    position: absolute;
+                    background-color: $color-text1;
                     width: 200px;
-                    top: 50px;
+                    top: 110%;
                     left: -100%;
-                    padding: 15px 0px;
                     border: 1px solid $color-border;
-                    transition: opacity 1s ease;
-                    animation: drop-hide 1s forwards ease;
-                    @keyframes drop-hide {
-                        from {
-                            display: block;
-                            opacity: 1;
-                        }
-                        to {
-                            display: none;
-                            opacity: 0;
-                        }
-                    }
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 12px;
-                        height: 12px;
-                        background-color: $color-text1;
-                        transform: rotate(45deg) translateX(-50%);
-                        top: -2px;
-                        left: 50%;
-                        border-top: 1px solid $color-border;
-                        border-left: 1px solid $color-border;
-                    }
+                    z-index: 1000;
+                    border-radius: 5px;
+                    // &::before {
+                    //     content: "";
+                    //     position: absolute;
+                    //     width: 12px;
+                    //     height: 12px;
+                    //     background-color: $color-text1;
+                    //     transform: rotate(45deg) translateX(-50%);
+                    //     top: -2px;
+                    //     left: 50%;
+                    //     border-top: 1px solid $color-border;
+                    //     border-left: 1px solid $color-border;
+                    // }
                     .dropdown-item {
                         color: $color-text2;
                         font-size: 17px;
                         transition: all 0.5s ease;
                         opacity: 0.9;
+                        &:first-child {
+                            margin-top: 10px;
+                        }
+                        &:last-child {
+                            margin-bottom: 10px;
+                        }
                         &:hover {
                             color: $color-hover;
                             background-color: $color-text1;
                         }
                     }
                 }
-                .close {
-                    animation: drop-hide 0.5s forwards ease;
-                    display: block;
-                }
-                .show {
-                    animation: drop-display 0.5s forwards ease;
-                       @keyframes drop-display {
-                           from {
-                               opacity: 0;
-                           }
-                           to {
-                               opacity: 1;
-                           }
-                       }
-                   }
             }
         }
         .header__link-search {
@@ -209,6 +193,7 @@ body {
                     .nav-item {
                         text-align: center;
                         .nav-link{ color: $color-text2;}
+
                         .dropdown-menu {
                             width: 96%;
                             margin: 0 auto;
@@ -228,6 +213,7 @@ body {
                     color: $color-text1;
                 }
             }
+
         }
     }
 }

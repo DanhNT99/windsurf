@@ -7,10 +7,10 @@ $(document).ready(function(){
             $('.header').removeClass('header-activity');
         }
         if($(window).scrollTop() > 100){
-            $('.btn-scroll').css({'display':'flex', 'animation':'drop-display 1s forwards ease'});
+            $('.btn-scroll').css({'display':'flex', 'animation':'animateShow 0.5s forwards ease'});
         }
         else {
-            $('.btn-scroll').css({'animation':'drop-hide 1s forwards ease'})
+            $('.btn-scroll').css({'display': 'none'})
         }
     })
     $('.btn-scroll').click(()=> {
@@ -31,13 +31,29 @@ $(document).ready(function(){
             flag = 0;
         }
     })
-});
-var listNavLink = document.querySelectorAll('.nav-link');
-listNavLink.forEach((link)=> {
-    link.addEventListener('click', ()=> {
-        var dropMenu = link.nextElementSibling;
-        dropMenu.classList.add('close');
-    })
-})
 
-   
+    // $('.dropdown').on('show.bs.dropdown', function () {
+    //     //trước khi hiện;
+    //     let dropdownMenu = $('.dropdown > div.dropdown-menu');
+    //         dropdownMenu.removeClass('close');
+    //         dropdownMenu.removeClass('none');
+    //   })
+
+    // $('.dropdown').on('hide.bs.dropdown', function () {
+    //     //trước khi ẩn
+    //     let dropdownMenu = $('.dropdown > div.dropdown-menu.show')
+    //         dropdownMenu.addClass("close");
+    //     $('div.dropdown-menu').on('transitionend', function () {
+    //             $('div.dropdown-menu').addClass('none');
+    //     })
+    //   })
+
+})
+// var listNavLink = document.querySelectorAll('.nav-link');
+// listNavLink.forEach((link)=> {
+//     link.addEventListener('click', ()=> {
+//         var dropMenu = link.nextElementSibling;
+//         dropMenu.classList.add('close');
+//     })
+// })
+
