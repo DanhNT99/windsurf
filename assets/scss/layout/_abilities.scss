@@ -31,6 +31,7 @@
                     color: $color-text2;
                     font-family: 'Jost-Bold';
                     font-size: 25px;
+                    line-height: 35px;
                     transition: color 0.5s ease;
                     &:hover {
                         color: $color-hover;
@@ -39,6 +40,7 @@
                 }
                 .abilities__item-detail {
                     font-size: 17px;
+                    line-height: 27px;
                     color: $color-text2;
                 }
             }

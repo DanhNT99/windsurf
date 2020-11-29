@@ -1,0 +1,41 @@
+.footer {
+    background-color: #111;
+    &__title {
+        color: $color-text1;
+        font-size: 20px;
+    }
+    &__contact {
+        color: $color-border;
+        opacity: 0.8;
+        font-size: 18px;
+    }
+    &__contact-icon {
+        color: $color-border;
+        opacity: 0.8;
+        font-size: 14px;
+    }
+    &__menu {
+        li {
+            a {
+                color: $color-border;
+                opacity: 0.8;
+                font-size: 18px;
+                &:hover {
+                    color: $color-text1;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__bottom {
+        border-top: 1px solid rgba($color: $color-border, $alpha: 0.1);
+    }
+    &__bottom-title {
+        color: $color-border;
+        opacity: 0.8;
+        font-size: 18px;
+        a {
+            color: $color-hover;
+        }
+    }
+}

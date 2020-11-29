@@ -1,0 +1,52 @@
+.form {
+    .subscribe {
+        &__sub {
+            color: $color-border;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        &__title {
+            font-size: 45px;
+            line-height: 55px;
+            color: $color-text2;
+        }
+        &__detail {
+            font-size: 19px;
+            line-height: 29px;
+            opacity: 0.9;
+            color: $color-text2;
+        }
+        &__contain-input {
+            width: 70%;
+            [type = "email"] {
+                width: 100%;
+                padding: 26px 12px;
+            }
+        }
+        &__btn {
+            background-color: #0de9df;
+            border: 1px solid transparent;
+            margin-right: 10px;
+            font-size: 20px;
+            padding: 12px 40px;
+            color: $color-text1;
+            &:hover {
+                background-color: #0bc1b8;
+            }
+
+        }
+    }
+}
+@media screen and(max-width: 768px) {
+    .form {
+        .subscribe {
+            &__contain-input {
+                width: 100%;
+            }
+            &__btn {
+                width: 100%;
+            }
+        }
+    }
+}

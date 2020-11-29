@@ -32,6 +32,38 @@ $(document).ready(function(){
         }
     })
 
+    $('.showSlideMain').slick({
+        dots: true,
+        speed: 300,
+        slidesToShow:2, // số trang ở trên 1 slider
+        slidesToScroll: 2,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+      });
+
     // $('.dropdown').on('show.bs.dropdown', function () {
     //     //trước khi hiện;
     //     let dropdownMenu = $('.dropdown > div.dropdown-menu');

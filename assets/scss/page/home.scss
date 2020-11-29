@@ -1,5 +1,8 @@
+//import libary
 @import "../vendor/bootstrap";
 @import "../vendor/fontAwesome";
+@import "../vendor/slick";
+
 @import "../layout/header";
 @import "../layout/banner";
 @import "../layout/video";
@@ -9,4 +12,6 @@
 @import "../layout/picture";
 @import "../layout/box-bg";
 @import "../layout/member";
+@import "../layout/form";
+@import "../layout/footer";
 @import "../layout/btn-scroll";
