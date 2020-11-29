@@ -1,6 +1,7 @@
 .member {
     padding: 80px 0px;
-    .member__top {
+    background-color: #f4f4f4;;
+    &__top {
         .member__top-sub {
             color: $color-border;
             font-weight: 700;
@@ -10,5 +11,33 @@
         .member__top-title {
             color: $color-text2;
         }
+    }
+    &__slider {
+        background-color: $color-text1;
+        border-radius: 5px;
+    }
+    &__slider-detail {
+        q {
+            font-size: 19px;
+            line-height: 29px;
+            color: $color-text2;
+            &:before {
+                font-size: 50px;
+                color: $color-hover;
+                font-family: "Merriweather", serif;
+            }
+        }
+    }
+    &__slider-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__slider-name {
+        color: $color-text2;
+    }
+    &__slider-address {
+        font-size: 20px;
     }
 }

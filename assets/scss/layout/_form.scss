@@ -18,7 +18,7 @@
             color: $color-text2;
         }
         &__contain-input {
-            width: 70%;
+            width: 63%;
             [type = "email"] {
                 width: 100%;
                 padding: 26px 12px;
@@ -35,6 +35,15 @@
                 background-color: #0bc1b8;
             }
 
+        }
+    }
+}
+@media screen and (max-width: 1068px) {
+    .form {
+        .subscribe {
+            &__title {
+                font-size: 35px;
+            }
         }
     }
 }
