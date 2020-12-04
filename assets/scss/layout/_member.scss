@@ -1,6 +1,6 @@
 .member {
     padding: 80px 0px;
-    background-color: #f4f4f4;;
+    background-color: #f4f4f4;
     &__top {
         .member__top-sub {
             color: $color-border;
@@ -11,6 +11,9 @@
         .member__top-title {
             color: $color-text2;
         }
+    }
+    .showSildeMain {
+        overflow: hidden;
     }
     &__slider {
         background-color: $color-text1;
@@ -39,5 +42,53 @@
     }
     &__slider-address {
         font-size: 20px;
+    }
+    .showSildeMain {
+        ul {
+           width: fit-content;
+           margin: 80px auto;
+           display: flex;
+           .slick-active {
+            width: 30px;
+            height: 10px;
+            background-color: $color-hover;
+           }
+        }
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: $color-border;
+            cursor: pointer;
+            margin-right: 20px;
+            transition: all 0.5s ease;
+            &:hover {
+                width: 30px;
+                height: 10px;
+                background-color: $color-hover;
+            }
+        }
+        button {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .member {
+        padding: 50px 0px;
+        .showSildeMain {
+            ul {
+                margin-top: 40px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .member {
+        &__title {
+            font-size: 25px;
+            line-height: 35px;
+        }
     }
 }

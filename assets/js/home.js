@@ -32,29 +32,34 @@ $(document).ready(function(){
         }
     })
 
-    $('.showSlideMain').slick({
+    $('.showSildeMain').slick({
+        dots: true,
+        speed: 500,
         slidesToShow:2, 
         slidesToScroll:2, 
-        infinite: false,
-        speed: 500,
-        dots: true,
-        prevArrow: '',
-        nextArrow: '',
+        arrows : false,
         responsive: [
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 2,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: true
               }
             },
             {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              },
+            {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
               }
             },
             {
@@ -67,74 +72,6 @@ $(document).ready(function(){
         ]
       });
     
-      // start slide main
-    // end start slide main
-
-    // start slide promotion
-    if($('.showSlidePromotionList').length){
-        $('.showSlidePromotionList').slick({
-            autoplay: true,
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            fade: true,
-            arrows: true,
-            prevArrow: '<button type="button" class="btnSlideType1 left"></button>',
-            nextArrow: '<button type="button" class="btnSlideType1 right"></button>'
-        });
-    }
-    // end start slide promotion
-
-    // start slide utilities
-    if($('.showSlideUtilities').length){
-        $('.showSlideUtilities').slick({
-            autoplay: true,
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            fade: true,
-            arrows: true,
-            prevArrow: '<button type="button" class="btnSlideType2 left"><i class="fas fa-chevron-left"></i></button>',
-            nextArrow: '<button type="button" class="btnSlideType2 right"><i class="fas fa-chevron-right"></i></button>'
-        });
-    }
-    // end start slide utilities
-
-    // start slide service
-    if($('.showSlideService').length){
-        $('.showSlideService').slick({
-            autoplay: true,
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            arrows: false,
-            slidesToShow: 3,
-            swipeToSlide: true,
-            centerMode: true,
-            centerPadding: '0px',
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }, {
-                    breakpoint: 481,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    }
-    // end start slide service
-
-    // start slide cmt
-    if($('.showSlideTestimonials').length){
-        $('.showSlideTestimonials').slick({
-            autoplay: true,
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            arrows: true,
-        })
-    }
     // $('.dropdown').on('show.bs.dropdown', function () {
     //     //trước khi hiện;
     //     let dropdownMenu = $('.dropdown > div.dropdown-menu');

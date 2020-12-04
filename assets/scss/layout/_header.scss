@@ -58,8 +58,6 @@ body {
         .header__top-right {
             .header__list-icon {
                 .header__icon-item {
-                    margin-right: 30px;
-                    padding: 10px 0px;
                     i {
                         color: #fff;
                         opacity: 0.9;
@@ -111,32 +109,15 @@ body {
                     width: 200px;
                     top: 110%;
                     left: -100%;
-                    border: 1px solid $color-border;
+                    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
                     z-index: 1000;
                     border-radius: 5px;
-                    // &::before {
-                    //     content: "";
-                    //     position: absolute;
-                    //     width: 12px;
-                    //     height: 12px;
-                    //     background-color: $color-text1;
-                    //     transform: rotate(45deg) translateX(-50%);
-                    //     top: -2px;
-                    //     left: 50%;
-                    //     border-top: 1px solid $color-border;
-                    //     border-left: 1px solid $color-border;
-                    // }
                     .dropdown-item {
                         color: $color-text2;
                         font-size: 17px;
                         transition: all 0.5s ease;
                         opacity: 0.9;
-                        &:first-child {
-                            margin-top: 10px;
-                        }
-                        &:last-child {
-                            margin-bottom: 10px;
-                        }
+                        padding: 5px 0px 5px 20px;
                         &:hover {
                             color: $color-hover;
                             background-color: $color-text1;
@@ -177,18 +158,16 @@ body {
     }
 }
 @import "../layout/scroll-header";
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 991px){
     .mobile-position {
-        position: absolute;
-        right: 50px;
-        top: 17px;
+        margin-left: auto;
+        margin-right: 20px;
     }
     .header {
         .header__bottom {
             .navbar-collapse{
                 background-color: $color-text1;
                 border-radius: 5px;
-                padding: 20px 0px;
                 .navbar-nav {
                     .nav-item {
                         text-align: center;
@@ -200,7 +179,10 @@ body {
                             position: relative;
                             top: 0;
                             left: 0;
-                            .dropdown-item { text-align: center;}
+                            .dropdown-item { 
+                                text-align: center;
+                                padding-bottom: 0px;
+                            }
                         }
                     }
                 }
@@ -216,4 +198,18 @@ body {
 
         }
     }
+}
+@media screen and (max-width: 480px) {
+   .header {
+    .header__bottom {
+        .navbar-brand {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .icon-moon, .icon-sun {
+            font-size: 17px;
+            line-height: 27px;
+        }
+    }
+   }
 }
