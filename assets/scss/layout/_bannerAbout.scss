@@ -1,0 +1,30 @@
+.bannerAbout {
+    height: fit-content;
+    &__content {
+        max-width: 600px;
+    }
+    &__content-title {
+        color: $color-text1;
+        font-weight: 800;
+        i {
+            margin: 0px 17px;
+            font-size: 12px;
+        }
+    }
+    &__content-link {
+        color: $color-text1;
+        transition: color 0.5s ease;
+        &:hover {
+            color: $color-hover;
+            text-decoration: none;
+        }
+    }
+}
+.aboutUs {
+    background-color: $bg-grey;
+}
+@media screen and (max-width: 1365px) {
+    .bannerAbout {
+        min-height: 300px;
+    }
+}

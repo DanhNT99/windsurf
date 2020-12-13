@@ -1,0 +1,11 @@
+.title {
+    font-size: 44px;
+    line-height: 55px;
+    color: $color-text2;
+}
+@media screen and(max-width: 1068px) {
+    .title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}

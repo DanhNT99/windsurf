@@ -3,17 +3,13 @@
     &__container {
         height: 420px;
     }
-        h3 {
+        &__sub {
             color: $color-border;
             font-weight: 700;
             font-size: 16px;
             text-transform: uppercase;
         }
-        &__title {
-            font-size: 45px;
-            line-height: 55px;
-            color: $color-text2;
-        }
+
         &__detail {
             font-size: 19px;
             line-height: 29px;
@@ -69,14 +65,6 @@
     .box {
         &__container {
             height: 350px;
-        }
-    }
-}
-@media screen and(max-width: 1068px) {
-    .box {
-        &__title {
-            font-size: 35px;
-            line-height: 45px;
         }
     }
 }

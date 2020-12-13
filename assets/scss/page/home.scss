@@ -1,17 +1,30 @@
 //import libary
-@import "../vendor/bootstrap";
-@import "../vendor/fontAwesome";
-@import "../vendor/slick";
+@import "../base/general";
+//compoment
+@import "../compoment/title";
+@import "../compoment/sub";
+@import "../compoment/detail";
+//end compoment
 
-@import "../layout/header";
+//banner
 @import "../layout/banner";
+//end banner
+
+//video
 @import "../layout/video";
+//end video
+
+//abilities (khả năng)
 @import "../layout/abilities";
+//end abilities
+
+//statistical (thống kê)
 @import "../layout/statistical";
+//end statistical
+
 @import "../layout/box";
 @import "../layout/picture";
 @import "../layout/box-bg";
 @import "../layout/member";
 @import "../layout/form";
-@import "../layout/footer";
 @import "../layout/btn-scroll";

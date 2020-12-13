@@ -42,17 +42,15 @@
         }
         .navbar-nav{
             .nav-item {
-                &:nth-child(1) {
-                    a {
-                        color:  $color-hover;
-                    }
-                }
                 .nav-link{
                     color: $color-text2;
                     &:hover {
                         color: $color-hover;
                     }
                     opacity: 1;
+                }
+                .active {
+                    color: $color-hover;
                 }
                 .dropdown-menu {
                     .dropdown-item {

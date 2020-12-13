@@ -1,0 +1,28 @@
+@import "../base/general";
+
+//compoment
+@import "../compoment/title";
+@import "../compoment/sub";
+@import "../compoment/detail";
+@import "../compoment/btnLink";
+//end compoment
+
+//banner
+@import "../layout/banner";
+//end banner
+
+//banner page of about
+@import "../layout/bannerAbout";
+//end 
+
+//lesson
+@import "../layout/lesson";
+//end lesson
+
+//team 
+@import"../layout/team";
+//end team
+
+//evaluate
+@import "../layout/evaluate";
+//end evaluate
