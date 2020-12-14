@@ -35,7 +35,6 @@
         color: $color-text1;
         font-size: 20px;
         border-radius: 5px;
-        margin:40px 0px;
         transition: background-color 0.5s ease;
         &:hover {
             text-decoration: none;
@@ -53,6 +52,15 @@
         &__title {
             font-size: 35px;
             line-height: 45px;
+        }
+    }
+}
+@media screen and (max-width: 413px) {
+    .box-bg {
+        &__link {
+            &:last-child {
+                margin-top: 10px;
+            }
         }
     }
 }

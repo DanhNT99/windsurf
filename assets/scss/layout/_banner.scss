@@ -141,3 +141,14 @@
         }
     }
 }
+@media screen and (max-width: 374px) {
+    .banner{
+        &__content {
+            .banner__content-link {
+                &:last-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

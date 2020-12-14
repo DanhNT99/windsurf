@@ -15771,6 +15771,12 @@ body {
   }
 }
 
+@media screen and (max-width: 374px) {
+  .banner__content .banner__content-link:last-child {
+    margin-top: 10px;
+  }
+}
+
 .bannerAbout {
   height: fit-content;
 }
@@ -15901,7 +15907,7 @@ body {
 
 .evaluate__box {
   width: 100%;
-  height: 7px;
+  height: 6px;
   background-color: #f4f4f4;
   border-radius: 20px;
   position: relative;
@@ -15911,7 +15917,7 @@ body {
 .evaluate__box:after {
   content: "";
   position: absolute;
-  height: 7px;
+  height: 100%;
   top: 0px;
   left: 0px;
   background-color: #0de9df;
