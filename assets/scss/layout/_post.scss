@@ -1,0 +1,416 @@
+.content {
+    padding: 80px 0px;
+    background-color: $bg-grey;
+    &__title {
+        @include blog-title;
+    }
+}
+.containForm{
+    &__search-box {
+        width: 100%;
+        height: 50px;
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+        border-radius: 7px;
+    }
+    &__search-input {
+        width: 80%;
+        border: none;
+        outline: none;
+        color: $color-purple;
+        font-size: 17px;
+        font-weight: 800;
+    }
+    &__search-btn {
+        border: none;
+        outline: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background-color: $color-hover;
+        color: $color-white;
+    }
+}
+
+.categories {
+    &__itemLink {
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 800;
+        transition: color 0.5s ease;
+        color: $color-purple;
+        &:hover {
+            text-decoration: none;
+            color: $color-hover;
+        }
+    }
+    &__item-icon {
+        color: $color-hover;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    &__containNumber {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: $color-white;
+        border-radius: 7px;
+    }
+    &__text {
+        font-size: 17px;
+        line-height: 27px;
+    }
+    &__number {
+        font-size: 12px;
+    }
+}
+
+.recentPost {
+    &__listItem {
+        display: flex;
+    }
+    &__containImages {
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+    &__containText {
+        flex: 1;
+        margin-left: 20px;
+    }
+    &__link {
+        color: $color-purple;
+        transition: color 0.5s ease;
+        &:hover {
+            text-decoration: none;
+            color: $color-hover;
+        }
+    }
+    &__title {
+        font-size: 17px;
+        transition: color 0.5 ease;
+    }
+}
+.twitter {
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        color: $color-purple;
+        transition: color 0.5s ease;
+        &:hover {
+            color: $color-hover;
+            text-decoration: none;
+        }
+    }
+    &__image {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    &__title {
+        font-size: 17px;
+        line-height: 27px;
+        margin-left: 20px;
+    }
+}
+
+.gallery {
+    &__image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+}
+
+.tags {
+    &__list {
+       @include displayFlex(left);
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-top: 20px;
+    }
+    &__item-link {
+        @include displayFlex(center);
+        padding: 10px 25px;
+        background-color: $color-white;
+        color: $color-purple;
+        border-radius: 7px;
+        transition: all 0.5s ease;
+        opacity: 0.9;
+        margin-right: 10px;
+        &:hover {
+            color: $color-white;
+            background-color: $color-hover;
+            text-decoration: none
+        }
+    }
+    &__text {
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
+.post {
+    &__image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+    &__containDate {
+        @include displayFlex(left);
+        margin: 20px 0px 0px 0px;
+    }
+    &__dateText {
+        color: $color-border;
+    }
+    &__dateLink {
+        color: $color-hover;
+        transition: all 0.5s ease;
+        margin-left: 5px;
+        @include font-text1();
+        &:hover {
+            color: $color-hover-green;
+            text-decoration: none;
+        }
+    }
+    &__containTitle {
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover .post__title{
+            color: $color-hover;
+        }
+    }
+    &__title {
+        transition: all 0.5s ease;
+        color: $color-purple;
+        margin: 20px 0px 0px 0px;
+        font-size: 30px;
+    }
+    &__containQuote {
+        padding: 30px 0px 30px 30px;
+        background-color: $color-white;
+        border-radius: 7px;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0px;
+            left: 0px;
+            width: 5px;
+            height: 100%;
+            background-color: $color-hover;
+        }
+    }
+    &__quoteText {
+        font-size: 20px;
+        line-height: 30px;
+        color: $color-purple;
+        font-style: italic;
+        max-width: 90%;
+    }
+    &__quoteName {
+        @include displayFlex(left);
+        color: $color-border;
+        font-style: italic;
+        font-size: 15px;
+    }
+    &__quoteBox {
+        display: inline-block;
+        width: 10px;
+        height: 2px;
+        background-color: $color-border;
+        margin-right: 10px;
+    }
+    &__interestedImage {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+    &__share {
+        margin: 50px 0px;
+    }
+    &__shareTitle {
+        color: $color-purple;
+        font-size: 25px;
+        margin-right: 20px;
+    }
+    &__shareList {
+        @include displayFlex(left);
+    }
+    &__shareListItem {
+        @include displayFlex(center);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+        i {
+            font-size: 15px;
+            color: $color-hover;
+            transition: color 0.5s ease;
+        }
+        &:hover {
+            background-color: $color-hover;
+        }
+        &:hover i {
+            color: $color-white;
+        }
+    }
+    &__boxMember {
+        background: $color-white;
+        padding: 15px 20px;
+        .detail {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    &__boxMemberImage {
+        width: 100%;
+        height: 170px;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+    &__boxMemberName {
+        color: $color-purple;
+        font-size: 18px;
+    }
+    &__listContact {
+        @include displayFlex(left);
+    }
+    &__contactItem {
+        margin-right: 20px;
+        i {
+            color: $color-purple;
+            transition: color 0.5s ease;
+            opacity: 0.9;
+            &:hover {
+                color: $color-hover;
+            }
+        }
+        .detail {
+            font-size: 17px;
+        }
+    }
+    &__cmtItemImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    &__cmtName {
+        font-size: 18px;
+        color: $color-purple;
+    }
+    &__cmtDate {
+        @include displayFlex(space-between);
+    }
+    &__cmtReplyLink {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__cmtReply {
+        color: $color-hover;
+        font-size: 17px;
+        transition: color 0.5s ease;
+        &:hover {
+            color: $color-hover-green;
+
+        }
+    }
+}
+.showSilderPost {
+    ul {
+        width: fit-content;
+        @include displayFlex(left);
+        margin: 0px 0px 0px auto;
+        position: relative;
+        li {
+            margin-right: 10px;
+            button {
+                @include displayFlex(center);
+                width: 35px;
+                height: 35px;
+                border: 1px solid $color-purple;
+                background-color: $color-white;
+                border-radius: 7px;
+                outline: none;
+                transition: all 0.5s ease;
+            }
+        }
+        .slick-active {
+            button {
+                background-color: $color-hover;
+                color: $color-white;
+                border-color: $color-hover;
+            }
+        }
+    }
+    .btnSliderSlickNext, .btnSliderSlickPrev {
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        i {
+            color: $color-hover;
+            transition: color 0.5s ease;
+        }
+        &:hover i{
+            color: $color-hover-green;
+        }
+
+    }
+    .btnSliderSlickPrev {
+        right: 100px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .content {
+        padding: 20px 0px;
+    }
+    .post {
+        &__containDate {
+            margin-top: 10px;
+        }
+        &__title {
+            margin-top: 10px;
+        }
+        &__containQuote {
+            padding: 15px 0px 15px 15px;
+        }
+        &__share {
+           margin: 30px 0px;
+        }
+        &__boxMemberImage {
+            height: auto;
+        }
+    }
+    .showSilderPost {
+        ul {
+            margin-right: 20px;
+        }
+        .btnSliderSlickNext{
+            right: 15px;
+        }
+    }
+}

@@ -1,18 +1,18 @@
-.header-activity {
-    background-color: $color-text1;
+.headerActivity {
+    background-color: rgba($color: $color-white, $alpha: 0.9);
     transition: background-color 0.5s ease;
+
     .header__top  {
-        .header__top-left {
-            .header__top-support {
-                li {
-                    p {
-                        color: $color-text2;
-                        &:hover {
-                            opacity: 1;
-                        }
-                    }
-                    a {
-                        color: $color-text2;
+
+        .header__topLeft {
+
+            .header__topSupport {
+
+                .header__topSupportItem {
+
+                    .header__topSupportLink {
+                        color: $color-purple;
+                        
                         &:hover {
                             opacity: 1;
                         }
@@ -20,11 +20,15 @@
                 }
             }
         }
-        .header__top-right {
-            .header__list-icon {
-                .header__icon-item {
-                    i {
-                        color: $color-text2;
+        .header__topRight {
+
+            .header__topRightListIcon {
+
+                .header__topRightContainsIcon{
+
+                    .header__topRightIcon {
+                        color: $color-purple;
+                        
                         &:hover {
                             opacity: 1;
                         }
@@ -33,55 +37,82 @@
             }
         }
     }
+
     .header__bottom {
-        .navbar-brand {
-            color: $color-text2;
-            .header__logo-icon {
-                color:  $color-hover;
+
+        .header__bottomNav {
+
+            .header__bottomLogo {
+                color: $color-purple;
             }
-        }
-        .navbar-nav{
-            .nav-item {
-                .nav-link{
-                    color: $color-text2;
-                    &:hover {
-                        color: $color-hover;
-                    }
-                    opacity: 1;
-                }
-                .active {
-                    color: $color-hover;
-                }
-                .dropdown-menu {
-                    .dropdown-item {
-                        color: $color-text2;
-                        font-size: 17px;
-                        transition: all 0.5s ease;
-                        opacity: 0.9;
-                        &:hover {
+
+            .header__bottomMenu {
+
+                .header__bottomMenuList {
+
+                    .header__bottomMenuListItem{
+
+                        .header__bottomMenuListItemLink{
+                            color: $color-purple;
+                            transition: color 0.5s ease;
+                            opacity: 1;
+                            
+                            &:hover{
+                                color: $color-hover;
+
+                                ~ .header__bottomMenuListItemIcon {
+                                    color: $color-hover;
+                                }
+
+                            }
+                        }
+
+                        .header__bottomMenuListItemIcon {
+                            transition: color 0.5s ease;
+                            font-size: 13px;
+                            color: $color-purple;
+                        } 
+                        
+                        .active {
                             color: $color-hover;
-                            background-color: $color-text1;
+                        }
+
+                        .header__bottomMenuDropdown {
+
+                            .header__bottomMenuDropdownItem{
+                                color: $color-purple;
+                                transition: all 0.5s ease;
+
+                                &:hover {
+                                    color: $color-hover;
+                                    background-color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .header__bottomMenuContainsForm {
+                    
+                    .header__bottomMenuBtnSearch  {
+                        color: $color-purple;
+                        border: 1px solid $color-purple;
+
+                        &:hover {
+                            color: $color-white;
+                            background-color: $color-hover;
+                            border-color: transparent;
                         }
                     }
                 }
             }
-        }
-        .header__link-search {
-            color: $color-text2;
-            border: 1px solid $color-text2;
-            &:hover {
-                color: $color-text1;
-                background-color: $color-hover;
-                border-color: transparent;
+
+            .header__bottomIcon {
+
+                .icon-moon {
+                    color: $color-purple;
+                }
             }
         }
-        .icon-moon {
-            color: $color-text2;
-        }
-        .btn-bar {
-            background-color: $color-hover;
-            color: $color-text1;
-            padding: 6px 7px;
-        }
     }
-}
+}  

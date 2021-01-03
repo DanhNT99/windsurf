@@ -9,112 +9,187 @@
 </head>
 
 <body>
+  <!-- header -->
   <header class="header">
+
     <div class="header__top container">
       <div class="row">
-        <div class="col-sm-6 py-2 header__top-left">
-          <ul class="header__top-support d-flex p-0 m-0 align-items-center">
-            <li class="mr-2 mr-sm-4">
-              <p><i class="far fa-envelope"></i> example@gmail.com</p>
+
+        <!-- header top on the left -->
+        <div class="col-sm-6 py-1 py-sm-2 header__topLeft">
+          <ul class="header__topSupport p-0 m-0">
+            <li class="header__topSupportItem mr-2 mr-sm-4">
+              <a href="mailto:danh.nt.dev@gmail.com" class="header__topSupportLink" title="chuyển qua email">
+                <p class="header__topSupportText"><i class="far fa-envelope mr-2" class="iconEmail"></i>danh.nt.dev@gmail.com</p>
+              </a>
             </li>
-            <li class="ml-auto mx-sm-0"><a href="#">Help</a></li>
-          </ul>
-        </div>
-        <div class=" col-sm-6 py-2 header__top-right">
-          <ul class="header__list-icon p-0 m-0 d-flex">
-            <li class="header__icon-item mx-auto mr-sm-4 ml-sm-auto">
-              <i class="fab fa-facebook-f"></i>
-            </li>
-            <li class="header__icon-item mx-auto mr-sm-4 ml-sm-0">
-              <i class="fab fa-twitter"></i>
-            </li>
-            <li class="header__icon-item mx-auto mr-sm-4 ml-sm-0">
-              <i class="fab fa-instagram"></i>
-            </li>
-            <li class="header__icon-item mx-auto mr-sm-4 ml-sm-0">
-              <i class="fab fa-pinterest"></i>
+            <li class="header__topSupportItem ml-auto mx-sm-0">
+              <a href="#" title="chuyển qua trang help" class="header__topSupportLink">
+                <p class="header__topSupportText">Help</p>
+              </a>
             </li>
           </ul>
         </div>
+        <!-- end -->
+
+        <!-- header top on the right -->
+        <div class=" col-sm-6 py-1 py-sm-2 header__topRight">
+          <ul class="header__topRightListIcon p-0 m-0">
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-auto">
+              <a href="#" title="chuyển qua facebook"><i class="fab fa-facebook-f header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua twitter"><i class="fab fa-twitter header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua instagram"><i class="fab fa-instagram header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua pinterest"><i class="fab fa-pinterest header__topRightIcon"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- end -->
       </div>
     </div>
+
     <div class="header__bottom">
       <div class="container">
-        <nav class="navbar navbar-expand-lg p-0">
-          <a class="navbar-brand" href="home.html">
-            <span class="header__logo-icon"><i class="fas fa-anchor"></i></span>
-            Windsurf
+        
+        <nav class="header__bottomNav">
+          <!-- header logo -->
+          <a class="header__bottomLogo" href="home.html" title="Chuyển qua trang Home">
+            <img src="assets/images/iconLogo.png" class="header__bottomLogoImg" alt="logo">Windsurf
           </a>
-          <div class="mobile-position">
+          <!-- end -->
+
+          <!-- header icon nav-bar -->
+          <div class="header__bottomBtnBar">
+            <i class="fas fa-bars show"></i>
+            <i class="fas fa-times close"></i>
+          </div>
+          <!-- end -->
+
+          <!-- header menu-->
+          <div class="header__bottomMenu">
+
+            <ul class="header__bottomMenuList m-lg-0">
+
+              <li class="header__bottomMenuListItem mt-lg-0">
+                <a class="header__bottomMenuListItemLink" href="home.html" title="Home">Home</a>
+              </li>
+
+              <li class="header__bottomMenuListItem  mt-lg-0">
+                <a class="header__bottomMenuListItemLink" href="about.html" title="About">About</a>
+              </li>
+
+              <li class="header__bottomMenuListItem mt-lg-0 ">
+                <a class="header__bottomMenuListItemLink  active" href="services.html" title="Services">Services</a>
+              </li>
+
+              <li class="header__bottomMenuListItem mt-lg-0 showAllMenuDrop">
+                <a class="header__bottomMenuListItemLink" href="blogPost.html" title="Blog">
+                  Blog
+                </a>
+                <i class="fas fa-chevron-down header__bottomMenuListItemIcon"></i>
+
+                <!-- menu dropdown level two -->
+                <ul class="header__bottomMenuDropdown mt-2 mt-md-0">
+
+                  <li class="header__bottomMenuDropdownItem">
+                    <a class="header__bottomMenuDropdownItemLink" href="blogPost.html" title="Chuyển qua trang Blog Posts"> Blog
+                      Posts</a>
+                    <!-- menu dropdow level three -->
+                    <ul class="header__bottomMenuDropdown3 mt-md-2">
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Posts">Posts one</a>
+                      </li>
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Single">Post two</a>
+                      </li>
+                    </ul>
+                    <!-- end -->
+                  </li>
+                  <li class="header__bottomMenuDropdownItem">
+                    <a class="header__bottomMenuDropdownItemLink" href="blogSingle.html" title="Chuyển qua trang Blog Single">Blog Single</a>
+                  </li>
+
+                </ul>
+                <!-- end -->
+              </li>
+
+              <li class="header__bottomMenuListItem showAllMenuDrop">
+                <a class="header__bottomMenuListItemLink" title="Chuyển qua trang Page">Page</a> 
+                <i class="fas fa-chevron-down header__bottomMenuListItemIcon"></i>
+
+                <!-- menu dropdown level two -->
+                <ul class="header__bottomMenuDropdown mt-3 mt-md-0">
+                  <li class="header__bottomMenuDropdownItem"> 
+                    <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trangFeatures">Features</a>
+
+                      <!-- menudropdown level three -->
+                    <ul class="header__bottomMenuDropdown3 mt-md-2">
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Posts">Features one</a>
+                      </li>
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Single">Features two</a>
+                      </li>
+                    </ul>
+                    <!-- end -->
+                  </li>
+
+                  <li class="header__bottomMenuDropdownItem"> <a class="header__bottomMenuDropdownItemLink" href="#"
+                      title="Chuyển qua trang 404 Page">404 Page</a> </li>
+                  <li class="header__bottomMenuDropdownItem"> <a class="header__bottomMenuDropdownItemLink" href="#"
+                      title="Chuyển qua trang Landing Page">Landing Page</a> </li>
+                </ul> 
+                <!-- end -->
+              </li>
+
+              <li class="header__bottomMenuListItem ">
+                <a class="header__bottomMenuListItemLink" href="contact.html" title="Chuyển qua trang Contact">Contact</a>
+              </li>
+              
+            </ul>
+
+            <div class="header__bottomMenuContainsForm">
+              <form action="">
+                <button type="button" class="header__bottomMenuBtnSearch">
+                  <i class="fas fa-search header__bottomMenuBtnSearchIcon"></i>Search
+                </button>
+                <input type="text" name="search" placeholder="Nhập vào nội dung cần tìm..." class="header__bottomMenuInputSearch">
+              </form>
+            </div>
+          </div>
+          <!-- end -->
+
+          <div class="header__bottomIcon">
             <i class="far fa-moon icon-moon"></i>
             <i class="fas fa-sun icon-sun"></i>
-          </div>
-          <button class="navbar-toggler collapsed btn-bar" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto">
-              <li class="nav-item mt-3 mt-sm-0">
-                <a class="nav-link" href="home.html">Home</a>
-              </li>
-              <li class="nav-item  mtsm-0">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" href="services.html">Services</a>
-              </li>
-              <li class="nav-item  " data-toggle="collapse" data-target="#drop-one">
-                <a class="nav-link">
-                  Blog
-                  <i class="fas fa-chevron-down icon-down"></i>
-                </a>
-                <div class="menu-dropdown collapse" id="drop-one">
-                  <a class="dropdown-item" href="#">Blog Posts</a>
-                  <a class="dropdown-item" href="#">Blog Single</a>
-                </div>
-              </li>
-              <li class="nav-item " data-toggle="collapse" data-target="#drop-two">
-                <a class="nav-link">
-                  Page
-                  <i class="fas fa-chevron-down icon-down"></i>
-                </a>
-                <div class="menu-dropdown collapse" id="drop-two">
-                  <a class="dropdown-item" href="#">Features</a>
-                  <a class="dropdown-item" href="#">404 Page</a>
-                  <a class="dropdown-item" href="#">Landing Page</a>
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-            <div class="mb-3 mb-lg-0">
-              <a href="#" class="header__link-search btn mr-4">
-                <span class="mr-2"><i class="fas fa-search"></i></span>
-                Search
-              </a>
-            </div>
           </div>
         </nav>
       </div>
     </div>
-    </div>
-  </header>
 
-  <section class="banner bannerAbout">
-    <img src="assets/images/banner1.jpg" class="banner__img-bg" alt="">
-    <div class="container pt-0 pb-5 py-lg-5">
-      <div class="bannerAbout__content m-auto py-0 pb-lg-5">
-        <p class="bannerAbout__content-title py-0 py-lg-4 text-center">
+  </header>
+  <!-- end header -->
+
+  <!-- banner -->
+  <section class="bannerAbout">
+    <img src="assets/images/banner1.jpg" class="bannerAbout__img-bg" alt="">
+    <div class="container">
+      <div class="bannerAbout__content m-auto">
+        <p class="bannerAbout__content-title text-center">
           <a href="home.html" class="bannerAbout__content-link">Home</a><i class="fas fa-arrow-right"></i><span>Services
             us</span>
         </p>
       </div>
     </div>
   </section>
+  <!-- end banner -->
 
+  <!-- girdPicture -->
   <section class="girdPicture py-5">
     <div class="container py-0 py-lg-5">
       <h3 class="sub text-center">OUR PASSION</h3>
@@ -228,74 +303,163 @@
       </div>
     </div>
   </section>
+  <!-- end girdPicture -->
 
+  <!-- footer -->
   <section class="footer mb-lg-5">
+
+    <!-- footer main -->
     <div class="container">
+
       <div class="row py-5">
+
+        <!-- contact information -->
         <div class="col-lg-6">
+
           <h3 class="footer__title mb-4">Contact information</h3>
-          <ul class="footer__contact p-0">
-            <li class="footer__contact-address"><p>Address: #135 block, Barnard St. Brooklyn, London 10036, UK</p></li>
-            <li class="foooter__contact-phone my-2"><p>Phone: +(12)234-11-24</p></li>
-            <li class="footer__contact-email"><p>Email: example@mail.com</p></li>
+
+          <!-- list contact Text -->
+          <ul class="footer__listContactText p-0">
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem">
+
+              <p class="footer__contactTextItemTitle">Address: #135 block, Barnard St. Brooklyn, London 10036, UK</p>
+
+            </li>
+            <!-- end -->
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem my-2">
+
+              <p class="footer__contactTextItemTitle">Phone: <a href="tel:0374167657" class="footer__contactItemLink">0374167657</a></p>
+
+            </li>
+            <!-- end -->
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem">
+
+              <p class="footer__contactTextItemTitle">Email: <a href="mailto:danh.nt.dev@gmail.com" class="footer__contactItemLink">danh.nt.dev@gmail.com</a></p>
+
+            </li>
+            <!-- end -->
+            
           </ul>
-          <ul class="footer__contact-icon p-0 d-flex">
-            <li class="mr-3"><i class="fab fa-facebook-f"></i></li>
-            <li class="mr-3"><i class="fab fa-twitter"></i></li>
-            <li class="mr-3"><i class="fab fa-dribbble"></i></li>
-            <li class=""><i class="fab fa-google"></i></li>
+          <!-- end -->
+
+          <!-- list contact icon -->
+          <ul class="footer__listContactIcon p-0 d-flex">
+
+            <li class="mr-3 footer__listContactIconItem ">
+              <a href="#"><i class="fab fa-facebook-f footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="mr-3 footer__listContactIconItem">
+              <a href="#"><i class="fab fa-twitter footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="mr-3 footer__listContactIconItem">
+              <a href="#"><i class="fab fa-dribbble footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="footer__listContactIconItem">
+              <a href="#"><i class="fab fa-google footer__contactIconItemIcon"></i></a>
+            </li>
+
           </ul>
+          <!-- end -->
+
         </div>
-        <div class="col-lg-6 mt-5 mt-lg-0">
+        <!-- end contact -->
+
+        <div class="col-lg-6 mt-3 mt-lg-0">
+
           <div class="row">
-            <div class="col-sm-4 col-6">
+            <!-- div contains menu -->
+            <div class="col-sm-4">
+
               <h3 class="footer__title mb-4">Company</h3>
+
+              <!-- footer menu -->
               <ul class="footer__menu p-0">
-                <li class="mb-2"><a href="#">About Us</a></li>
-                <li class="mb-2"><a href="#">Blog Posts</a></li>
-                <li class="mb-2"><a href="#">Services</a></li>
-                <li class="mb-2"><a href="#">Pricing</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="about.html" title="About Us">About Us</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="blogPost.html" title="Blog Posts">Blog Posts</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="services.html" title="Services">Services</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="#" title="Princing">Pricing</a></li>
+
               </ul>
+              <!-- end menu -->
+
             </div>
-            <div class="col-sm-4 col-6">
-              <h3 class="footer__title mb-4">Quick Links</h3>
-              <ul class="footer__menu p-0">
-                <li class="mb-2"><a href="#">Contact Us</a></li>
-                <li class="mb-2"><a href="#">Create account</a></li>
-                <li class="mb-2"><a href="#">Care Center</a></li>
-                <li><a href="#">Site Feedack</a></li>
-              </ul>
+            <!-- end -->
+
+            <!-- div contains fanpage -->
+            <div class="col-12 col-sm-8 mt-3 mt-lg-0">
+
+              <div class="fb-page footer__fanpage" data-href="https://www.facebook.com/windsurfff" data-tabs="timeline"
+                data-width="400px" data-height="300px" data-small-header="true" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
+
+                <blockquote cite="https://www.facebook.com/windsurfff" class="fb-xfbml-parse-ignore"><a
+                    href="https://www.facebook.com/windsurfff">Windsurf</a></blockquote>
+
+              </div>
+
             </div>
-            <div class="col-sm-4 col-6 mt-4 mt-sm-0">
-              <h3 class="footer__title mb-4">Support</h3>
-              <ul class="footer__menu p-0">
-                <li class="mb-2"><a href="#">All Dogs</a></li>
-                <li class="mb-2"><a href="#">Care Advices</a></li>
-                <li class="mb-2"><a href="#">Care Support</a></li>
-                <li class="mb-2"><a href="#">Veterinary Help</a></li>
-              </ul>
-            </div>
+            <!-- end -->
+            
           </div>
+
         </div>
+
       </div>
+
     </div>
+    <!-- end -->
+
+    <!-- footer bottom -->
     <div class="container-fluid">
+
       <div class="row footer__bottom">
+
         <div class="col-12 text-center py-4 border-danger">
-          <p class="footer__bottom-title p-0 m-0">© 2020 Windsurf. All Rights Reserved. Design by
-            <span><a href="#">W3Layouts</a></span></p>
+
+          <p class="footer__bottomTitle p-0 m-0">© 2020 Windsurf. All Rights Reserved. Design by
+            <span><a href="#" class="footer__bottomTitleLink">W3Layouts</a></span>
+
+          </p>
+
         </div>
+
       </div>
+
     </div>
+    <!-- end -->
+
   </section>
+  <!-- end footer -->
 
-
-  <div class="btn-scroll">
+  <!-- btn scroll top -->
+  <div class="btnScrollTop">
     <span>⤴</span>
   </div>
+  <!-- end btn scroll top -->
+
+  <!-- btn chat -->
+  <div class="btnMessages">
+    <img src="assets/images/iconMess.png" class="btnMessagesImage" alt="messages">
+  </div>
+  <!-- end btn chat -->
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/home.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0"
+  nonce="EapDpEdq"></script>
 </body>
 
 </html>

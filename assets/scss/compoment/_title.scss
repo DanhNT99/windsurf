@@ -1,7 +1,6 @@
 .title {
-    font-size: 44px;
-    line-height: 55px;
-    color: $color-text2;
+    @include font-title2;
+    color: $color-purple;
 }
 @media screen and(max-width: 1068px) {
     .title {

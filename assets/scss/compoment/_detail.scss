@@ -1,6 +1,5 @@
 .detail {
-    font-size: 19px;
-    line-height: 29px;
+    @include font-text1;
     opacity: 0.9;
-    color: $color-text2;
+    color: $color-purple;
 }

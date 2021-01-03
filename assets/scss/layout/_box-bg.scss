@@ -1,9 +1,11 @@
-.box-bg {
+.boxBg {
     background: url(../images/banner1.jpg) no-repeat 0px 0px;
     background-attachment: fixed;
     background-size: cover;
     position: relative;
     z-index: 1;
+    padding: 80px 0px;
+    
     &::after {
         content: "";
         position: absolute;
@@ -14,53 +16,66 @@
         z-index: -1;
         background-color: rgba(0, 1, 15, 0.6);
     }
+
     &__container {
         max-width: 1000px;
         margin: 0 auto;
-    }
-    &__title {
-        font-size: 42px;
-        color: $color-text1;
-    }
-    &__detail {
-        font-size: 20px;
-        line-height: 30px;
-        color: $color-text1;
-        max-width: 600px;
-    }
-    &__link {
-        padding: 12px 40px;
-        background-color: rgba($color: #fff, $alpha: 0.2);
-        border: 1px solid $color-text1;
-        color: $color-text1;
-        font-size: 20px;
-        border-radius: 5px;
-        transition: background-color 0.5s ease;
-        &:hover {
-            text-decoration: none;
-            background-color: $color-hover;
-            border-color: transparent;
-            color: $color-text1;
+
+        .title {
+            color: $color-white;
         }
-    }
-    .link-activity {
-        @include linkActivity;
-    }
-}
-@media screen and (max-width: 1068px) {
-    .box-bg {
-        &__title {
-            font-size: 35px;
-            line-height: 45px;
+
+        .detail {
+            color: $color-white;
+            max-width: 600px;
         }
-    }
-}
-@media screen and (max-width: 413px) {
-    .box-bg {
-        &__link {
-            &:last-child {
-                margin-top: 10px;
+
+        .boxBg__link {
+            padding: 12px 40px;
+            background-color: rgba($color: #fff, $alpha: 0.2);
+            border: 1px solid $color-white;
+            color: $color-white;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+            
+            &:hover {
+                text-decoration: none;
+                background-color: $color-hover;
+                border-color: transparent;
+                color: $color-white;
             }
         }
     }
+
+    .linkActivity {
+        @include linkActivity;
+    }
+}
+@media screen and (max-width: 575px) {
+
+    .boxBg {
+        padding: 40px 0px;
+    }
+
+}
+
+@media screen and (max-width: 413px) {
+
+    .boxBg {
+
+        &__container{
+
+            .boxBg__link {
+
+                &:last-child {
+                    margin-top: 10px;
+                }
+
+            }
+
+        }
+
+    }
+
 }

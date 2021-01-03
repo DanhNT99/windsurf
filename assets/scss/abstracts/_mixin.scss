@@ -6,3 +6,32 @@
             background-color: #0bc1b8;
         }
 }
+@mixin heightCalc($value) {
+    height: calc(#{$value});
+    height: -webkit-calc(#{$value});
+    height: -moz-calc(#{$value});
+    height: -ms-calc(#{$value});
+    height: -o-calc(#{$value});
+}
+@mixin displayFlex ($jus){
+    display: flex;
+    align-items: center;
+    justify-content: $jus;
+}
+@mixin font-title1 {
+    font-size: 60px;
+    line-height: 70px;
+}
+@mixin font-title2 {
+    font-size: 45px;
+    line-height: 55px;
+}
+@mixin  font-text1 {
+    font-size: 19px;
+    line-height: 29px;   
+}
+@mixin blog-title {
+    font-size: 28px;
+    line-height: 38px;
+    color: $color-purple;
+}

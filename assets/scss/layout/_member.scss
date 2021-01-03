@@ -1,87 +1,121 @@
 .member {
     padding: 80px 0px;
     background-color: #f4f4f4;
+
     &__top {
+
         .member__top-sub {
             color: $color-border;
             font-weight: 700;
             font-size: 16px;
             text-transform: uppercase;
         }
+
         .member__top-title {
-            color: $color-text2;
+            color: $color-purple;
         }
+
     }
-    .showSildeMain {
+
+    .showSildeMember {
         overflow: hidden;
-    }
-    &__slider {
-        background-color: $color-text1;
-        border-radius: 5px;
-    }
-    &__slider-detail {
-        q {
-            font-size: 19px;
-            line-height: 29px;
-            color: $color-text2;
-            &:before {
-                font-size: 50px;
-                color: $color-hover;
-                font-family: "Merriweather", serif;
+
+        .member__slider {
+            background-color: $color-white;
+            border-radius: 5px;
+
+            .member__sliderDetail {
+
+                q {
+                    font-size: 19px;
+                    line-height: 29px;
+                    color: $color-purple;
+
+                    &:before {
+                        font-size: 50px;
+                        color: $color-hover;
+                        font-family: "Merriweather", serif;
+                    }
+
+                }
+
+            }
+
+            .member__sliderBox {
+
+                .member__sliderImage {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .member__sliderInfor {
+
+                    .member__sliderInforName {
+                        color: $color-purple;
+                    }
+
+                    .member__sliderInforAddress {
+                        font-size: 20px;
+                    }
+
+                }
             }
         }
-    }
-    &__slider-img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    &__slider-name {
-        color: $color-text2;
-    }
-    &__slider-address {
-        font-size: 20px;
-    }
-    .showSildeMain {
+
         ul {
-           width: fit-content;
-           margin: 80px auto;
-           display: flex;
-           .slick-active {
-            width: 30px;
-            height: 10px;
-            background-color: $color-hover;
-           }
-        }
-        li {
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-            background-color: $color-border;
-            cursor: pointer;
-            margin-right: 20px;
-            transition: all 0.5s ease;
-            &:hover {
-                width: 30px;
-                height: 10px;
-                background-color: $color-hover;
+            width: fit-content;
+            margin: 40px auto 0px auto;
+            display: flex;
+
+            .slick-active {
+             width: 30px;
+             height: 10px;
+             background-color: $color-hover;
             }
-        }
-        button {
-            display: none;
-        }
+
+         }
+
+         li {
+             width: 10px;
+             height: 10px;
+             border-radius: 10px;
+             background-color: $color-border;
+             cursor: pointer;
+             margin-right: 20px;
+             transition: all 0.5s ease;
+
+             &:hover {
+                 width: 30px;
+                 height: 10px;
+                 background-color: $color-hover;
+             }
+
+         }
+
+         button {
+             display: none;
+         }
+
     }
+
 }
+
 @media screen and (max-width: 600px) {
+
     .member {
         padding: 50px 0px;
-        .showSildeMain {
+
+        .showSildeMember{
+
             ul {
                 margin-top: 40px;
                 margin-bottom: 0px;
             }
+
         }
+
     }
 }
 @media screen and (max-width: 480px) {

@@ -1,9 +1,10 @@
-//import libary
 @import "../base/general";
+
 //compoment
 @import "../compoment/title";
 @import "../compoment/sub";
 @import "../compoment/detail";
+@import "../compoment/btnLink";
 //end compoment
 
 //banner
@@ -14,17 +15,30 @@
 @import "../layout/video";
 //end video
 
-//abilities (khả năng)
+//abilities
 @import "../layout/abilities";
-//end abilities
+//end 
 
-//statistical (thống kê)
+//statistical
 @import "../layout/statistical";
 //end statistical
 
+//box
 @import "../layout/box";
+//end box
+
+//picture
 @import "../layout/picture";
+//end box
+
+//box-bg 
 @import "../layout/box-bg";
+
+//member
 @import "../layout/member";
-@import "../layout/form";
-@import "../layout/btn-scroll";
+//end member
+
+
+//member
+@import "../layout/subscribe";
+//end member

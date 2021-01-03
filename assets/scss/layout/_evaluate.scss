@@ -1,7 +1,8 @@
 .evaluate {
+    padding: 100px 0px;
     &__item-text {
         font-size: 17px;
-        color: $color-text2;
+        color: $color-purple;
     }
     &__box {
         width: 100%;
@@ -53,5 +54,10 @@
         width: 100%;
         height: auto;
         border-radius: 5px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .evaluate {
+        padding: 50px 0px;
     }
 }

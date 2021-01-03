@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/blogPost.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+
+    <div class="header__top container">
+      <div class="row">
+
+        <!-- header top on the left -->
+        <div class="col-sm-6 py-1 py-sm-2 header__topLeft">
+          <ul class="header__topSupport p-0 m-0">
+            <li class="header__topSupportItem mr-2 mr-sm-4">
+              <a href="mailto:danh.nt.dev@gmail.com" class="header__topSupportLink" title="chuyển qua email">
+                <p class="header__topSupportText"><i class="far fa-envelope mr-2" class="iconEmail"></i>danh.nt.dev@gmail.com</p>
+              </a>
+            </li>
+            <li class="header__topSupportItem ml-auto mx-sm-0">
+              <a href="#" title="chuyển qua trang help" class="header__topSupportLink">
+                <p class="header__topSupportText">Help</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end -->
+
+        <!-- header top on the right -->
+        <div class=" col-sm-6 py-1 py-sm-2 header__topRight">
+          <ul class="header__topRightListIcon p-0 m-0">
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-auto">
+              <a href="#" title="chuyển qua facebook"><i class="fab fa-facebook-f header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua twitter"><i class="fab fa-twitter header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua instagram"><i class="fab fa-instagram header__topRightIcon"></i></a>
+            </li>
+            <li class="header__topRightContainsIcon mx-auto mr-sm-4 ml-sm-0">
+              <a href="#" title="chuyển qua pinterest"><i class="fab fa-pinterest header__topRightIcon"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        
+        <nav class="header__bottomNav">
+          <!-- header logo -->
+          <a class="header__bottomLogo" href="home.html" title="Chuyển qua trang Home">
+            <img src="assets/images/iconLogo.png" class="header__bottomLogoImg" alt="logo">Windsurf
+          </a>
+          <!-- end -->
+
+          <!-- header icon nav-bar -->
+          <div class="header__bottomBtnBar">
+            <i class="fas fa-bars show"></i>
+            <i class="fas fa-times close"></i>
+          </div>
+          <!-- end -->
+
+          <!-- header menu-->
+          <div class="header__bottomMenu">
+
+            <ul class="header__bottomMenuList m-lg-0">
+
+              <li class="header__bottomMenuListItem mt-lg-0">
+                <a class="header__bottomMenuListItemLink" href="home.html" title="Home">Home</a>
+              </li>
+
+              <li class="header__bottomMenuListItem  mt-lg-0">
+                <a class="header__bottomMenuListItemLink" href="about.html" title="About">About</a>
+              </li>
+
+              <li class="header__bottomMenuListItem mt-lg-0 ">
+                <a class="header__bottomMenuListItemLink" href="services.html" title="Services">Services</a>
+              </li>
+
+              <li class="header__bottomMenuListItem mt-lg-0 showAllMenuDrop">
+                <a class="header__bottomMenuListItemLink  active" href="blogPost.html" title="Blog">
+                  Blog
+                </a>
+                <i class="fas fa-chevron-down header__bottomMenuListItemIcon"></i>
+
+                <!-- menu dropdown level two -->
+                <ul class="header__bottomMenuDropdown mt-2 mt-md-0">
+
+                  <li class="header__bottomMenuDropdownItem">
+                    <a class="header__bottomMenuDropdownItemLink" href="blogPost.html" title="Chuyển qua trang Blog Posts"> Blog
+                      Posts</a>
+                    <!-- menu dropdow level three -->
+                    <ul class="header__bottomMenuDropdown3 mt-md-2">
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Posts">Posts one</a>
+                      </li>
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Single">Post two</a>
+                      </li>
+                    </ul>
+                    <!-- end -->
+                  </li>
+                  <li class="header__bottomMenuDropdownItem">
+                    <a class="header__bottomMenuDropdownItemLink" href="blogSingle.html" title="Chuyển qua trang Blog Single">Blog Single</a>
+                  </li>
+
+                </ul>
+                <!-- end -->
+              </li>
+
+              <li class="header__bottomMenuListItem showAllMenuDrop">
+                <a class="header__bottomMenuListItemLink" title="Chuyển qua trang Page">Page</a> 
+                <i class="fas fa-chevron-down header__bottomMenuListItemIcon"></i>
+
+                <!-- menu dropdown level two -->
+                <ul class="header__bottomMenuDropdown mt-3 mt-md-0">
+                  <li class="header__bottomMenuDropdownItem"> 
+                    <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trangFeatures">Features</a>
+
+                      <!-- menudropdown level three -->
+                    <ul class="header__bottomMenuDropdown3 mt-md-2">
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Posts">Features one</a>
+                      </li>
+                      <li class="header__bottomMenuDropdownItem">
+                        <a class="header__bottomMenuDropdownItemLink" href="#" title="Chuyển qua trang Blog Single">Features two</a>
+                      </li>
+                    </ul>
+                    <!-- end -->
+                  </li>
+
+                  <li class="header__bottomMenuDropdownItem"> <a class="header__bottomMenuDropdownItemLink" href="#"
+                      title="Chuyển qua trang 404 Page">404 Page</a> </li>
+                  <li class="header__bottomMenuDropdownItem"> <a class="header__bottomMenuDropdownItemLink" href="#"
+                      title="Chuyển qua trang Landing Page">Landing Page</a> </li>
+                </ul> 
+                <!-- end -->
+              </li>
+
+              <li class="header__bottomMenuListItem ">
+                <a class="header__bottomMenuListItemLink" href="contact.html" title="Chuyển qua trang Contact">Contact</a>
+              </li>
+              
+            </ul>
+
+            <div class="header__bottomMenuContainsForm">
+              <form action="">
+                <button type="button" class="header__bottomMenuBtnSearch">
+                  <i class="fas fa-search header__bottomMenuBtnSearchIcon"></i>Search
+                </button>
+                <input type="text" name="search" placeholder="Nhập vào nội dung cần tìm..." class="header__bottomMenuInputSearch">
+              </form>
+            </div>
+          </div>
+          <!-- end -->
+
+          <div class="header__bottomIcon">
+            <i class="far fa-moon icon-moon"></i>
+            <i class="fas fa-sun icon-sun"></i>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+  <!-- end header -->
+
+  <!-- banner about -->
+  <section class="bannerAbout">
+    <img src="assets/images/banner1.jpg" class="bannerAbout__img-bg" alt="">
+    <div class="container">
+      <div class="bannerAbout__content m-auto">
+        <p class="bannerAbout__content-title text-center">
+          <a href="home.html" class="bannerAbout__content-link">Home</a><i
+            class="fas fa-arrow-right"></i><span>Blog</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- end banner about -->
+
+  <!-- posts -->
+  <section class="content">
+
+    <div class="container">
+      <div class="row flex-column-reverse flex-sm-row">
+        <!-- on the left -->
+        <div class="col-lg-4 mt-3 mt-lg-0">
+          <!-- from -->
+          <div class="containForm">
+            <h3 class="content__title">Search here</h3>
+            <form class="mt-lg-3" action="">
+              <div class="containForm__search-box">
+                <input type="text" class="containForm__search-input" placeholder="Search...">
+                <button class="containForm__search-btn"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <!-- end -->
+
+          <!-- categories -->
+          <div class="categories mt-4 mt-lg-5">
+            <h3 class="content__title">Categories</h3>
+            <ul class="categories__list p-0">
+              <li class="categories__item mt-lg-3">
+                <a href="#" class="categories__itemLink">
+                  <span class="categories__containText">
+                    <h3 class="m-0 p-0 categories__text"><i class="fas fa-chevron-right categories__item-icon"></i>New
+                      to the water</h3>
+                  </span>
+                  <span class="categories__containNumber">
+                    <h4 class="m-0 p-0 categories__number">4</h4>
+                  </span>
+                </a>
+              </li>
+              <li class="categories__item mt-3">
+                <a href="#" class="categories__itemLink">
+                  <span class="categories__containText">
+                    <h3 class="m-0 p-0 categories__text"><i
+                        class="fas fa-chevron-right categories__item-icon"></i>Intermediate surfer</h3>
+                  </span>
+                  <span class="categories__containNumber">
+                    <h4 class="m-0 categories__number p-0">8</h4>
+                  </span>
+                </a>
+              </li>
+              <li class="categories__item mt-3">
+                <a href="#" class="categories__itemLink">
+                  <span class="categories__containText">
+                    <h3 class="m-0 p-0 categories__text"><i class="fas fa-chevron-right categories__item-icon"></i>Pro
+                      Level Surfing</h3>
+                  </span>
+                  <span class="categories__containNumber">
+                    <h4 class="m-0 categories__number p-0">8</h4>
+                  </span>
+                </a>
+              </li>
+              <li class="categories__item mt-3">
+                <a href="#" class="categories__itemLink">
+                  <span class="categories__containText">
+                    <h3 class="m-0 p-0 categories__text"><i class="fas fa-chevron-right categories__item-icon"></i>More
+                      Skills</h3>
+                  </span>
+                  <span class="categories__containNumber">
+                    <h4 class="m-0 categories__number p-0">3</h4>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end -->
+
+          <!-- rrecent post -->
+          <div class="rencentPost mt-4 mt-lg-5">
+            <h3 class="content__title">Recent Posts</h3>
+            <ul class="recentPot__list mt-lg-3">
+              <li class="recentPost__listItem">
+                <div class="recentPost__containImages">
+                  <img src="assets/images/bg-video.jpg" class="recentPost__image" alt="image recent">
+                </div>
+                <div class="recentPost__containText">
+                  <a href="#" class="recentPost__link">
+                    <h3 class="recentPost__title">How to improve work performance</h3>
+                  </a>
+                  <p class="recentPost__date">Sep 11, 2020</p>
+                </div>
+              </li>
+              <li class="recentPost__listItem my-lg-3">
+                <div class="recentPost__containImages">
+                  <img src="assets/images/about2.jpg" class="recentPost__image" alt="image recent">
+                </div>
+                <div class="recentPost__containText">
+                  <a href="#" class="recentPost__link">
+                    <h3 class="recentPost__title">How to improve work performance</h3>
+                  </a>
+                  <p class="recentPost__date">Sep 12, 2020</p>
+                </div>
+              </li>
+              <li class="recentPost__listItem">
+                <div class="recentPost__containImages">
+                  <img src="assets/images/banner2.jpg" class="recentPost__image" alt="image recent">
+                </div>
+                <div class="recentPost__containText">
+                  <a href="#" class="recentPost__link">
+                    <h3 class="recentPost__title">How to improve work performance</h3>
+                  </a>
+                  <p class="recentPost__date">Sep 13, 2020</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end -->
+
+          <!-- twitter -->
+          <div class="twitter">
+            <h3 class="content__title">Twitter</h3>
+            <ul class="twitter__list mt-lg-3">
+              <li class="twitter__listItem">
+                <a href="#" class="twitter__link">
+                  <img src="assets/images/iconTwitter.png" class="twitter__image" alt="twitter">
+                  <h3 class="twitter__title">
+                    Hi, I found great code to update javascript with free download
+                  </h3>
+                </a>
+              </li>
+              <li class="twitter__listItem mt-lg-3">
+                <a href="#" class="twitter__link">
+                  <img src="assets/images/iconTwitter.png" class="twitter__image" alt="twitter">
+                  <h3 class="twitter__title">
+                    We are born crying, live complaining, and die disappointed.
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end twitter -->
+
+          <!-- gallery -->
+          <div class="gallery">
+            <h3 class="content__title">Gallery</h3>
+            <div class="row px-2 flex-wrap">
+              <div class="col-4 p-1 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic1.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+              <div class="col-4 p-1 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic2.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+              <div class="col-4 p-1 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic3.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+              <div class="col-4 p-1 pt-3 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic3.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+              <div class="col-4 p-1 pt-3 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic4.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+              <div class="col-4 p-1 pt-3 p-lg-1">
+                <a href="" class="gallery__link">
+                  <img src="assets/images/pic1.jpg" alt="pic1" class="gallery__image">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- end gallery -->
+
+          <!-- tags -->
+          <div class="tags mt-lg-5">
+            <h3 class="content__title">Tags</h3>
+            <ul class="tags__list">
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text"> Design</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Boats</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Coach</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Passion</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Surfing</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Sail</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Diving</h3>
+                </a>
+              </li>
+              <li class="tags__item">
+                <a href="#" class="tags__item-link">
+                  <h3 class="tags__text">Location</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- end -->
+
+        <!-- on the right -->
+        <div class="showSilderPost col-lg-8 pl-lg-4">
+
+          <div class="post__list">
+            <div class="post__item mb-4 mb-3 mb-lg-5">
+              <img src="assets/images/bg-video.jpg" alt="" class="post__image">
+
+              <div class="post__containDate">
+                <p class="post__dateText">SEP 12, 2020.</p>
+                <a href="#" class="post__dateLink"> - by Admin</a>
+              </div>
+
+              <a href="#" class="post__containTitle">
+                <h3 class="post__title">Surfing is not a sport, it’s a life style</h3>
+              </a>
+
+              <p class="detail my-2 my-lg-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta
+                est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.
+              </p>
+
+              <a href="#" class="btnLink btn">Read more</a>
+            </div>
+
+            <div class="post__item  mb-4 mb-3 mb-lg-5">
+              <img src="assets/images/banner1.jpg" alt="" class="post__image">
+
+              <div class="post__containDate">
+                <p class="post__dateText">SEP 12, 2020.</p>
+                <a href="3" class="post__dateLink"> - by Admin</a>
+              </div>
+
+              <a href="" class="post__containTitle">
+                <h3 class="post__title">Surfing is not a sport, it’s a life style</h3>
+              </a>
+
+              <p class="detail my-2 my-lg-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta
+                est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.
+              </p>
+
+              <a href="" class="btnLink btn">Read more</a>
+            </div>
+
+            <div class="post__item  mb-4 mb-lg-5">
+              <img src="assets/images/banner2.jpg" alt="" class="post__image">
+
+              <div class="post__containDate">
+                <p class="post__dateText">SEP 12, 2020.</p>
+                <a href="3" class="post__dateLink"> - by Admin</a>
+              </div>
+
+              <a href="" class="post__containTitle">
+                <h3 class="post__title">Surfing is not a sport, it’s a life style</h3>
+              </a>
+
+              <p class="detail my-2 my-lg-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta
+                est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.
+              </p>
+
+              <a href="" class="btnLink btn">Read more</a>
+            </div>
+          </div>
+          <div class="post__list">
+            <div class="post__item  mb-4 mb-3 mb-lg-5">
+              <img src="assets/images/bg-video.jpg" alt="" class="post__image">
+
+              <div class="post__containDate">
+                <p class="post__dateText">SEP 12, 2020.</p>
+                <a href="#" class="post__dateLink"> - by Admin</a>
+              </div>
+
+              <a href="#" class="post__containTitle">
+                <h3 class="post__title">Surfing is not a sport, it’s a life style</h3>
+              </a>
+
+              <p class="detail my-2 my-lg-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta
+                est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.
+              </p>
+
+              <a href="#" class="btnLink btn">Read more</a>
+            </div>
+
+            <div class="post__item  mb-4 mb-lg-5">
+              <img src="assets/images/banner2.jpg" alt="" class="post__image">
+
+              <div class="post__containDate">
+                <p class="post__dateText">SEP 12, 2020.</p>
+                <a href="3" class="post__dateLink"> - by Admin</a>
+              </div>
+
+              <a href="" class="post__containTitle">
+                <h3 class="post__title">Surfing is not a sport, it’s a life style</h3>
+              </a>
+
+              <p class="detail my-2 my-lg-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum laboriosam voluptate soluta
+                est obcaecati, quam aperiam nam natus dicta tenetur? Dolore.
+              </p>
+
+              <a href="" class="btnLink btn">Read more</a>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer mb-lg-5">
+
+    <!-- footer main -->
+    <div class="container">
+
+      <div class="row py-5">
+
+        <!-- contact information -->
+        <div class="col-lg-6">
+
+          <h3 class="footer__title mb-4">Contact information</h3>
+
+          <!-- list contact Text -->
+          <ul class="footer__listContactText p-0">
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem">
+
+              <p class="footer__contactTextItemTitle">Address: #135 block, Barnard St. Brooklyn, London 10036, UK</p>
+
+            </li>
+            <!-- end -->
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem my-2">
+
+              <p class="footer__contactTextItemTitle">Phone: <a href="tel:0374167657" class="footer__contactItemLink">0374167657</a></p>
+
+            </li>
+            <!-- end -->
+
+            <!-- contact text item -->
+            <li class="footer__listContactTextItem">
+
+              <p class="footer__contactTextItemTitle">Email: <a href="mailto:danh.nt.dev@gmail.com" class="footer__contactItemLink">danh.nt.dev@gmail.com</a></p>
+
+            </li>
+            <!-- end -->
+            
+          </ul>
+          <!-- end -->
+
+          <!-- list contact icon -->
+          <ul class="footer__listContactIcon p-0 d-flex">
+
+            <li class="mr-3 footer__listContactIconItem ">
+              <a href="#"><i class="fab fa-facebook-f footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="mr-3 footer__listContactIconItem">
+              <a href="#"><i class="fab fa-twitter footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="mr-3 footer__listContactIconItem">
+              <a href="#"><i class="fab fa-dribbble footer__contactIconItemIcon"></i></a>
+            </li>
+
+            <li class="footer__listContactIconItem">
+              <a href="#"><i class="fab fa-google footer__contactIconItemIcon"></i></a>
+            </li>
+
+          </ul>
+          <!-- end -->
+
+        </div>
+        <!-- end contact -->
+
+        <div class="col-lg-6 mt-3 mt-lg-0">
+
+          <div class="row">
+            <!-- div contains menu -->
+            <div class="col-sm-4">
+
+              <h3 class="footer__title mb-4">Company</h3>
+
+              <!-- footer menu -->
+              <ul class="footer__menu p-0">
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="about.html" title="About Us">About Us</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="blogPost.html" title="Blog Posts">Blog Posts</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="services.html" title="Services">Services</a></li>
+
+                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="#" title="Princing">Pricing</a></li>
+
+              </ul>
+              <!-- end menu -->
+
+            </div>
+            <!-- end -->
+
+            <!-- div contains fanpage -->
+            <div class="col-12 col-sm-8 mt-3 mt-lg-0">
+
+              <div class="fb-page footer__fanpage" data-href="https://www.facebook.com/windsurfff" data-tabs="timeline"
+                data-width="400px" data-height="300px" data-small-header="true" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
+
+                <blockquote cite="https://www.facebook.com/windsurfff" class="fb-xfbml-parse-ignore"><a
+                    href="https://www.facebook.com/windsurfff">Windsurf</a></blockquote>
+
+              </div>
+
+            </div>
+            <!-- end -->
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- end -->
+
+    <!-- footer bottom -->
+    <div class="container-fluid">
+
+      <div class="row footer__bottom">
+
+        <div class="col-12 text-center py-4 border-danger">
+
+          <p class="footer__bottomTitle p-0 m-0">© 2020 Windsurf. All Rights Reserved. Design by
+            <span><a href="#" class="footer__bottomTitleLink">W3Layouts</a></span>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- end -->
+
+  </section>
+  <!-- end footer -->
+
+  <!-- btn scroll top -->
+  <div class="btnScrollTop">
+    <span>⤴</span>
+  </div>
+  <!-- end btn scroll top -->
+
+  <!-- btn chat -->
+  <div class="btnMessages">
+    <img src="assets/images/iconMess.png" class="btnMessagesImage" alt="messages">
+  </div>
+  <!-- end btn chat -->
+
+  <!-- script -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0"
+    nonce="EapDpEdq"></script>
+</body>
+
+</html>

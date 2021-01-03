@@ -1,85 +1,47 @@
 .box {
-    padding: 100px 0px;
-    &__container {
-        height: 420px;
-    }
-        &__sub {
-            color: $color-border;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: uppercase;
+    padding: 80px 0px;
+
+    .box__rightContainsImage {
+
+        .box__rightImage{
+            max-width: 100%;
+            height: 100%;
+            border-radius: 5px;
         }
 
-        &__detail {
-            font-size: 19px;
-            line-height: 29px;
-            opacity: 0.9;
-            color: $color-text2;
-        }
-        .btn {
-            font-size: 19px;
-            padding: 10px 40px 10px 40px;
-            background-color: $color-hover;
-            color: $color-text1;
-            transition: background-color 0.5s ease;
-            &:hover {
-                background-color: #0bc1b8;
-            }
-        }
-        img {
-            max-width: 100%;
-            border-radius: 5px;
-            height: 100%;
-        }
-        &__link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            background-color: $color-hover;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: box-shadow 1.5s infinite ease;
-            &:hover {
-                text-decoration: none;
-            }
-            i {
-                font-size: 14px;
-                color: $color-text1;
-            }
-            @keyframes box-shadow {
-                0% {
-                    box-shadow: 0 0 0 1px rgba(144, 203, 218, 0.4), 0 0 0 8px  rgba(192, 228, 237, 0.4),0 0 0 15px  rgba(192, 228, 237, 0.4);
-                }
-                100% {
-                    box-shadow: 0 0 0 8px rgba(144, 203, 218, 0.4), 0 0 0 15px rgba(144, 203, 218, 0.4), 0 0 0 30px rgba(144, 203, 218, 0.4);
-                }
-            }
-        }
+    }
+
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
+
     .box {
-        &__container {
+
+        &__rightContainsImage {
             height: 350px;
         }
+
     }
+
 }
-@media screen and(max-width: 992px) {
+@media screen and(max-width: 991px) {
+
     .box {
-        &__container {
+
+        &__rightContainsImage {
            height: auto;
-        }
-        img {
-            height: auto;
+
+           .box__rightImage {
+               height: auto;
+           }
+
         }
     }
+
 }
 @media screen and(max-width: 480px) {
+
     .box {
-        padding-top: 50px;
+        padding: 40px 0px;
     }
+
 }

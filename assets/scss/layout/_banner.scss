@@ -1,12 +1,7 @@
-@import "../abstracts/variable";
-@import "../abstracts/mixin";
 .banner{
     position: relative;
-    top: 0px;
     height: 100vh;
-    background-size: cover;
-    z-index: 1;
-    padding-top: 180px;
+
     &::after {
         content: "";
         position: absolute;
@@ -17,7 +12,8 @@
         z-index: -1;
         background-color: rgba(0, 1, 15, 0.6);
     }
-    &__img-bg {
+
+    &__backgroundImage {
         position: absolute;
         top: 0;
         left: 0;
@@ -26,129 +22,169 @@
         object-fit: cover;
         z-index: -1;
     }
+
     &__content {
-        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
         max-width: 650px;
-        .banner__content-title {
-            color: $color-text1;
-            font-weight: 600;
-            font-size: 60px;
-            line-height: 70px;
-            font-family: 'Jost-Bold';
+
+        .banner__contentTitle {
+            color: $color-white;
+            @include font-title1;
         }
-        .banner__content-detail {
-            color: $color-text1;
+
+        .banner__contentDetail {
+            color: $color-white;
             margin: 35px 0px 50px 0px;
-            font-size: 19px;
-            line-height: 29px;
+            @include font-text1;
         }
-        .banner__content-link {
-            padding: 10px 25px;
-            background-color: rgba($color: #fff, $alpha: 0.2);
-            border: 1px solid $color-text1;
-            color: $color-text1;
-            font-size: 20px;
-            border-radius: 5px;
-            margin: 0px 0px 0px 10px;
-            transition: background-color 0.5s ease;
-            &:hover {
+
+        .banner__contentContainsLink {
+            @include displayFlex(center);
+            flex-wrap: wrap;
+            .banner__contentLink {
+                padding: 10px 25px;
+                background-color: rgba($color: #fff, $alpha: 0.2);
+                border: 1px solid $color-white;
+                color: $color-white;
+                font-size: 20px;
+                border-radius: 5px;
                 text-decoration: none;
+                transition: background-color 0.5s ease;
+    
+                &:hover {
+                    background-color: $color-hover;
+                    border-color: transparent;
+                }
+            }
+            .linkActivity {
+                @include linkActivity;
+            }
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+        .banner__bottomMouse {
+            width: 28px;
+            height: 45px;
+            border-radius: 18px;
+            border: 2px solid $color-hover;
+
+            .banner__bottomMouseDot {
+                width: 6px;
+                height: 6px;
                 background-color: $color-hover;
-                border-color: transparent;
+                margin: 5px auto;
+                animation: dotMove 1.2s infinite ease;
+            }
+
+            @keyframes dotMove {
+                to {
+                    opacity: 0;
+                    margin-top: 16px;
+                }
             }
         }
-        .link-activity {
-            @include linkActivity;
-        }
-    }
-    &__mouse {
-        width: 28px;
-        height: 45px;
-        border-radius: 18px;
-        border: 2px solid $color-hover;
-        margin: 50px auto 5px auto;
-        .banner__mouse-dot {
-            width: 6px;
-            height: 6px;
-            background-color: $color-hover;
-            margin: 5px auto;
-            animation: dot-move 1.2s infinite ease;
-        }
-        @keyframes dot-move {
-            to {
-                opacity: 0;
-                margin-top: 16px;
+
+        .banner__bottomArrow {
+
+            .banner__bottomArrowItem {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-bottom: 2px solid $color-white;
+                border-right: 2px solid $color-hover;
+                margin: 0 auto;
+                transform: rotate(45deg);
+                margin-top: 5px;
+                animation: opacityArrow 1.5s infinite ease-in 0.1s;
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.3s;
+                }
             }
-        }
-    }
-    &__arrow {
-        .banner__arrow-item {
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid $color-text1;
-            border-right: 2px solid $color-hover;
-            margin: 0 auto;
-            position: relative;
-            transform: rotate(45deg);
-            margin-top: 5px;
-            animation: opacity-arrow 1.5s infinite ease-in 0.1s;
-            &:nth-child(2) {
-                animation-delay: 0.2s;
-            }
-            &:nth-child(3) {
-                animation-delay: 0.3s;
-            }
-        }
-        @keyframes opacity-arrow {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
-    }
-}
-@media screen and (max-width: 1200px) {
-    .banner {
-        height: auto;
-        min-height: 700px;
-        padding-top: 250px;
-    }
-}
-@media screen and (max-width: 1080px) {
-    .banner{
-        &__content {
-            .banner__content-title {
-                font-size: 40px;
-                line-height: 50px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 480px) {
-    .banner{
-        &__content {
-            .banner__content-title {
-                font-size: 30px;
-                line-height: 40px;
-            }
-            .banner__content-detail {
-                margin: 25px 0px 30px 0px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 374px) {
-    .banner{
-        &__content {
-            .banner__content-link {
-                &:last-child {
-                    margin-top: 10px;
+
+            @keyframes opacityArrow {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .banner {
+        height: auto;
+        min-height: 700px;
+        padding-top: 250px;
+
+        &__content {
+
+            .banner__contentTitle {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .banner{
+
+        &__content {
+
+            .banner__contentDetail {
+                margin: 25px 0px 30px 0px;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 352px) {
+
+    .banner{
+
+        &__content {
+
+            .banner__contentContainsLink {
+
+                .banner__contentLink {
+
+                    &:last-child {
+                        margin-top: 10px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    
 }

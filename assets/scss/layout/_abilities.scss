@@ -1,76 +1,87 @@
 .abilities {
     background-color: $bg-grey;
-    padding: 100px 0px;
-    &__container{
-        .abilities__top {
-            .abilities__top-sub {
-                color: $color-border;
-                font-weight: 700;
-                font-size: 16px;
-                text-transform: uppercase;
-            }
-            .abilities__top-title {
-                font-size: 45px;
-                color: $color-text2;
+    padding: 80px 0px;
+
+    &__item{
+        background-clip: content-box;
+
+        .abilities__itemBox {
+            padding: 50px 40px;
+            border-radius: 5px;
+            transition: all 0.7s ease;
+
+            &:hover {
+                background-color: $color-white;
+                box-shadow: 0px 0px 5px 3px rgba($color: $bg-black, $alpha: 0.1);
             }
         }
-        .abilities__item{
-            background-clip: content-box;
-            .abilities__item-box {
-                padding: 50px 40px;
-                border-radius: 5px;
-                transition: all 0.7s ease;
-                &:hover {
-                    background-color: $color-text1;
-                    box-shadow: 0px 0px 5px 3px rgba($color: #000000, $alpha: 0.1);
-                }
-                .abilities__item-icon {
-                    font-size: 30px;
-                    color: $color-hover;
-                }
-                .abilites__item-title {
-                    display: block;
-                    color: $color-text2;
-                    font-family: 'Jost-Bold';
-                    font-size: 25px;
-                    line-height: 35px;
-                    transition: color 0.5s ease;
-                    &:hover {
-                        color: $color-hover;
-                        text-decoration: none;
-                    }
-                }
-                .abilities__item-detail {
-                    font-size: 17px;
-                    line-height: 27px;
-                    color: $color-text2;
-                }
+
+        .abilities__itemBoxImage {
+            width: 46px;
+            height: 35px;
+            object-fit: cover;
+        }
+
+        .abilities__itemBoxTitle {
+            display: block;
+            color: $color-purple;
+            font-family: 'Jost-Bold';
+            font-size: 25px;
+            line-height: 35px;
+            transition: color 0.5s ease;
+
+            &:hover {
+                color: $color-hover;
+                text-decoration: none;
             }
+        }
+        
+        .abilities__itemBoxDetail {
+            font-size: 17px;
+            line-height: 27px;
+            color: $color-purple;
         }
     }
+
 }
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1199px) {
+    
     .abilities {
+        
+
         &__container{
-            .abilities__top {
-                .abilities__top-title {
-                    font-size: 35px;
-                    line-height: 45px;
-                }
-            }
+
             .abilities__item{
+
                 .abilities__item-box {
+
                     .abilites__item-title {
                         font-size: 22px;
                         line-height: 32px;
                     }
+
                 }
             }
         }
     }
+
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 575px) {
+
     .abilities {
-        padding: 50px 0px;
+        padding: 40px 0px;
+
+        &__container{
+
+            .abilities__item{
+                background-clip: content-box;
+                
+                .abilities__item-box {
+                    padding: 10px 40px;
+                }
+                
+            }
+        }
     }
+
 }
