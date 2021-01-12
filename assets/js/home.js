@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   //window sroll change color menu and show btnTop
     $(window).scroll(()=> {
-
         if($(window).scrollTop() > 0) {
             $('.header').addClass('headerActivity');
         }
@@ -64,9 +63,10 @@ $(document).ready(function(){
 
     $(window).on('click',function(event){
       var clickNameClass =  '.' + event.target.className;
-      var flag = $(clickNameClass).hasClass('header__bottomMenuBtnSearch');
-      if(!flag) {
+      var flag = $(clickNameClass).hasClass('header__bottomMenuBtnSearch') || $(clickNameClass).hasClass('header__bottomMenuInputSearch');
+      if(!flag){
         $('.header__bottomMenu').removeClass('showInput');
+        $('.header__bottomMenuList').css({'animation' : 'showMenu 1s forwards ease'})
       }
     })
 
@@ -147,8 +147,7 @@ $(document).ready(function(){
       slidesToShow:1, 
       slidesToScroll:1,
       prevArrow : false, 
-      // prevArrow: '<button type="button" class="btnSliderSlickPrev prev"><i class="fas fa-arrow-left"></i></button>',
-      nextArrow: '<button type="button" class="btnSliderSlickNext next"><i class="fas fa-arrow-right"></i></button>',
+      nextArrow: false,
       responsive: [
           {
             breakpoint: 1024,

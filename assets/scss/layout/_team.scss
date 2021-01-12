@@ -1,52 +1,76 @@
 .team {
     background-color: $bg-grey;
-    padding: 100px 0px;
-    &__item-image {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        &:hover ~ .team__item-link {
-            color: $color-hover;
-            text-decoration: none;
-        }
-    }
-    &__item-link {
-        text-decoration: none;
-        color: $color-purple;
-        font-size: 19px;
-        transition: color 0.5s ease;
-        &:hover {
-            color: $color-hover;
-            text-decoration: none;
-        }
-    }
-    &__item-detail {
-        color: $color-border;
-    }
-    &__contact-item {
-        a {
-            width: 35px;
-            height: 35px;
-            border-radius: 100%;
-            background-color: $bg-black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.5s ease;
-            text-decoration: none;
-            i {
-                color: $color-white;
-                font-size: 15px;
+    padding: 80px 0px;
+
+    &__item {
+
+        .team__itemImage {
+
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+    
+            &:hover{
+
+                ~ .team__item-link {
+                    color: $color-hover;
+                    text-decoration: none;
+                }
+
             }
+        }
+
+        .team__itemLink {
+            text-decoration: none;
+            color: $color-purple;
+            font-size: 19px;
+            transition: color 0.5s ease;
+
             &:hover {
-                background-color: $color-hover;
+                color: $color-hover;
                 text-decoration: none;
             }
+
         }
+
+        .team__itemDetail {
+            color: $color-border;
+        }
+
+        .team__listContact {
+
+            .team__contactItem {
+
+                .team__contactItemLink {
+                    @include displayFlex(center);
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    background-color: $bg-black;
+                    transition: all 0.5s ease;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        background-color: $color-hover;
+                        text-decoration: none;
+                    }
+
+                    .team__contactItemIcon {
+                        color: $color-white;
+                        font-size: 15px;
+                    }
+
+                }
+            }
+        }
+
     }
 }
+
 @media screen and (max-width: 575px) {
+
     .team {
         padding: 50px 0px;
     }
+    
 }

@@ -87,10 +87,19 @@
                 .header__bottomMenuList {
                     @include displayFlex(space-between);
                     transform: translateX(30%);
-
+                    
+                    @keyframes showMenu {
+                        from {
+                            opacity: 0;
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
                     .header__bottomMenuListItem{
                         position: relative;
                         margin-right: 20px;
+                        cursor: pointer;
 
                         &:after {
                             content: "";
@@ -105,7 +114,6 @@
                             color: $color-white;
                             opacity: 0.8;
                             font-size: 19px;
-                            cursor: pointer;
 
                             &:hover {
                                 text-decoration: none;
@@ -187,7 +195,9 @@
                             }
                         }
                     }
+
                 }
+
                 .header__bottomMenuContainsForm {
                     position: relative;
 
@@ -200,6 +210,10 @@
                         position: absolute;
                         right: 150%;
                         padding: 7px 0px;
+
+                        &::placeholder {
+                            color: $color-border;
+                        }
                     }
 
                     .header__bottomMenuBtnSearch  {
@@ -224,14 +238,16 @@
                             background-color: transparent;
                             position: absolute;
                         }
+
                         .header__bottomMenuBtnSearchIcon{
                             margin-right: 5px;
                             font-size: 15px;
                         }
+
                         &:hover {
                             background-color: $color-hover;
-                            opacity: 1;
                         }
+
                     }
                 }
             }
@@ -240,6 +256,7 @@
 
                     .header__bottomMenuList {
                         display: none;
+                        opacity: 0;
                     }
     
                     .header__bottomMenuContainsForm {
@@ -303,6 +320,23 @@
                     
                     .header__bottomMenuList {
                         transform: translateX(20%);
+                    }
+
+                    .header__bottomMenuContainsForm {
+
+                        .header__bottomMenuInputSearch {
+                            right: 130%;
+                        }
+                    }
+                }
+
+                .showInput {
+                    
+                    .header__bottomMenuContainsForm {
+
+                        .header__bottomMenuInputSearch {
+                            width: 400px;
+                        }
                     }
                 }
             }

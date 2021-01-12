@@ -16449,9 +16449,28 @@ body {
           transform: translateX(30%);
 }
 
+@-webkit-keyframes showMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem {
   position: relative;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem:after {
@@ -16467,7 +16486,6 @@ body {
   color: #fff;
   opacity: 0.8;
   font-size: 19px;
-  cursor: pointer;
 }
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem .header__bottomMenuListItemLink:hover {
@@ -16570,6 +16588,22 @@ body {
   padding: 7px 0px;
 }
 
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::placeholder {
+  color: #a3a3a3;
+}
+
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuBtnSearch {
   color: #fff;
   font-size: 18px;
@@ -16602,11 +16636,11 @@ body {
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuBtnSearch:hover {
   background-color: #0de9df;
-  opacity: 1;
 }
 
 .header__bottom .header__bottomNav .showInput .header__bottomMenuList {
   display: none;
+  opacity: 0;
 }
 
 .header__bottom .header__bottomNav .showInput .header__bottomMenuContainsForm {
@@ -16667,6 +16701,12 @@ body {
   .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList {
     -webkit-transform: translateX(20%);
             transform: translateX(20%);
+  }
+  .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch {
+    right: 130%;
+  }
+  .header__bottom .header__bottomNav .showInput .header__bottomMenuContainsForm .header__bottomMenuInputSearch {
+    width: 400px;
   }
 }
 
@@ -17400,10 +17440,6 @@ body {
   padding: 80px 0px;
 }
 
-.abilities__item {
-  background-clip: content-box;
-}
-
 .abilities__item .abilities__itemBox {
   padding: 50px 40px;
   border-radius: 5px;
@@ -17446,7 +17482,7 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .abilities__container .abilities__item .abilities__item-box .abilites__item-title {
+  .abilities__item .abilities__itemBox .abilites__itemTitle {
     font-size: 22px;
     line-height: 32px;
   }
@@ -17456,10 +17492,10 @@ body {
   .abilities {
     padding: 40px 0px;
   }
-  .abilities__container .abilities__item {
+  .abilities__item {
     background-clip: content-box;
   }
-  .abilities__container .abilities__item .abilities__item-box {
+  .abilities__item .abilities__itemBox {
     padding: 10px 40px;
   }
 }

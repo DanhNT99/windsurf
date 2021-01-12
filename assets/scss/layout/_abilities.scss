@@ -3,7 +3,6 @@
     padding: 80px 0px;
 
     &__item{
-        background-clip: content-box;
 
         .abilities__itemBox {
             padding: 50px 40px;
@@ -47,22 +46,20 @@
 @media screen and (max-width: 1199px) {
     
     .abilities {
-        
 
-        &__container{
+        &__item{
 
-            .abilities__item{
+            .abilities__itemBox {
 
-                .abilities__item-box {
-
-                    .abilites__item-title {
-                        font-size: 22px;
-                        line-height: 32px;
-                    }
-
+                .abilites__itemTitle {
+                    font-size: 22px;
+                    line-height: 32px;
                 }
+
             }
+
         }
+
     }
 
 }
@@ -71,16 +68,14 @@
     .abilities {
         padding: 40px 0px;
 
-        &__container{
+        &__item{
 
-            .abilities__item{
-                background-clip: content-box;
-                
-                .abilities__item-box {
-                    padding: 10px 40px;
-                }
-                
+            background-clip: content-box;
+            
+            .abilities__itemBox {
+                padding: 10px 40px;
             }
+            
         }
     }
 

@@ -13,7 +13,7 @@
         background-color: rgba(0, 1, 15, 0.6);
     }
 
-    &__img-bg {
+    &__imageBg {
         position: absolute;
         top: 0px;
         left: 0px;
@@ -26,28 +26,27 @@
     &__content {
         transform: translateY(200px);
         max-width: 600px;
-    }
 
-    &__content-title {
-        color: $color-white;
-        font-weight: 800;
+        .bannerAbout__contentTitle {
+            color: $color-white;
+            font-weight: 800;
 
-        i {
-            margin: 0px 17px;
-            font-size: 12px;
+
+            .bannerAbout__contentTitleLink {
+                color: $color-white;
+                transition: color 0.5s ease;
+        
+                &:hover {
+                    color: $color-hover;
+                    text-decoration: none;
+                }
+            }
+
+            .bannerAbout__contentTitleIcon {
+                margin: 0px 17px;
+                font-size: 12px;
+            }
         }
-
-    }
-
-    &__content-link {
-        color: $color-white;
-        transition: color 0.5s ease;
-
-        &:hover {
-            color: $color-hover;
-            text-decoration: none;
-        }
-
     }
 
 }

@@ -1,12 +1,16 @@
 .content {
     padding: 80px 0px;
     background-color: $bg-grey;
+
     &__title {
         @include blog-title;
     }
+
 }
-.containForm{
-    &__search-box {
+
+.containsForm{
+
+    &__searchBox {
         width: 100%;
         height: 50px;
         background-color: $color-white;
@@ -15,123 +19,168 @@
         justify-content: space-between;
         padding: 0px 15px;
         border-radius: 7px;
-    }
-    &__search-input {
-        width: 80%;
-        border: none;
-        outline: none;
-        color: $color-purple;
-        font-size: 17px;
-        font-weight: 800;
-    }
-    &__search-btn {
-        border: none;
-        outline: none;
-        width: 35px;
-        height: 35px;
-        border-radius: 100%;
-        background-color: $color-hover;
-        color: $color-white;
+        
+        .containsForm__searchBoxInput {
+            width: 80%;
+            border: none;
+            outline: none;
+            color: $color-purple;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .containsForm__searchBoxBtn {
+            border: none;
+            outline: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: $color-hover;
+            color: $color-white;
+
+            .containsForm__searchBoxImage {
+                width: 15px;
+                height: 15px;
+                object-fit: cover;
+            }
+
+        }
+
     }
 }
 
 .categories {
+
     &__itemLink {
-        display: flex; 
-        align-items: center;
-        justify-content: space-between;
+        @include displayFlex(space-between);
         font-weight: 800;
         transition: color 0.5s ease;
         color: $color-purple;
+
         &:hover {
-            text-decoration: none;
             color: $color-hover;
+            text-decoration: none;
         }
+
+        .categories__itemContainsText {
+
+            .categories__itemText {
+                font-size: 17px;
+                line-height: 27px;
+            }
+
+            .categories__itemIcon {
+                color: $color-hover;
+                font-size: 12px;
+                margin-right: 10px;
+            }
+
+        }
+
+        .categories__itemContainsNumber {
+            @include displayFlex(center);
+            width: 30px;
+            height: 30px;
+            background-color: $color-white;
+            border-radius: 7px;
+
+            .categories__itemNumber {
+                font-size: 12px;
+            }
+
+        }
+
     }
-    &__item-icon {
-        color: $color-hover;
-        font-size: 12px;
-        margin-right: 10px;
-    }
-    &__containNumber {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        background-color: $color-white;
-        border-radius: 7px;
-    }
-    &__text {
-        font-size: 17px;
-        line-height: 27px;
-    }
-    &__number {
-        font-size: 12px;
-    }
+
 }
 
 .recentPost {
+
     &__listItem {
         display: flex;
-    }
-    &__containImages {
-        width: 85px;
-        height: 85px;
-        overflow: hidden;
-    }
-    &__image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 7px;
-    }
-    &__containText {
-        flex: 1;
-        margin-left: 20px;
-    }
-    &__link {
-        color: $color-purple;
-        transition: color 0.5s ease;
-        &:hover {
-            text-decoration: none;
-            color: $color-hover;
+
+        .recentPost__itemContainsImages {
+            width: 85px;
+            height: 85px;
+            overflow: hidden;
+
+            .recentPost__itemImage {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 7px;
+            }
+
         }
+
+        .recentPost__itemContainsText {
+            flex: 1;
+            margin-left: 20px;
+
+            .recentPost__itemLink {
+                color: $color-purple;
+                transition: color 0.5s ease;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-hover;
+                }
+
+            }  
+
+            .recentPost__itemTitle {
+                font-size: 17px;
+                transition: color 0.5 ease;
+            }
+        } 
+
     }
-    &__title {
-        font-size: 17px;
-        transition: color 0.5 ease;
-    }
+
 }
+
 .twitter {
-    &__link {
-        display: flex;
-        justify-content: space-between;
-        color: $color-purple;
-        transition: color 0.5s ease;
-        &:hover {
-            color: $color-hover;
+
+    &__listItem {
+
+        .twitter__itemLink {
+            @include displayFlex(space-between);
+            align-items: flex-start;
+            color: $color-purple;
+            transition: color 0.5s ease;
             text-decoration: none;
+
+            &:hover {
+                color: $color-hover;
+            }
+
+            .twitter__itemLinkImage {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;  
+            }
+
+            .twitter__itemLinkTitle {
+                font-size: 17px;
+                line-height: 27px;
+                margin-left: 20px;
+            }  
+
         }
-    }
-    &__image {
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
-    }
-    &__title {
-        font-size: 17px;
-        line-height: 27px;
-        margin-left: 20px;
+
     }
 }
 
 .gallery {
-    &__image {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 7px;
+    
+    &__item {
+
+        .gallery__itemImage {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+
     }
 }
 
@@ -139,75 +188,141 @@
     &__list {
        @include displayFlex(left);
         flex-wrap: wrap;
-    }
-    &__item {
-        margin-top: 20px;
-    }
-    &__item-link {
-        @include displayFlex(center);
-        padding: 10px 25px;
-        background-color: $color-white;
-        color: $color-purple;
-        border-radius: 7px;
-        transition: all 0.5s ease;
-        opacity: 0.9;
-        margin-right: 10px;
-        &:hover {
-            color: $color-white;
-            background-color: $color-hover;
-            text-decoration: none
+
+        .tags__item {
+            margin-top: 20px;
         }
-    }
-    &__text {
-        font-size: 16px;
-        margin: 0;
+
+        .tags__itemLink {
+            @include displayFlex(center);
+            padding: 10px 25px;
+            background-color: $color-white;
+            color: $color-purple;
+            border-radius: 7px;
+            transition: all 0.5s ease;
+            opacity: 0.9;
+            margin-right: 10px;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-hover;
+                text-decoration: none
+            }
+
+            .tags__itemLinkText {
+                font-size: 16px;
+                margin: 0;
+            }
+
+        }
+
     }
 }
 
 .post {
-    &__image {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 7px;
-    }
-    &__containDate {
-        @include displayFlex(left);
-        margin: 20px 0px 0px 0px;
-    }
-    &__dateText {
-        color: $color-border;
-    }
-    &__dateLink {
-        color: $color-hover;
-        transition: all 0.5s ease;
-        margin-left: 5px;
-        @include font-text1();
-        &:hover {
-            color: $color-hover-green;
-            text-decoration: none;
+
+
+    &__item {
+
+        .post__itemLinkImage {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 7px;
+
+            &:hover {
+
+                .post__itemLinkBox {
+                    transform: translateX(42%) rotate(45deg);
+                    opacity: 1;
+                }
+                
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            .post__itemLinkBox {
+                position: absolute;
+                width: 150px;
+                height: 50px;
+                background-color: $color-hover;
+                z-index: 1;
+                transform: translateX(100%) rotate(45deg);
+                top: 0;
+                right: 0;
+                opacity: 0;
+                transition: transform 0.5s ease  , opacity 0.5s ease;
+                color:$color-white;
+                @include displayFlex(center);
+            }
+            
+            .post__itemLinkBoxIcon {
+                transform: rotate(-45deg);
+                margin-right: 20px;
+            }
+
+            .post__itemImage {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 7px;
+            }
+    
         }
-    }
-    &__containTitle {
-        &:hover {
-            text-decoration: none;
+        .post__itemContainsDate {
+            @include displayFlex(left);
+            margin-top: 20px;
+
+            .post__itemContainsDateText {
+                color: $color-border;
+            }
+
+            .post__itemContainsDateLink {
+                color: $color-hover;
+                transition: all 0.5s ease;
+                margin-left: 5px;
+                @include font-text1();
+
+                &:hover {
+                    color: $color-hover-green;
+                    text-decoration: none;
+                }
+
+            }
         }
-        &:hover .post__title{
-            color: $color-hover;
+
+        .post__itemContainsTitle {
+
+            &:hover {
+                text-decoration: none;
+
+                .post__title{
+                    color: $color-hover;
+                }
+
+            }
+
         }
+
+        .post__itemTitle {
+            color: $color-purple;
+            margin-top: 20px;
+            font-size: 30px;
+            transition: all 0.5s ease;
+        }
+
+
     }
-    &__title {
-        transition: all 0.5s ease;
-        color: $color-purple;
-        margin: 20px 0px 0px 0px;
-        font-size: 30px;
-    }
-    &__containQuote {
+
+    &__itemContainsQuote {
         padding: 30px 0px 30px 30px;
         background-color: $color-white;
         border-radius: 7px;
         position: relative;
         overflow: hidden;
+
         &:before {
             position: absolute;
             content: "";
@@ -217,127 +332,169 @@
             height: 100%;
             background-color: $color-hover;
         }
-    }
-    &__quoteText {
-        font-size: 20px;
-        line-height: 30px;
-        color: $color-purple;
-        font-style: italic;
-        max-width: 90%;
-    }
-    &__quoteName {
-        @include displayFlex(left);
-        color: $color-border;
-        font-style: italic;
-        font-size: 15px;
-    }
-    &__quoteBox {
-        display: inline-block;
-        width: 10px;
-        height: 2px;
-        background-color: $color-border;
-        margin-right: 10px;
-    }
-    &__interestedImage {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 7px;
-    }
-    &__share {
-        margin: 50px 0px;
-    }
-    &__shareTitle {
-        color: $color-purple;
-        font-size: 25px;
-        margin-right: 20px;
-    }
-    &__shareList {
-        @include displayFlex(left);
-    }
-    &__shareListItem {
-        @include displayFlex(center);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-        transition: background-color 0.5s ease;
-        cursor: pointer;
-        i {
+
+        .post__itemContainsQuoteText {
+            font-size: 20px;
+            line-height: 30px;
+            color: $color-purple;
+            font-style: italic;
+            max-width: 90%;
+        }
+
+        .post__itemContainsQuoteName {
+            @include displayFlex(left);
+            color: $color-border;
+            font-style: italic;
             font-size: 15px;
-            color: $color-hover;
-            transition: color 0.5s ease;
         }
-        &:hover {
-            background-color: $color-hover;
+
+        .post__itemContainsQuoteBox {
+            display: inline-block;
+            width: 10px;
+            height: 2px;
+            background-color: $color-border;
+            margin-right: 10px;
         }
-        &:hover i {
-            color: $color-white;
-        }
+
     }
-    &__boxMember {
+    &__itemInterested {
+
+        .post__itemInterestedImage {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+
+    }
+
+    &__itemShare {
+        margin: 50px 0px;
+
+        .post__itemShareTitle {
+            color: $color-purple;
+            font-size: 25px;
+            margin-right: 20px;
+        }  
+        
+        .post__itemShareList {
+            @include displayFlex(left);
+
+            .post__itemShareListItem {
+                @include displayFlex(center);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+                transition: background-color 0.5s ease;
+                cursor: pointer;
+    
+                .post__itemShareIcon {
+                    font-size: 15px;
+                    color: $color-hover;
+                    transition: color 0.5s ease;
+                }
+    
+                &:hover {
+                    background-color: $color-hover;
+    
+                    .post__itemShareIcon {
+                        color: $color-white;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+    &__itemBoxMember {
         background: $color-white;
         padding: 15px 20px;
+
+
         .detail {
             font-size: 18px;
             line-height: 28px;
         }
-    }
-    &__boxMemberImage {
-        width: 100%;
-        height: 170px;
-        border-radius: 7px;
-        object-fit: cover;
-    }
-    &__boxMemberName {
-        color: $color-purple;
-        font-size: 18px;
-    }
-    &__listContact {
-        @include displayFlex(left);
-    }
-    &__contactItem {
-        margin-right: 20px;
-        i {
+
+        .post__itemBoxMemberImage {
+            width: 100%;
+            height: 170px;
+            border-radius: 7px;
+            object-fit: cover;
+        }
+
+        .post__itemBoxMemberName {
             color: $color-purple;
-            transition: color 0.5s ease;
-            opacity: 0.9;
-            &:hover {
-                color: $color-hover;
+            font-size: 18px;
+        }
+
+
+        .post__itemBoxMemberListContact {
+            @include displayFlex(left);
+
+            .post__itemBoxMemberListContactItem {
+                margin-right: 20px;
+
+                 .post__itemBoxMemberListContactItemIcon {
+                    color: $color-purple;
+                    transition: color 0.5s ease;
+                    opacity: 0.9;
+
+                    &:hover {
+                        color: $color-hover;
+                    }
+
+                }
+
             }
-        }
-        .detail {
-            font-size: 17px;
-        }
-    }
-    &__cmtItemImage {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    &__cmtName {
-        font-size: 18px;
-        color: $color-purple;
-    }
-    &__cmtDate {
-        @include displayFlex(space-between);
-    }
-    &__cmtReplyLink {
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    &__cmtReply {
-        color: $color-hover;
-        font-size: 17px;
-        transition: color 0.5s ease;
-        &:hover {
-            color: $color-hover-green;
 
         }
     }
+
+    &__cmtItem {
+
+        .post__cmtItemImage {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .post__cmtItemName {
+            font-size: 18px;
+            color: $color-purple;
+        }
+
+        .post__cmtItemDate {
+            @include displayFlex(space-between);
+
+            .post__cmtItemDateText {
+                color: $color-border;
+            }
+
+            .post__cmtItemReplyLink {
+                color: $color-hover;
+                transition: color 0.5s ease;
+
+                &:hover {
+                    color: $color-hover-green;
+                    text-decoration: none;
+        
+                }
+
+                .post__cmtItemReply {
+                    font-size: 17px;
+                }  
+            }
+
+        }
+    }
+
 }
+
 .showSilderPost {
+    overflow: hidden;
     ul {
         width: fit-content;
         @include displayFlex(left);
@@ -384,27 +541,66 @@
         right: 100px;
     }
 }
-@media screen and (max-width: 575px) {
+
+
+@media screen and (max-width: 991px) {
     .content {
-        padding: 20px 0px;
+        padding-top: 60px;
+    }
+    .twitter {
+
+        &__listItem {
+    
+            .twitter__itemLink {
+                @include displayFlex(left);
+    
+                .twitter__itemLinkImage {
+                    margin-left: 20px;
+                } 
+    
+            }
+    
+        }
     }
     .post {
+        &__itemBoxMember {
+            .post__itemBoxMemberImage {
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .content {
+        padding: 40px 0px;
+    }
+
+    .post {
+
         &__containDate {
             margin-top: 10px;
         }
+
         &__title {
             margin-top: 10px;
         }
+
         &__containQuote {
             padding: 15px 0px 15px 15px;
         }
+
         &__share {
            margin: 30px 0px;
         }
+
         &__boxMemberImage {
             height: auto;
         }
+
     }
+
     .showSilderPost {
         ul {
             margin-right: 20px;

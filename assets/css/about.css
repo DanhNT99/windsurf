@@ -16449,9 +16449,28 @@ body {
           transform: translateX(30%);
 }
 
+@-webkit-keyframes showMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem {
   position: relative;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem:after {
@@ -16467,7 +16486,6 @@ body {
   color: #fff;
   opacity: 0.8;
   font-size: 19px;
-  cursor: pointer;
 }
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList .header__bottomMenuListItem .header__bottomMenuListItemLink:hover {
@@ -16570,6 +16588,22 @@ body {
   padding: 7px 0px;
 }
 
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch::placeholder {
+  color: #a3a3a3;
+}
+
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuBtnSearch {
   color: #fff;
   font-size: 18px;
@@ -16602,11 +16636,11 @@ body {
 
 .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuBtnSearch:hover {
   background-color: #0de9df;
-  opacity: 1;
 }
 
 .header__bottom .header__bottomNav .showInput .header__bottomMenuList {
   display: none;
+  opacity: 0;
 }
 
 .header__bottom .header__bottomNav .showInput .header__bottomMenuContainsForm {
@@ -16667,6 +16701,12 @@ body {
   .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuList {
     -webkit-transform: translateX(20%);
             transform: translateX(20%);
+  }
+  .header__bottom .header__bottomNav .header__bottomMenu .header__bottomMenuContainsForm .header__bottomMenuInputSearch {
+    right: 130%;
+  }
+  .header__bottom .header__bottomNav .showInput .header__bottomMenuContainsForm .header__bottomMenuInputSearch {
+    width: 400px;
   }
 }
 
@@ -17061,7 +17101,7 @@ body {
   background-color: rgba(0, 1, 15, 0.6);
 }
 
-.bannerAbout__img-bg {
+.bannerAbout__imageBg {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -17078,25 +17118,25 @@ body {
   max-width: 600px;
 }
 
-.bannerAbout__content-title {
+.bannerAbout__content .bannerAbout__contentTitle {
   color: #fff;
   font-weight: 800;
 }
 
-.bannerAbout__content-title i {
-  margin: 0px 17px;
-  font-size: 12px;
-}
-
-.bannerAbout__content-link {
+.bannerAbout__content .bannerAbout__contentTitle .bannerAbout__contentTitleLink {
   color: #fff;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
-.bannerAbout__content-link:hover {
+.bannerAbout__content .bannerAbout__contentTitle .bannerAbout__contentTitleLink:hover {
   color: #0de9df;
   text-decoration: none;
+}
+
+.bannerAbout__content .bannerAbout__contentTitle .bannerAbout__contentTitleIcon {
+  margin: 0px 17px;
+  font-size: 12px;
 }
 
 .aboutUs {
@@ -17114,7 +17154,7 @@ body {
 }
 
 .lesson {
-  padding: 100px 0px;
+  padding: 80px 0px;
 }
 
 .lesson__image {
@@ -17125,26 +17165,36 @@ body {
   border-radius: 5px;
 }
 
-.lesson__contain-icon i {
-  font-size: 30px;
-  color: #0de9df;
+.lesson__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.lesson__iconImage {
+.lesson__item .lesson__itemContainsIcon .lesson__itemIconImage {
   width: 50px;
   height: 53px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.lesson .iconPost {
+.lesson__item .lesson__itemContainsIcon .iconPost {
   width: 50px;
   height: 47px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.lesson__item-link {
+.lesson__item .lesson__itemContainsText .lesson__itemLink {
   text-decoration: none;
   color: #3b3663;
   font-size: 25px;
@@ -17154,12 +17204,12 @@ body {
   line-height: 35px;
 }
 
-.lesson__item-link:hover {
+.lesson__item .lesson__itemContainsText .lesson__itemLink:hover {
   color: #0de9df;
   text-decoration: none;
 }
 
-.lesson__item-detail {
+.lesson__item .lesson__itemContainsText .lesson__itemDetail {
   color: #3b3663;
   font-size: 18px;
   line-height: 28px;
@@ -17167,27 +17217,27 @@ body {
 
 @media screen and (max-width: 575px) {
   .lesson {
-    padding: 50px 0px;
+    padding: 40px 0px;
   }
 }
 
 .team {
   background-color: #f4f4f4;
-  padding: 100px 0px;
+  padding: 80px 0px;
 }
 
-.team__item-image {
+.team__item .team__itemImage {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-.team__item-image:hover ~ .team__item-link {
+.team__item .team__itemImage:hover ~ .team__item-link {
   color: #0de9df;
   text-decoration: none;
 }
 
-.team__item-link {
+.team__item .team__itemLink {
   text-decoration: none;
   color: #3b3663;
   font-size: 19px;
@@ -17195,20 +17245,16 @@ body {
   transition: color 0.5s ease;
 }
 
-.team__item-link:hover {
+.team__item .team__itemLink:hover {
   color: #0de9df;
   text-decoration: none;
 }
 
-.team__item-detail {
+.team__item .team__itemDetail {
   color: #a3a3a3;
 }
 
-.team__contact-item a {
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  background-color: #111;
+.team__item .team__listContact .team__contactItem .team__contactItemLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17218,19 +17264,23 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: #111;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   text-decoration: none;
 }
 
-.team__contact-item a i {
-  color: #fff;
-  font-size: 15px;
-}
-
-.team__contact-item a:hover {
+.team__item .team__listContact .team__contactItem .team__contactItemLink:hover {
   background-color: #0de9df;
   text-decoration: none;
+}
+
+.team__item .team__listContact .team__contactItem .team__contactItemLink .team__contactItemIcon {
+  color: #fff;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 575px) {
@@ -17240,15 +17290,24 @@ body {
 }
 
 .evaluate {
-  padding: 100px 0px;
+  padding: 80px 0px;
 }
 
-.evaluate__item-text {
+.evaluate__listItem .evaluate__itemText {
   font-size: 17px;
   color: #3b3663;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.evaluate__box {
+.evaluate__listItem .evaluate__itemBox {
   width: 100%;
   height: 6px;
   background-color: #f4f4f4;
@@ -17257,36 +17316,45 @@ body {
   overflow: hidden;
 }
 
-.evaluate__box:after {
+.evaluate__listItem .evaluate__itemBox:after {
   content: "";
   position: absolute;
   height: 100%;
+  width: 0;
   top: 0px;
   left: 0px;
   background-color: #0de9df;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
 }
 
-.evaluate__surfing .evaluate__item-text {
+.evaluate__listItem .changeSurfing:after {
   width: 80%;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
 }
 
-.evaluate__surfing .evaluate__box:after {
-  width: 80%;
-}
-
-.evaluate__boats .evaluate__item-text {
+.evaluate__listItem .changeBoats:after {
   width: 95%;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
 }
 
-.evaluate__boats .evaluate__box:after {
-  width: 95%;
-}
-
-.evaluate__diving .evaluate__item-text {
+.evaluate__listItem .changeDiving:after {
   width: 75%;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
 }
 
-.evaluate__diving .evaluate__box:after {
+.evaluate__surfing .evaluate__itemText {
+  width: 80%;
+}
+
+.evaluate__boats .evaluate__itemText {
+  width: 95%;
+}
+
+.evaluate__diving .evaluate__itemText {
   width: 75%;
 }
 
@@ -17298,7 +17366,7 @@ body {
 
 @media screen and (max-width: 575px) {
   .evaluate {
-    padding: 50px 0px;
+    padding: 40px 0px;
   }
 }
 /*# sourceMappingURL=about.css.map */
