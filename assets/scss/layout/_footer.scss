@@ -17,11 +17,9 @@
         }
 
         .footer__contactItemLink {
-            color: $color-border;
-            opacity: 0.8;
-            font-size: 18px;
+            color: $color-white;
             transition: all 0.5s ease;
-    
+            
             &:hover {
                 color: $color-white;
                 opacity: 1;

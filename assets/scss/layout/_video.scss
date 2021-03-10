@@ -71,22 +71,23 @@
         z-index: 998;
         opacity: 0;
         .video__overlayClipBtnClose {
-                position: absolute;
-                right: 20px;
-                top: 20px;
-                background-color: transparent;
-                border: none !important;
-                outline: none !important;
-                i {
-                    color: $color-white;
-                    @include font-text1();
-                    transition: all 0.5s ease;
-                    opacity: 0.6;
-                    &:hover {
-                        font-size: 30px;
-                        opacity: 1;
-                    }
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: transparent;
+            border: none !important;
+            outline: none !important;
+            i {
+                color: $color-white;
+                @include font-text1();
+                transition: all 0.5s ease;
+                opacity: 0.6;
+                &:hover {
+                    font-size: 30px;
+                    opacity: 1;
                 }
+            }
         }
     }
 
@@ -110,6 +111,13 @@
         &__right {
             height: 300px;
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .video {
+        padding: 40px 0px;
     }
 }
 

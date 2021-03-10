@@ -3,13 +3,31 @@
     padding: 80px 0px;
 
     &__item{
+        position: relative;
+        height: 323px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: $color-hover;
+            background-clip: content-box;
+            z-index: 1;
+            padding: 1px 16px;
+            border-radius: 8px;
+        }
 
         .abilities__itemBox {
+            position: absolute;
             padding: 50px 40px;
-            border-radius: 5px;
             transition: all 0.7s ease;
-
+            z-index: 2;
+            background-color: $bg-grey;
             &:hover {
+                transform: translate(-30px, -30px);
                 background-color: $color-white;
                 box-shadow: 0px 0px 5px 3px rgba($color: $bg-black, $alpha: 0.1);
             }
@@ -43,14 +61,23 @@
     }
 
 }
+
 @media screen and (max-width: 1199px) {
     
     .abilities {
 
         &__item{
+            position: static;
+            height: fit-content;
+
+            &::after {
+                display: none;
+            }
 
             .abilities__itemBox {
-
+                position: static;
+                padding: 10px 10px;
+                
                 .abilites__itemTitle {
                     font-size: 22px;
                     line-height: 32px;
@@ -63,18 +90,46 @@
     }
 
 }
+
+@media screen and (max-width: 991px) {
+    .abilities {
+
+        &__item {
+            height: 200px;
+            
+            .abilities__itemBox {
+                padding: 10px 40px;
+                
+                &:hover {
+                    transform: translate(0, 0);
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+            
+        }
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .abilities {
+        padding: 40px 0px;
+    }
+}
+
 @media screen and (max-width: 575px) {
 
     .abilities {
-        padding: 40px 0px;
+
 
         &__item{
 
             background-clip: content-box;
-            
-            .abilities__itemBox {
-                padding: 10px 40px;
-            }
             
         }
     }

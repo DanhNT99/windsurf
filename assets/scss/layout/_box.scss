@@ -1,7 +1,7 @@
 .box {
     padding: 80px 0px;
 
-    .box__rightContainsImage {
+    &__rightContainsImage {
 
         .box__rightImage{
             max-width: 100%;
@@ -38,6 +38,22 @@
     }
 
 }
+
+@media screen and (max-width: 767px) {
+    
+    .box {
+        padding: 40px 0px;
+        &__rightContainsImage {
+           height: auto;
+
+           .box__rightImage {
+               height: 300px;
+           }
+
+        }
+    }
+} 
+
 @media screen and(max-width: 480px) {
 
     .box {

@@ -92,17 +92,18 @@
                     }
                 }
 
-                .header__bottomMenuContainsForm {
+            }
+            
+            .header__bottomMenuContainsForm {
                     
-                    .header__bottomMenuBtnSearch  {
-                        color: $color-purple;
-                        border: 1px solid $color-purple;
+                .header__bottomMenuBtnSearch  {
+                    color: $color-purple;
+                    border: 1px solid $color-purple;
 
-                        &:hover {
-                            color: $color-white;
-                            background-color: $color-hover;
-                            border-color: transparent;
-                        }
+                    &:hover {
+                        color: $color-white;
+                        background-color: $color-hover;
+                        border-color: transparent;
                     }
                 }
             }

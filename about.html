@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Windsurf - About</title>
   <link rel="stylesheet" href="assets/css/about.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/iconLogo.png" />
+  <link rel="icon" type="image/x-icon" href="assets/images/iconLogo.png" />
+
 </head>
 
 <body>
-  <!-- header -->
-  <header class="header">
+  
+   <!-- header -->
+   <header class="header">
 
     <div class="header__top container">
       <div class="row">
@@ -57,18 +62,21 @@
       <div class="container">
         
         <nav class="header__bottomNav">
+
+          <!-- header icon nav-bar -->
+          <div class="header__bottomBtnBar">
+            <i class="fas fa-bars show"></i>
+            <i class="fas fa-times close"></i>
+       
+          </div>
+          <!-- end -->
+
           <!-- header logo -->
           <a class="header__bottomLogo" href="home.html" title="Chuyển qua trang Home">
             <img src="assets/images/iconLogo.png" class="header__bottomLogoImg" alt="logo">Windsurf
           </a>
           <!-- end -->
 
-          <!-- header icon nav-bar -->
-          <div class="header__bottomBtnBar">
-            <i class="fas fa-bars show"></i>
-            <i class="fas fa-times close"></i>
-          </div>
-          <!-- end -->
 
           <!-- header menu-->
           <div class="header__bottomMenu">
@@ -80,7 +88,7 @@
               </li>
 
               <li class="header__bottomMenuListItem  mt-lg-0">
-                <a class="header__bottomMenuListItemLink active" href="about.html" title="About">About</a>
+                <a class="header__bottomMenuListItemLink  active" href="about.html" title="About">About</a>
               </li>
 
               <li class="header__bottomMenuListItem mt-lg-0 ">
@@ -152,22 +160,23 @@
               </li>
               
             </ul>
+          </div>
 
-            <div class="header__bottomMenuContainsForm">
-              <form action="">
-                <button type="button" class="header__bottomMenuBtnSearch">
-                  <i class="fas fa-search header__bottomMenuBtnSearchIcon"></i>Search
-                </button>
-                <input type="text" name="search" placeholder="Nhập vào nội dung cần tìm..." class="header__bottomMenuInputSearch">
-              </form>
-            </div>
+          <div class="header__bottomMenuContainsForm">
+            <form action="">
+              <input type="text" name="search" placeholder="Nhập vào nội dung cần tìm..." class="header__bottomMenuInputSearch">
+              <button type="button" class="header__bottomMenuBtnSearch">
+                <i class="fas fa-search header__bottomMenuBtnSearchIcon"></i>Search
+              </button>
+            </form>
           </div>
           <!-- end -->
 
           <div class="header__bottomIcon">
-            <i class="far fa-moon icon-moon"></i>
-            <i class="fas fa-sun icon-sun"></i>
+            <i class="fas fa-search header__bottomMenuBtnSearchIcon"></i>
+            <i class="fas fa-times close"></i>
           </div>
+          
         </nav>
       </div>
     </div>
@@ -177,336 +186,544 @@
 
   <!-- banner -->
   <section class="bannerAbout">
-    <img src="assets/images/banner1.jpg" class="bannerAbout__img-bg" alt="">
-    <div class="container">
+
+    <img src="assets/images/banner1.jpg" class="bannerAbout__imageBg" alt="">
+
       <div class="bannerAbout__content m-auto">
-        <p class="bannerAbout__content-title text-center">
-          <a href="home.html" class="bannerAbout__content-link">Home</a><i class="fas fa-arrow-right"></i><span>About</span>
+
+        <p class="bannerAbout__contentTitle text-center">
+
+          <a href="home.html" class="bannerAbout__contentTitleLink" title = "home">Home</a><i class="fas fa-arrow-right bannerAbout__contentTitleIcon"></i><span>About</span>
+
         </p>
+
       </div>
-    </div>
+
   </section>
   <!-- end banner -->
 
   <!-- about us -->
   <section class="aboutUs">
+
     <div class="container">
+
       <h3 class="sub">About Us</h3>
+
       <h2 class="title">Enjoy life, one wave at a time</h2>
-      <div class="row my-3 my-sm-5">
+
+      <div class="row my-3 my-lg-5">
+
         <div class="col-12 col-lg-6">
+          
           <p class="detail my-0">
             Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga, suscipit totam animi
             consequatur saepe blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
             consectetur adipisicing elit. Fuga, suscipit totam animi consequatur saepe blanditiis.
           </p>
+
         </div>
+
         <div class="col-12 col-lg-6 pl-lg-5">
+
           <p class="detail my-0">
             Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga, suscipit totam animi
             consequatur saepe blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
             consectetur adipisicing elit. Fuga, suscipit totam animi consequatur saepe blanditiis.
           </p>
+
         </div>
+
       </div>
-      <a href="#" class="btnLink btn btn-style mt-2 mt-sm-0">Learn More</a>
+
+      <a href="#" class="btnLink btn btn-style mt-2 mt-sm-0" title = "learn More">Learn More</a>
+      
     </div>
+
   </section>
   <!-- end about us -->
 
   <!-- lesson -->
   <section class="lesson">
+
     <div class="container">
+
       <h3 class="sub text-center">WHAT WE DO</h3>
+
       <h3 class="title text-center">Our Lessons</h3>
-      <div class="row mt-3 mt-sm-5">
+
+      <!-- lesson content -->
+      <div class="row mt-3 mt-md-5">
+
+        <!-- lesson on the left -->
         <div class="col-lg-6">
+
           <img src="assets/images/about1.jpg" class="lesson__image" alt="">
+
         </div>
-        <div class="col-lg-6 mt-3 mt-sm-5 mt-lg-0">
+        <!-- end left -->
+
+
+        <!-- lesson on the right -->
+        <div class="col-lg-6 mt-3 mt-md-5 mt-lg-0">
+
+          <!-- lesson list -->
           <ul class="lesson__list m-0">
-            <li class="lesson__item d-flex">
-              <span class="lesson__contain-icon mr-4">
-                <img src="assets/images/iconBook.png" class="lesson__iconImage" alt="book">
+
+            <!-- lesson list item -->
+            <li class="lesson__item">
+
+              <span class="lesson__itemContainsIcon mr-4">
+
+                <img src="assets/images/iconBook.png" class="lesson__itemIconImage" alt="book">
+
               </span>
-              <span lcass="lesson__contain-text">
-                <a href="#" class="lesson__item-link">
+
+              <span class="lesson__itemContainsText">
+
+                <a href="#" class="lesson__itemLink" title = "Lesson for Kids">
+
                   <h4>Lessons for Kids</h4>
+
                 </a>
-                <p class="lesson__item-detail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
+
+                <p class="lesson__itemDetail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
                   optio consectetur adipisicing.</p>
+
               </span>
+
             </li>
-            <li class="lesson__item d-flex my-3 my-sm-5">
-              <span class="lesson__contain-icon mr-4">
-                <img src="assets/images/iconSitemap.png" class="lesson__iconImage" alt="book">
+            <!-- end -->
+
+            <!-- lesson list item -->
+            <li class="lesson__item my-3 my-md-5">
+
+              <span class="lesson__itemContainsIcon mr-4">
+
+                <img src="assets/images/iconSitemap.png" class="lesson__itemIconImage" alt="site map">
+
               </span>
-              <span lcass="lesson__contain-text">
-                <a href="#" class="lesson__item-link">
+
+              <span class="lesson__itemContainsText">
+
+                <a href="#" class="lesson__itemLink" title = "Group Lessons">
+                  
                   <h4>Group Lessons</h4>
+                  
                 </a>
-                <p class="lesson__item-detail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
+
+                <p class="lesson__itemDetail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
                   optio consectetur adipisicing.</p>
+
               </span>
+
             </li>
-            <li class="lesson__item d-flex">
-              <span class="lesson__contain-icon mr-4">
-                <img src="assets/images/iconPostCard.png" class="lesson__iconImage iconPost" alt="Post card">
+            <!-- end -->
+
+            <!-- lesson list item -->
+            <li class="lesson__item">
+
+              <span class="lesson__itemContainsIcon mr-4">
+
+                <img src="assets/images/iconPostCard.png" class="lesson__itemIconImage iconPost" alt="Post card">
+
               </span>
-              <span lcass="lesson__contain-text">
-                <a href="#" class="lesson__item-link">
+
+              <span class="lesson__itemContainsText">
+
+                <a href="#" class="lesson__itemLink" title  = "Private Lessons">
+
                   <h4>Private Lessons</h4>
+
                 </a>
-                <p class="lesson__item-detail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
+
+                <p class="lesson__itemDetail m-0">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi
                   optio consectetur adipisicing.</p>
+
               </span>
+
             </li>
+            <!-- end -->
 
           </ul>
+          <!-- end list -->
+          
         </div>
+        <!-- end right -->
+
       </div>
+      <!-- end content -->
+
     </div>
+
   </section>
   <!-- end lesson -->
 
   <!-- team -->
   <section class="team">
+
     <div class="container">
+
       <h3 class="sub text-center">OUR TEAM</h3>
+
       <h3 class="title text-center">Aswesome Team</h3>
-      <div class="row mt-3 mt-sm-5">
-        <div class=" col-12 col-lg-3 mb-4 mb-lg-0">
-          <img src="assets/images/member1.jpg" class="team__item-image mb-4" alt="">
-          <a href="#" class="team__item-link text-center">
-            <h4 class="team__item-name">Lyn Victor</h4>
+
+      <div class="row containSliderTeam showSliderTeam mt-3 mt-sm-5">
+
+        <!-- team item -->
+        <div class="col-sm-6 col-lg-3 team__item text-center mb-4 mb-lg-0">
+
+          <a href = "#" title = "Lyn Victor" class="team__itemContainImage">
+           <img src="assets/images/member1.jpg" class="team__itemImage mb-4" alt="picture item team">
           </a>
-          <p class="team__item-detail text-center">Surf Teacher</p>
-          <ul class="team__contact  mt-2 mt-lg-4 p-0 d-flex justify-content-center">
-            <li class="team__contact-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="team__contact-item mx-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="team__contact-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+          
+          <a href="#" class="team__itemLink text-center">
+
+            <h4 class="team__itemName">Lyn Victor</h4>
+
+          </a>
+
+          <p class="team__itemDetail text-center">Surf Teacher</p>
+
+          <ul class="team__listContact  mt-2 mt-lg-4 p-0 d-flex justify-content-center">
+
+            <li class="team__contactItem"><a href="#" class="team__contactItemLink" title = "facebook"><i class="team__contactItemIcon fab fa-facebook-f"></i></a></li>
+
+            <li class="team__contactItem mx-3"><a href="#" class="team__contactItemLink" title = "twitter"><i class="team__contactItemIcon fab fa-twitter"></i></a></li>
+
+            <li class="team__contactItem"><a href="#" class="team__contactItemLink" title = "instagram"><i class="team__contactItemIcon fab fa-instagram"></i></a></li>
+
+          </ul>
+
+        </div>
+        <!-- end item -->
+
+        <!-- team item -->
+        <div class="col-sm-6 col-lg-3 team__item text-center mb-4 mb-lg-0">
+
+         <a href="#" title = "Meyer Willson" class="team__itemContainImage">
+          <img src="assets/images/member2.jpg" class="team__itemImage mb-4" alt="picture item team">
+         </a> 
+
+          <a href="#" class="team__itemLink text-center">
+
+            <h4 class="team__itemName">Meyer Willson</h4>
+
+          </a>
+
+          <p class="team__itemDetail text-center">Surf Teacher</p>
+
+          <ul class="team__listContact mt-2 mt-lg-4  p-0 d-flex justify-content-center">
+
+            <li class="team__contactItem">
+
+              <a href="#" class="team__contactItemLink" title = "facebook"><i class="team__contactItemIcon fab fa-facebook-f"></i></a>
+
+            </li>
+
+            <li class="team__contactItem mx-3">
+              <a href="#" class="team__contactItemLink" title  = "twitter"><i class="team__contactItemIcon fab fa-twitter"></i></a>
+            </li>
+
+            <li class="team__contactItem">
+
+              <a href="#" class="team__contactItemLink" title = "instagram"><i class="team__contactItemIcon fab fa-instagram"></i></a>
+            </li>
+
+          </ul>
+          
+        </div>
+        <!-- end item -->
+
+        <!-- team item -->
+        <div class="col-sm-6 col-lg-3 team__item text-center mb-4  mb-lg-0 ">
+
+         <a href="#" title = "Lyn Meyer" class="team__itemContainImage">
+          <img src="assets/images/member3.jpg" class="team__itemImage mb-4" alt="picture item team">
+         </a> 
+
+          <a href="#" class="team__itemLink text-center">
+            <h4 class="team__itemName">Lyn Meyer</h4>
+          </a>
+
+          <p class="team__itemDetail text-center">Surf Teacher</p>
+
+          <ul class="team__listContact mt-2 mt-lg-4  p-0 d-flex justify-content-center">
+            
+            <li class="team__contactItem">
+              <a href="#" class="team__contactItemLink" title = "facebook">
+                <i class="team__contactItemIcon fab fa-facebook-f"></i>
+              </a>
+            </li>
+
+            <li class="team__contactItem mx-3">
+
+              <a href="#" class="team__contactItemLink" title  = "twitter">
+                <i class="team__contactItemIcon fab fa-twitter"></i>
+              </a>
+
+            </li>
+
+            <li class="team__contactItem">
+
+              <a href="#" class="team__contactItemLink" title = "instagram">
+                <i class="team__contactItemIcon fab fa-instagram"></i>
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+        <!-- end item -->
+
+        <!-- team item -->
+        <div class="col-sm-6 col-lg-3 team__item text-center mb-4  mb-lg-0 ">
+
+         <a href="#" title = "Sam Mills" class="team__itemContainImage">
+           <img src="assets/images/member4.jpg" class="team__itemImage mb-4" alt="picture item team">
+          </a> 
+
+          <a href="#" class="team__itemLink text-center">
+            <h4 class="team__itemName">Sam Mills</h4>
+          </a>
+
+          <p class="team__itemDetail text-center">Surf Teacher</p>
+
+          <ul class="team__listContact mt-2 mt-lg-3  p-0 d-flex justify-content-center">
+            <li class="team__contactItem"><a href="#" class="team__contactItemLink" title = "facebook"><i class="team__contactItemIcon fab fa-facebook-f"></i></a></li>
+            <li class="team__contactItem mx-3"><a href="#" class="team__contactItemLink" title  = "twitter"><i class="team__contactItemIcon fab fa-twitter"></i></a></li>
+            <li class="team__contactItem"><a href="#" class="team__contactItemLink" title = "instagram"><i class="team__contactItemIcon fab fa-instagram"></i></a></li>
           </ul>
         </div>
-        <div class=" col-12 col-lg-3 mb-4 mb-lg-0">
-          <img src="assets/images/member2.jpg" class="team__item-image mb-4" alt="">
-          <a href="#" class="team__item-link text-center">
-            <h4 class="team__item-name">Meyer Willson</h4>
-          </a>
-          <p class="team__item-detail text-center">Surf Teacher</p>
-          <ul class="team__contact mt-2 mt-lg-4  p-0 d-flex justify-content-center">
-            <li class="team__contact-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="team__contact-item mx-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="team__contact-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-        <div class=" col-12 col-lg-3 mb-4  mb-lg-0 ">
-          <img src="assets/images/member3.jpg" class="team__item-image mb-4" alt="">
-          <a href="#" class="team__item-link text-center">
-            <h4 class="team__item-name">Lyn Meyer</h4>
-          </a>
-          <p class="team__item-detail text-center">Surf Teacher</p>
-          <ul class="team__contact mt-2 mt-lg-4  p-0 d-flex justify-content-center">
-            <li class="team__contact-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="team__contact-item mx-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="team__contact-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-        <div class=" col-12 col-lg-3 mb-4  mb-lg-0 ">
-          <img src="assets/images/member4.jpg" class="team__item-image mb-4" alt="">
-          <a href="#" class="team__item-link text-center">
-            <h4 class="team__item-name">Sam Mills</h4>
-          </a>
-          <p class="team__item-detail text-center">Surf Teacher</p>
-          <ul class="team__contact mt-2 mt-lg-3  p-0 d-flex justify-content-center">
-            <li class="team__contact-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="team__contact-item mx-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="team__contact-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
+        <!-- end item -->
+
       </div>
+
     </div>
+
   </section>
   <!-- end team -->
 
   <!-- evaluate(đánh giá) -->
   <section class="evaluate">
+
     <div class="container">
+
       <div class="row">
+
+        <!-- evaluate on the left -->
         <div class="col-lg-6 pr-lg-5">
+
           <h3 class="sub">WINDSURFING</h3>
+
           <h3 class="title">Surfing is not a sport, it’s a life style</h3>
+
           <p class="detail">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula.
             Semper at, ipsum dolor sit amet elit. Non quae, fugiat ad.</p>
-          <div class="evaluate__contain">
-            <ul class="evaluate__list p-0 mt-3 mt-sm-5">
-              <li class="evaluate__list-item evaluate__surfing">
-                <h3 class="evaluate__item-text d-flex justify-content-between">
-                  Surfing
-                  <span>80%</span>
+
+            <!-- evaluate list -->
+            <ul class="evaluate__list p-0 mt-3 mt-md-5">
+
+              <!-- evaluate item -->
+              <li class="evaluate__listItem  evaluate__surfing">
+
+                <h3 class="evaluate__itemText">
+
+                  Surfing <span>80%</span>
+
                 </h3>
-                <div class="evaluate__box"></div>
+
+                <div class="evaluate__itemBox"></div>
+
               </li>
-              <li class="evaluate__list-item evaluate__boats my-4">
-                <h3 class="evaluate__item-text d-flex justify-content-between">
-                  Boats
-                  <span>95%</span>
+              <!-- end-->
+
+                <!-- evaluate item -->
+              <li class="evaluate__listItem evaluate__boats my-4">
+
+                <h3 class="evaluate__itemText">
+
+                  Boats <span>95%</span>
+
                 </h3>
-                <div class="evaluate__box"></div>
+
+                <div class="evaluate__itemBox"></div>
+
               </li>
-              <li class="evaluate__list-item evaluate__diving">
-                <h3 class="evaluate__item-text d-flex justify-content-between">
-                  Diving
-                  <span>75%</span>
+              <!-- end -->
+
+              <!-- evaluate item -->
+              <li class="evaluate__listItem evaluate__diving">
+
+                <h3 class="evaluate__itemText">
+
+                  Diving <span>75%</span>
+
                 </h3>
-                <div class="evaluate__box"></div>
+
+                <div class="evaluate__itemBox"></div>
+
               </li>
+              <!-- end -->
+
             </ul>
-          </div>
+            <!-- end list -->
+
         </div>
+        <!-- end left -->
+
+        <!-- evaluate on the right contians image -->
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <img src="assets/images/about2.jpg" class="evaluate__image" alt="">
+
+          <img src="assets/images/about2.jpg" class="evaluate__image" alt="picture evaluate">
+
         </div>
+        <!-- end right -->
+
       </div>
+
     </div>
+
   </section>
   <!-- end valuate -->
 
-   <!-- footer -->
-   <section class="footer mb-lg-5">
+  <!-- footer -->
+  <section class="footer">
 
-    <!-- footer main -->
-    <div class="container">
-
-      <div class="row py-5">
-
-        <!-- contact information -->
-        <div class="col-lg-6">
-
-          <h3 class="footer__title mb-4">Contact information</h3>
-
-          <!-- list contact Text -->
-          <ul class="footer__listContactText p-0">
-
-            <!-- contact text item -->
-            <li class="footer__listContactTextItem">
-
-              <p class="footer__contactTextItemTitle">Address: #135 block, Barnard St. Brooklyn, London 10036, UK</p>
-
-            </li>
+      <!-- footer main -->
+      <div class="container">
+  
+        <div class="row py-5">
+  
+          <!-- contact information -->
+          <div class="col-lg-6">
+  
+            <h3 class="footer__title mb-4">Contact information</h3>
+  
+            <!-- list contact Text -->
+            <ul class="footer__listContactText p-0">
+  
+              <!-- contact text item -->
+              <li class="footer__listContactTextItem">
+  
+                <p class="footer__contactTextItemTitle">Address: #135 block, Barnard St. Brooklyn, London 10036, UK</p>
+  
+              </li>
+              <!-- end -->
+  
+              <!-- contact text item -->
+              <li class="footer__listContactTextItem my-2">
+  
+                <p class="footer__contactTextItemTitle">Phone: <a href="tel:0374167657" class="footer__contactItemLink" title = "0374167657">0374167657</a></p>
+  
+              </li>
+              <!-- end -->
+  
+              <!-- contact text item -->
+              <li class="footer__listContactTextItem">
+  
+                <p class="footer__contactTextItemTitle">Email: <a href="mailto:danh.nt.dev@gmail.com" class="footer__contactItemLink" title = "email">danh.nt.dev@gmail.com</a></p>
+  
+              </li>
+              <!-- end -->
+              
+            </ul>
             <!-- end -->
-
-            <!-- contact text item -->
-            <li class="footer__listContactTextItem my-2">
-
-              <p class="footer__contactTextItemTitle">Phone: <a href="tel:0374167657" class="footer__contactItemLink">0374167657</a></p>
-
-            </li>
+  
+            <!-- list contact icon -->
+            <ul class="footer__listContactIcon p-0 d-flex">
+  
+              <li class="mr-3 footer__listContactIconItem ">
+                <a href="#" title = "facebook"><i class="fab fa-facebook-f footer__contactIconItemIcon"></i></a>
+              </li>
+  
+              <li class="mr-3 footer__listContactIconItem">
+                <a href="#" title = "twitter"><i class="fab fa-twitter footer__contactIconItemIcon"></i></a>
+              </li>
+  
+              <li class="mr-3 footer__listContactIconItem">
+                <a href="#" title = "dribbble"><i class="fab fa-dribbble footer__contactIconItemIcon"></i></a>
+              </li>
+  
+              <li class="footer__listContactIconItem">
+                <a href="#" title = "goolge" ><i class="fab fa-google footer__contactIconItemIcon"></i></a>
+              </li>
+  
+            </ul>
             <!-- end -->
-
-            <!-- contact text item -->
-            <li class="footer__listContactTextItem">
-
-              <p class="footer__contactTextItemTitle">Email: <a href="mailto:danh.nt.dev@gmail.com" class="footer__contactItemLink">danh.nt.dev@gmail.com</a></p>
-
-            </li>
-            <!-- end -->
-            
-          </ul>
-          <!-- end -->
-
-          <!-- list contact icon -->
-          <ul class="footer__listContactIcon p-0 d-flex">
-
-            <li class="mr-3 footer__listContactIconItem ">
-              <a href="#"><i class="fab fa-facebook-f footer__contactIconItemIcon"></i></a>
-            </li>
-
-            <li class="mr-3 footer__listContactIconItem">
-              <a href="#"><i class="fab fa-twitter footer__contactIconItemIcon"></i></a>
-            </li>
-
-            <li class="mr-3 footer__listContactIconItem">
-              <a href="#"><i class="fab fa-dribbble footer__contactIconItemIcon"></i></a>
-            </li>
-
-            <li class="footer__listContactIconItem">
-              <a href="#"><i class="fab fa-google footer__contactIconItemIcon"></i></a>
-            </li>
-
-          </ul>
-          <!-- end -->
-
-        </div>
-        <!-- end contact -->
-
-        <div class="col-lg-6 mt-3 mt-lg-0">
-
-          <div class="row">
-            <!-- div contains menu -->
-            <div class="col-sm-4">
-
-              <h3 class="footer__title mb-4">Company</h3>
-
-              <!-- footer menu -->
-              <ul class="footer__menu p-0">
-
-                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="about.html" title="About Us">About Us</a></li>
-
-                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="blogPost.html" title="Blog Posts">Blog Posts</a></li>
-
-                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="services.html" title="Services">Services</a></li>
-
-                <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="#" title="Princing">Pricing</a></li>
-
-              </ul>
-              <!-- end menu -->
-
-            </div>
-            <!-- end -->
-
-            <!-- div contains fanpage -->
-            <div class="col-12 col-sm-8 mt-3 mt-lg-0">
-
-              <div class="fb-page footer__fanpage" data-href="https://www.facebook.com/windsurfff" data-tabs="timeline"
-                data-width="400px" data-height="300px" data-small-header="true" data-adapt-container-width="true"
-                data-hide-cover="false" data-show-facepile="true">
-
-                <blockquote cite="https://www.facebook.com/windsurfff" class="fb-xfbml-parse-ignore"><a
-                    href="https://www.facebook.com/windsurfff">Windsurf</a></blockquote>
-
-              </div>
-
-            </div>
-            <!-- end -->
-            
+  
           </div>
-
+          <!-- end contact -->
+  
+          <div class="col-lg-6 mt-3 mt-lg-0">
+  
+            <div class="row">
+  
+              <!-- div contains menu -->
+              <div class="col-sm-4">
+  
+                <h3 class="footer__title mb-4">Company</h3>
+  
+                <!-- footer menu -->
+                <ul class="footer__menu p-0">
+  
+                  <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="about.html" title="About Us">About Us</a></li>
+  
+                  <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="blogPost.html" title="Blog Posts">Blog Posts</a></li>
+  
+                  <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="services.html" title="Services">Services</a></li>
+  
+                  <li class="mb-2 footer__menuItem"><a class="footer__menuItemLink" href="#" title="Princing">Pricing</a></li>
+  
+                </ul>
+                <!-- end menu -->
+  
+              </div>
+              <!-- end -->
+  
+              <!-- div contains fanpage -->
+              <div class="col-12 col-sm-8 mt-3 mt-lg-0">
+  
+                <div class="fb-page footer__fanpage" data-href="https://www.facebook.com/windsurfff" data-tabs="timeline"
+                  data-width="400px" data-height="300px" data-small-header="true" data-adapt-container-width="true"
+                  data-hide-cover="false" data-show-facepile="true">
+  
+                  <blockquote cite="https://www.facebook.com/windsurfff" class="fb-xfbml-parse-ignore"><a
+                      href="https://www.facebook.com/windsurfff">Windsurf</a></blockquote>
+  
+                </div>
+  
+              </div>
+              <!-- end -->
+              
+            </div>
+  
+          </div>
+  
         </div>
-
+  
       </div>
-
-    </div>
-    <!-- end -->
-
-    <!-- footer bottom -->
-    <div class="container-fluid">
-
-      <div class="row footer__bottom">
-
-        <div class="col-12 text-center py-4 border-danger">
-
-          <p class="footer__bottomTitle p-0 m-0">© 2020 Windsurf. All Rights Reserved. Design by
-            <span><a href="#" class="footer__bottomTitleLink">W3Layouts</a></span>
-
-          </p>
-
+      <!-- end -->
+  
+      <!-- footer bottom -->
+      <div class="container-fluid">
+  
+        <div class="row footer__bottom">
+  
+          <div class="col-12 text-center py-4 border-danger">
+  
+            <p class="footer__bottomTitle p-0 m-0">© 2020 Windsurf. All Rights Reserved. Design by
+              <span><a href="#" class="footer__bottomTitleLink" title = "w3layouts">W3Layouts</a></span>
+  
+            </p>
+  
+          </div>
+  
         </div>
-
+  
       </div>
-
-    </div>
-    <!-- end -->
-
+      <!-- end -->
+  
   </section>
   <!-- end footer -->
 
@@ -524,6 +741,7 @@
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/home.js"></script>
+  <script src="assets/js/about.js"></script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0"
   nonce="EapDpEdq"></script>
 </body>

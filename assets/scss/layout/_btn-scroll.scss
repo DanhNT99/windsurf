@@ -5,12 +5,12 @@
     background-color: $color-hover;
     position: fixed;
     bottom: 100px;
-    right: 15px;
+    right: -50px;
     z-index: 500;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: bottom 0.5s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
 
     &:hover {
@@ -43,12 +43,33 @@
 
 @keyframes animateShow {
 
-    from {
-        opacity: 0;
+    0%{
+        right: -50px
     }
-
+    50% {
+        right: 30px;
+    }
     to {
-        opacity: 1;
+        right: 15px;
     }
 
+}
+@keyframes animateClose {
+
+    0%{
+        right: 15px
+    }
+    50% {
+        right: 30px;
+    }
+    to {
+        right: -50;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .btnScrollTop {
+        bottom: 80px;
+    }
 }

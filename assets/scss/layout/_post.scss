@@ -2,8 +2,19 @@
     padding: 80px 0px;
     background-color: $bg-grey;
 
+    .contentRow {
+        position: relative;
+    }
+
+    .wrapUnderSearch  {
+        position: absolute;
+        top: 130px;
+    }
     &__title {
         @include blog-title;
+    }
+    .boxPost {
+        margin-top: 130px;
     }
 
 }
@@ -14,9 +25,7 @@
         width: 100%;
         height: 50px;
         background-color: $color-white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include displayFlex(space-between);
         padding: 0px 15px;
         border-radius: 7px;
         
@@ -61,35 +70,26 @@
             color: $color-hover;
             text-decoration: none;
         }
-
-        .categories__itemContainsText {
-
-            .categories__itemText {
-                font-size: 17px;
-                line-height: 27px;
-            }
-
-            .categories__itemIcon {
-                color: $color-hover;
-                font-size: 12px;
-                margin-right: 10px;
-            }
-
+        .categories__itemText {
+            font-size: 17px;
+            line-height: 27px;
         }
 
-        .categories__itemContainsNumber {
-            @include displayFlex(center);
+        .categories__itemIcon {
+            color: $color-hover;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .categories__itemNumber {
             width: 30px;
             height: 30px;
             background-color: $color-white;
+            font-size: 12px;
             border-radius: 7px;
-
-            .categories__itemNumber {
-                font-size: 12px;
-            }
-
+            text-align: center;
+            line-height: 30px;
         }
-
     }
 
 }
@@ -101,8 +101,6 @@
 
         .recentPost__itemContainsImages {
             width: 85px;
-            height: 85px;
-            overflow: hidden;
 
             .recentPost__itemImage {
                 width: 100%;
@@ -147,10 +145,10 @@
             align-items: flex-start;
             color: $color-purple;
             transition: color 0.5s ease;
-            text-decoration: none;
 
             &:hover {
                 color: $color-hover;
+                text-decoration: none;
             }
 
             .twitter__itemLinkImage {
@@ -174,17 +172,24 @@
     
     &__item {
 
-        .gallery__itemImage {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 7px;
+        .gallery__itemLink {
+            display: block;
+            width: 100%;
+            height: 120px;
+
+            .gallery__itemImage {
+                width: 100%;
+                height: 100%;
+                border-radius: 7px;
+                object-fit: cover;
+            }
         }
 
     }
 }
 
 .tags {
+    
     &__list {
        @include displayFlex(left);
         flex-wrap: wrap;
@@ -194,13 +199,12 @@
         }
 
         .tags__itemLink {
-            @include displayFlex(center);
+            display: block;
             padding: 10px 25px;
             background-color: $color-white;
             color: $color-purple;
             border-radius: 7px;
             transition: all 0.5s ease;
-            opacity: 0.9;
             margin-right: 10px;
 
             &:hover {
@@ -248,19 +252,19 @@
                 width: 150px;
                 height: 50px;
                 background-color: $color-hover;
-                z-index: 1;
                 transform: translateX(100%) rotate(45deg);
                 top: 0;
                 right: 0;
                 opacity: 0;
-                transition: transform 0.5s ease  , opacity 0.5s ease;
+                transition: all 0.5s ease;
                 color:$color-white;
-                @include displayFlex(center);
+                text-align: center;
             }
             
             .post__itemLinkBoxIcon {
                 transform: rotate(-45deg);
                 margin-right: 20px;
+                line-height: 50px;
             }
 
             .post__itemImage {
@@ -272,11 +276,11 @@
     
         }
         .post__itemContainsDate {
-            @include displayFlex(left);
             margin-top: 20px;
 
             .post__itemContainsDateText {
                 color: $color-border;
+                display: inline-block
             }
 
             .post__itemContainsDateLink {
@@ -298,7 +302,7 @@
             &:hover {
                 text-decoration: none;
 
-                .post__title{
+                .post__itemTitle{
                     color: $color-hover;
                 }
 
@@ -369,7 +373,6 @@
     }
 
     &__itemShare {
-        margin: 50px 0px;
 
         .post__itemShareTitle {
             color: $color-purple;
@@ -453,48 +456,79 @@
         }
     }
 
-    &__cmtItem {
+    &__listCmt {
 
-        .post__cmtItemImage {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
+        .post__cmtItem {
 
-        .post__cmtItemName {
-            font-size: 18px;
-            color: $color-purple;
-        }
+            .post__cmtItemBox {
+                position: relative;
 
-        .post__cmtItemDate {
-            @include displayFlex(space-between);
-
-            .post__cmtItemDateText {
-                color: $color-border;
-            }
-
-            .post__cmtItemReplyLink {
-                color: $color-hover;
-                transition: color 0.5s ease;
-
-                &:hover {
-                    color: $color-hover-green;
-                    text-decoration: none;
-        
+                .post__cmtItemImage {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
                 }
 
-                .post__cmtItemReply {
-                    font-size: 17px;
-                }  
+                .post__cmtItemInfor {
+
+
+                    .post__cmtItemName {
+                        font-size: 18px;
+                        color: $color-purple;
+                    }
+            
+                    .post__cmtItemDate {
+
+                        @include displayFlex(space-between);
+                        flex-wrap: wrap;
+            
+                        .post__cmtItemDateText {
+                            color: $color-border;
+                        }
+            
+                        .post__cmtItemReplyLink {
+                            color: $color-hover;
+                            transition: color 0.5s ease;
+            
+                            &:hover {
+                                color: $color-hover-green;
+                                text-decoration: none;
+                    
+                            }
+            
+                            .post__cmtItemReply {
+                                font-size: 17px;
+                            }  
+                        }
+            
+                    }
+                }
+
             }
 
+    
+        }
+        
+        .post__cmtContainBtn {
+            text-align: center;
+    
+            .post__cmtBtnLoad {
+                outline: none;
+                color: white;
+                background: $color-hover;
+                border: none;
+                border-radius: 7px;
+                padding: 3px 10px;
+                margin-top: 20px;
+            }
         }
     }
-
 }
 
 .showSilderPost {
+
     overflow: hidden;
+    margin-bottom: 130px;
     ul {
         width: fit-content;
         @include displayFlex(left);
@@ -546,7 +580,13 @@
 @media screen and (max-width: 991px) {
     .content {
         padding-top: 60px;
+
+        .wrapUnderSearch  {
+            position: static;
+            top: 130px;
+        }
     }
+
     .twitter {
 
         &__listItem {
@@ -562,19 +602,138 @@
     
         }
     }
+
+    .gallery {
+
+        &__item {
+
+            .gallery__itemLink {
+                height: 250px;
+            }
+    
+        }
+
+    }
+
     .post {
         &__itemBoxMember {
             .post__itemBoxMemberImage {
                 height: auto;
             }
         }
+        
+        &__listCmt {
+
+            .post__cmtItem {
+    
+                .post__cmtItemBox {
+                    position: relative;
+                }
+                .post__cmtItemInfor {
+                    position: absolute;
+                    top: 0px;
+                    left: 128px;
+                }
+    
+        
+            }
+            
+            .post__cmtContainBtn {
+                text-align: center;
+        
+                .post__cmtBtnLoad {
+                    outline: none;
+                    color: white;
+                    background: $color-hover;
+                    border: none;
+                    border-radius: 7px;
+                    padding: 3px 10px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    .containsForm{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        &__searchBox {
+            width: 100%;
+            height: 50px;
+            background-color: $color-white;
+            @include displayFlex(space-between);
+            padding: 0px 15px;
+            border-radius: 7px;
+            
+            .containsForm__searchBoxInput {
+                width: 80%;
+                border: none;
+                outline: none;
+                color: $color-purple;
+                font-size: 17px;
+                font-weight: 800;
+            }
+    
+            .containsForm__searchBoxBtn {
+                border: none;
+                outline: none;
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+                background-color: $color-hover;
+                color: $color-white;
+    
+                .containsForm__searchBoxImage {
+                    width: 15px;
+                    height: 15px;
+                    object-fit: cover;
+                }
+    
+            }
+    
+        }
     }
 
+    .showSilderPost {
+        margin-bottom: 0;
+        padding-top: 136px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        padding-top: 40px;
+
+        .wrapUnderSearch  {
+            position: static;
+            top: 130px;
+        }
+    }
+
+    .gallery {
+
+        &__item {
+
+            .gallery__itemLink {
+                height: 170px;
+            }
+    
+        }
+
+    }
 }
 
 @media screen and (max-width: 575px) {
     .content {
         padding: 40px 0px;
+
+        .wrapUnderSearch  {
+            position: static;
+            top: 130px;
+        }
     }
 
     .post {
@@ -587,26 +746,87 @@
             margin-top: 10px;
         }
 
-        &__containQuote {
+        &__itemContainsQuote {
             padding: 15px 0px 15px 15px;
         }
 
-        &__share {
-           margin: 30px 0px;
+        &__itemShare {
+           margin: 20px 0px;
         }
 
-        &__boxMemberImage {
-            height: auto;
+        &__itemBoxMember {
+
+            .post__itemBoxMemberImage {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .post__itemBoxMemberName {
+                text-align: center
+            }
         }
 
     }
 
+    .containsForm{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        &__searchBox {
+            width: 100%;
+            height: 50px;
+            background-color: $color-white;
+            @include displayFlex(space-between);
+            padding: 0px 15px;
+            border-radius: 7px;
+            
+            .containsForm__searchBoxInput {
+                width: 80%;
+                border: none;
+                outline: none;
+                color: $color-purple;
+                font-size: 17px;
+                font-weight: 800;
+            }
+    
+            .containsForm__searchBoxBtn {
+                border: none;
+                outline: none;
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+                background-color: $color-hover;
+                color: $color-white;
+    
+                .containsForm__searchBoxImage {
+                    width: 15px;
+                    height: 15px;
+                    object-fit: cover;
+                }
+    
+            }
+    
+        }
+    }
+
     .showSilderPost {
+
         ul {
             margin-right: 20px;
         }
         .btnSliderSlickNext{
             right: 15px;
         }
+
+    }
+
+    .gallery {
+
+        .gallery__itemLink {
+            height: 100px;
+        }
+
     }
 }
+

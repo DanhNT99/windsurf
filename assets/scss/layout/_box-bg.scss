@@ -52,7 +52,8 @@
         @include linkActivity;
     }
 }
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 767px) {
 
     .boxBg {
         padding: 40px 0px;

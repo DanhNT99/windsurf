@@ -50,10 +50,17 @@
     }
 
 }
+
+@media screen and (max-width: 767px) {
+
+    .statistical {
+        padding: 40px 0px;
+    }
+}
+
 @media screen and (max-width: 575px) {
 
     .statistical {
-        padding: 50px 0px;
 
         &__number {
             font-size: 40px;

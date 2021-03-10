@@ -58,6 +58,7 @@
         border-top: 1px solid rgba(223, 223, 223, 0.3);
         border-bottom: 1px solid rgba(223, 223, 223, 0.3);
         padding: 10px 0px;
+        transition: all 0.5s ease;
 
         .header__bottomNav {
             @include displayFlex(space-between);
@@ -81,21 +82,10 @@
             }
 
             .header__bottomMenu {
-                @include displayFlex(space-between);
                 flex: 1;
-
                 .header__bottomMenuList {
-                    @include displayFlex(space-between);
-                    transform: translateX(30%);
+                    @include displayFlex(center);
                     
-                    @keyframes showMenu {
-                        from {
-                            opacity: 0;
-                        }
-                        to {
-                            opacity: 1;
-                        }
-                    }
                     .header__bottomMenuListItem{
                         position: relative;
                         margin-right: 20px;
@@ -145,14 +135,12 @@
                     }
 
                     .showAllMenuDrop {
-                        overflow: hidden;
 
                         &:hover {
-                            overflow: visible;
-
                             .header__bottomMenuDropdown{
                                 top: 45px;
                                 opacity: 1;
+                                pointer-events: auto;
                             }
                         }
 
@@ -162,19 +150,18 @@
                             width: 200px;
                             top: 80px;
                             left: -100%;
-                            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
                             z-index: 1000;
                             opacity: 0;
                             transition: all 0.5s ease;
-
+                            pointer-events: none;
+                            
                             .header__bottomMenuDropdownItem {
                                 position: relative;
                                 padding: 5px 0px 5px 20px;
-                                overflow: hidden;
                                 transition: all 0.5s ease;
 
                                 &:hover {
-                                    overflow: visible;
 
                                     .header__bottomMenuDropdown3 {
                                         top: 0px;
@@ -190,7 +177,7 @@
                                     z-index: 1000;
                                     background-color: $color-white;
                                     opacity: 0;
-                                    transition: top 0.5s ease, opacity 0.5s ease;
+                                    transition: all 0.5s ease;
                                 }
                             }
                         }
@@ -198,95 +185,67 @@
 
                 }
 
-                .header__bottomMenuContainsForm {
+            }
+
+            .header__bottomMenuContainsForm {
+                position: relative;
+
+                .header__bottomMenuInputSearch {
+                    border: none;
+                    outline: none;
+                    top: 0px;
+                    width: 0px;
+                    transition: width 0.5s ease;
+                    position: absolute;
+                    right: 150%;
+                    padding: 7px 0px;
+
+                    &::placeholder {
+                        color: $color-border;
+                    }
+                }
+
+                .header__bottomMenuBtnSearch  {
+                    color: $color-white;
+                    font-size: 18px;
+                    opacity: 0.8;
+                    border: 1px solid $color-white;
+                    background-color: rgba($color: $color-white, $alpha: 0.2);
+                    padding: 5px 30px;
+                    transition: background 0.5s ease;
+                    outline: none;
+                    display: block;
                     position: relative;
 
-                    .header__bottomMenuInputSearch {
-                        border: none;
-                        outline: none;
-                        top: 0px;
-                        width: 0px;
-                        transition: width 0.5s ease;
-                        position: absolute;
-                        right: 150%;
-                        padding: 7px 0px;
-
-                        &::placeholder {
-                            color: $color-border;
-                        }
+                    .header__bottomMenuBtnSearchIcon{
+                        margin-right: 5px;
+                        font-size: 15px;
                     }
 
-                    .header__bottomMenuBtnSearch  {
-                        color: $color-white;
-                        font-size: 18px;
-                        opacity: 0.8;
-                        border: 1px solid $color-white;
-                        background-color: rgba($color: $color-white, $alpha: 0.2);
-                        padding: 5px 30px;
-                        margin-right: 20px;
-                        transition: background 0.5s ease;
-                        outline: none;
-                        display: block;
-                        position: relative;
-
-                        &:after {
-                            content: "";
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background-color: transparent;
-                            position: absolute;
-                        }
-
-                        .header__bottomMenuBtnSearchIcon{
-                            margin-right: 5px;
-                            font-size: 15px;
-                        }
-
-                        &:hover {
-                            background-color: $color-hover;
-                        }
-
+                    &:hover {
+                        background-color: $color-hover;
                     }
+
                 }
             }
 
             .showInput {
 
-                    .header__bottomMenuList {
-                        display: none;
-                        opacity: 0;
-                    }
-    
-                    .header__bottomMenuContainsForm {
-                       margin-left: auto;
+                .header__bottomMenuInputSearch  {
+                    border: 1px solid $color-purple;
+                    animation: inputShow 1s forwards ease;
+                    width: 550px;
+                    padding: 7px 10px;
+                }
 
-                        .header__bottomMenuInputSearch {
-                            border: 1px solid $color-purple;
-                            animation: inputShow 1s forwards ease;
-                            width: 500px;
-                            padding: 7px 10px;
-                        }
-                    }
-    
-                    @keyframes inputShow {
-                        from {
-                            opacity: 0;
-                        }
-                        to {
-                            opacity: 1;
-                        }
-                    }
             }
-
+            
             .header__bottomBtnBar {
                 display: none;
                 width: 40px;
                 height: 35px;
                 border-radius: 7px;
                 background-color: $color-hover;
-                margin: 0px 20px 0px auto;
 
                 i{
                     color: $color-white;
@@ -295,17 +254,22 @@
 
             .header__bottomIcon {
 
-                .icon-moon, .icon-sun {
-                    color: $color-white;
-                    font-size: 22px;
-                    transform: rotate(-30deg);
-                }
-            
-                .icon-sun {
+                .header__bottomMenuBtnSearchIcon, .close {
                     display: none;
                 }
+
             }
         }
+    }
+
+    .fixedHeaderBottom {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: rgba($color: $color-white, $alpha: 0.9);
+        z-index: 900;
+        transition: all 0.5s ease;
     }
 } 
 
@@ -317,10 +281,6 @@
             .header__bottomNav {
 
                 .header__bottomMenu {
-                    
-                    .header__bottomMenuList {
-                        transform: translateX(20%);
-                    }
 
                     .header__bottomMenuContainsForm {
 
@@ -331,13 +291,12 @@
                 }
 
                 .showInput {
-                    
-                    .header__bottomMenuContainsForm {
 
-                        .header__bottomMenuInputSearch {
-                            width: 400px;
-                        }
+                    .header__bottomMenuInputSearch  {
+                        width: 430px;
+                        padding: 7px 10px;
                     }
+    
                 }
             }
         }
@@ -345,9 +304,8 @@
 }
 
 @media only screen and (max-width: 991px){
-    .header {
-        height: 99px;
 
+    .header {
         &__bottom {
 
             .header__bottomNav {
@@ -365,43 +323,53 @@
                     position: fixed;
                     z-index: 992;
                     width: 100%;
-                    left: -100%;
+                    left: 0px;
                     top: 99px;
+                    transform: translateX(-100%);
                     overflow-y: auto;
                     @include heightCalc('100% - 99px');   
                     display: block;    
                     background-color: $color-white;
-                    transition: all 0.5s;
+                    transition: transform 0.5s ease;
+                    padding-bottom: 70px;
 
                     .header__bottomMenuList {
+
                         display: block;
                         transform: translateX(0px);
+
                         .header__bottomMenuListItem{
                             margin: 15px 0px 0px 0px;
                             text-align: center;
+
                             .header__bottomMenuListItemLink{
                                 color: $color-purple;
                             }
+
                             .header__bottomMenuListItemIcon {
                                 position: absolute;
                                 left: 58%;
                                 top: 9px;
                                 color: $color-purple;
                             }
+
                             .header__bottomMenuDropdown {
                                 width: 95%;
                                 top: 110%;
                                 margin: 0 auto;
                                 overflow: hidden;
                                 display: none;
+
                                 .header__bottomMenuDropdownItem {
                                     padding: 0;
                                     margin: 5px 0;
+                                    
                                     .header__bottomMenuDropdown3 {
                                         width: 100%;
                                         box-shadow: 0px 0px 0px 0px $color-white;
                                         display: block;
                                     }
+
                                 }
                             }
                         }
@@ -431,7 +399,7 @@
                 }
 
                 .headerMenuToRight {
-                    left: 0px;
+                    transform: translatex(0);
                 }
 
                 .header__bottomBtnBar {
@@ -446,25 +414,87 @@
                     }
                 }
 
-                .header__bottomIcon {
+                
+                .header__bottomMenuContainsForm {
+                    position: fixed;
+                    right: -100%;
+                    top: 120px;
+                    width: 100%;
+                    padding: 15px 39px;
+                    background-color: $color-white;
+                    transition: all 0.5s ease;
 
-                    .icon-moon, .icon-sun {
-                        color: $color-white;
-                        font-size: 22px;
-                        transform: rotate(-30deg);
+                    .header__bottomMenuBtnSearch {
+                        display: inline-block;
+                        width: 19%;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        margin-right: 0;
+                        color: $color-purple;
+                        border-color: $color-purple;
+                        outline: none;
                     }
 
-                    .icon-sun {
-                        display: none;
+                    .header__bottomMenuInputSearch {
+                        position: static;
+                        width: 80%;
+                        border: none;
+                        outline: none;
                     }
                 }
+
+                .formSearchRightToLeft {
+                    right: 0;
+                }
+
+                .header__bottomIcon {
+                    position: relative;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background-color: $color-white;
+                    overflow: hidden;
+                    
+                     .header__bottomMenuBtnSearchIcon, .close {
+                         position: absolute;
+                         top: 50%;
+                         left: 50%;
+                         color: $color-purple;
+                         line-height: 35px;
+                         display: inline-block;
+                         transition: all 0.5s ease;
+                    }
+                    
+                    .header__bottomMenuBtnSearchIcon {
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .close {
+                        transform : translate(120%, -50%);
+
+                    }
+
+                }
+
+                .changeIcon {
+
+                    .header__bottomMenuBtnSearchIcon {
+                        transform: translate(-230%, -50%);
+                    }
+
+                    .close {
+                        transform : translate(-50%, -50%);
+
+                    }
+                }  
             }
         }
     }
 }
+
 @media screen and (max-width: 575px) {
     .header{
-        height: 139px;
+        height: fit-content;
 
         &__bottom {
 
@@ -476,9 +506,28 @@
                 }
 
                 .header__bottomMenu {
-                    top: 139px;
+                    top: 126px;
                 }
+                
+                .header__bottomMenuContainsForm {
+                    padding: 15px 14px;
+
+                    .header__bottomMenuBtnSearch {
+                        font-size: 16px;
+
+                        .header__bottomMenuBtnSearchIcon {
+                            font-size: 14px;
+                            margin-right: 0px;
+                        }
+                    }
+
+                    .header__bottomMenuInputSearch {
+                        width: 79%;
+                    }
+                }
+
             }
+
         }
     }
 }

@@ -1,6 +1,7 @@
 .banner{
     position: relative;
     height: 100vh;
+    overflow: hidden;
 
     &::after {
         content: "";
@@ -21,6 +22,19 @@
         height: 100%;
         object-fit: cover;
         z-index: -1;
+        animation: zoomImage 60s infinite ease;
+        @keyframes zoomImage {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     }
 
     &__content {
@@ -68,6 +82,7 @@
 
     &__bottom {
         position: absolute;
+        top: 80%;
         left: 50%;
         bottom: 30px;
         transform: translateX(-50%);
@@ -134,7 +149,6 @@
     .banner {
         height: auto;
         min-height: 700px;
-        padding-top: 250px;
 
         &__content {
 
@@ -149,10 +163,23 @@
 
 }
 
+@media screen and (max-width: 767px) {
+    .banner {
+        min-height: 500px;
+        &__content {
+
+            .banner__contentDetail {
+                margin: 15px 0px 15px 0px;
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width: 575px) {
 
     .banner{
-
+        min-height: 700px;
         &__content {
 
             .banner__contentDetail {
@@ -161,11 +188,15 @@
 
         }
 
+        &__bottom {
+            top: 80%;
+        }
+
     }
 
 }
 
-@media screen and (max-width: 352px) {
+@media screen and (max-width: 353px) {
 
     .banner{
 
@@ -185,6 +216,10 @@
 
         }
 
+        &__bottom {
+            top: 85%;
+        }
+        
     }
     
 }

@@ -5,14 +5,22 @@
     &__item {
 
         .team__itemImage {
-
             width: 100%;
-            height: auto;
+            height: 300px;
             border-radius: 5px;
+            object-fit: cover;
     
             &:hover{
+                ~ .team__itemLink {
+                    color: $color-hover;
+                    text-decoration: none;
+                }
 
-                ~ .team__item-link {
+            }
+        }
+        .team__itemContainImage {
+            &:hover{
+                ~ .team__itemLink {
                     color: $color-hover;
                     text-decoration: none;
                 }
@@ -48,7 +56,6 @@
                     border-radius: 100%;
                     background-color: $bg-black;
                     transition: all 0.5s ease;
-                    text-decoration: none;
                     
                     &:hover {
                         background-color: $color-hover;
@@ -67,10 +74,60 @@
     }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
 
     .team {
-        padding: 50px 0px;
+        padding: 40px 0px;
+
+        &__item {
+
+            .team__itemImage {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+
+        .showSliderTeam {
+            overflow: hidden;
+    
+           .slick-dots{
+                width: fit-content;
+                margin: 0 auto;
+                display: flex;
+    
+                .slick-active {
+                 width: 30px;
+                 height: 10px;
+                 background-color: $color-hover;
+                }
+
+                li {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background-color: $color-border;
+                    cursor: pointer;
+                    margin-right: 20px;
+                    transition: all 0.5s ease;
+       
+                    &:hover {
+                        width: 30px;
+                        height: 10px;
+                        background-color: $color-hover;
+                    }
+       
+                }
+       
+                button {
+                    display: none;
+                }
+    
+             }
+
+    
+        }
+    
     }
     
 }
