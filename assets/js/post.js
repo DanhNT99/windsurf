@@ -1,32 +1,77 @@
 $(document).ready(function () {
   
 //all funciton
-var index = 2;
-function seeMoreCmt() {
-    var str = ".post__cmtAdd:nth-child(" + index + ")";
-    var postAdd = $(str);
-    postAdd.slideDown(0);   
-    str = str + " .post__cmtItem";
-    let indexScrollCmt = postAdd.offset().top - $('.header').height() - 20;
-    $('html, body').animate({scrollTop: indexScrollCmt}, 1000);
-    TweenMax.staggerFrom($(str),1,{top: 100, opacity: 0,}, 0.3);
-    index++;
 
-    if(index == $('.post__cmtAdd').length + 2) {
-        $('.post__cmtBtnLoad').css({'display' : 'none'});
-    }
-
-}
 //end functtion
 
 //all event
-
-$('.post__cmtAdd').slideUp(0);
 
 $('.post__cmtBtnLoad').click(function (e) { 
   e.preventDefault();
   seeMoreCmt();
 });
+
+
+///slider slick
+
+  $('.showSilderPost').slick({
+    dots: true,
+    speed: 500,
+    slidesToShow:1, 
+    slidesToScroll:1,
+    prevArrow : false, 
+    nextArrow: false,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+    ]
+  });
+    
+  $('.post__cmtItemBtn').click(function (e) {
+    let itemPrev =  $(this).prev();
+    let flag = itemPrev.attr('show-text');
+    console.log(typeof flag);
+    if(flag === 'false') {
+      itemPrev.css({'line-clamp':'inherit'});
+      itemPrev.attr('show-text', 'true');
+      $(this).text('Tắt bình luận');
+    }
+    else {
+      itemPrev.attr('show-text', 'false');
+      itemPrev.css({'line-clamp':'2'});
+      $(this).text('Xem bình luận');
+    }
+  });
+
+//end slider slick
 
 //end event
     
@@ -84,5 +129,8 @@ $('.post__cmtBtnLoad').click(function (e) {
             }
           }
       ]
-  });
+    });
+
+
+ 
 });

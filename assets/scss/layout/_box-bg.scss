@@ -33,7 +33,7 @@
         .boxBg__link {
             padding: 12px 40px;
             background-color: rgba($color: #fff, $alpha: 0.2);
-            border: 1px solid $color-white;
+            border: 1px solid currentColor;
             color: $color-white;
             font-size: 20px;
             border-radius: 5px;
@@ -43,7 +43,6 @@
                 text-decoration: none;
                 background-color: $color-hover;
                 border-color: transparent;
-                color: $color-white;
             }
         }
     }
@@ -53,7 +52,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 812px) {
 
     .boxBg {
         padding: 40px 0px;
@@ -61,7 +60,7 @@
 
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 382px) {
 
     .boxBg {
 

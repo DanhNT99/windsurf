@@ -1,7 +1,5 @@
 .banner{
-    position: relative;
     height: 100vh;
-    overflow: hidden;
 
     &::after {
         content: "";
@@ -15,24 +13,18 @@
     }
 
     &__backgroundImage {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         z-index: -1;
         animation: zoomImage 60s infinite ease;
         @keyframes zoomImage {
             0% {
-                transform: scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
             50% {
-                transform: scale(1.5);
+                transform: translate(-50%, -50%) scale(1.5);
             }
 
             100% {
-                transform: scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
         }
     }
@@ -50,6 +42,7 @@
             @include font-title1;
         }
 
+
         .banner__contentDetail {
             color: $color-white;
             margin: 35px 0px 50px 0px;
@@ -59,6 +52,7 @@
         .banner__contentContainsLink {
             @include displayFlex(center);
             flex-wrap: wrap;
+
             .banner__contentLink {
                 padding: 10px 25px;
                 background-color: rgba($color: #fff, $alpha: 0.2);
@@ -74,6 +68,7 @@
                     border-color: transparent;
                 }
             }
+
             .linkActivity {
                 @include linkActivity;
             }
@@ -163,6 +158,29 @@
 
 }
 
+@media screen and (max-width: 991px) {
+
+    .banner {
+        height: auto;
+        min-height: 580px;
+
+        &__content {
+
+            .banner__contentTitle {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            
+            .banner__contentDetail {
+                margin: 20px 0px 25px 0px;
+            }
+        }
+
+    }
+
+}
+
+
 @media screen and (max-width: 767px) {
     .banner {
         min-height: 500px;
@@ -179,37 +197,27 @@
 @media screen and (max-width: 575px) {
 
     .banner{
-        min-height: 700px;
-        &__content {
+        min-height: 500px;
 
-            .banner__contentDetail {
-                margin: 25px 0px 30px 0px;
+        &__content {
+            transform: translate(-50%, -46%);
+
+            .banner__contentTitle {
+                font-size: 30px;
+                line-height: 40px;
             }
 
-        }
-
-        &__bottom {
-            top: 80%;
-        }
-
-    }
-
-}
-
-@media screen and (max-width: 353px) {
-
-    .banner{
-
-        &__content {
+            .banner__contentDetail {
+                font-size: 16px;
+                margin: 0;
+            }
 
             .banner__contentContainsLink {
+                margin-top: 10px;
 
                 .banner__contentLink {
-
-                    &:last-child {
-                        margin-top: 10px;
-                    }
-
+                    padding: 5px 10px;
+                    font-size: 16px;
                 }
 
             }
@@ -217,9 +225,68 @@
         }
 
         &__bottom {
-            top: 85%;
+            top: 80%;
+
+            .banner__bottomMouse {
+                width: 20px;
+                height: 30px;
+                border-radius: 10px;
+
+                .banner__bottomMouseDot {
+                    width: 3px;
+                    height: 3px;
+                }
+            }
+
         }
-        
+
     }
+
+}
+
+// @media screen and (max-width: 353px) {
+
+//     .banner{
+
+//         &__bottom {
+//             top: 85%;
+//         }
+        
+//     }
     
+// }
+@media screen and (max-height: 375px) {
+    
+    .banner{
+        min-height: 500px;
+
+        &__content {
+            transform: translate(-50%, -50%);
+
+            .banner__contentContainsLink {
+
+                .banner__contentLink {
+                    padding: 5px 10px;
+                    font-size: 16px;
+                }
+
+            }
+        }
+
+        &__bottom {
+            top: 76%;
+        }
+
+    }
+}
+
+@media screen and (max-height: 320px) {
+    
+    .banner{
+        min-height: 400px;
+        &__content {
+            transform: translate(-50%, -40%);
+        }
+
+    }
 }

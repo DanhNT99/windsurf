@@ -18,6 +18,31 @@
     align-items: center;
     justify-content: $jus;
 }
+
+@mixin objectFit($value) {
+    object-fit: $value;
+    -webkit-object-fit: $value;
+    -moz-object-fit: $value;
+    -ms-object-fit: $value;
+    -o-object-fit: $value;
+}
+
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+}
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+}
+
 @mixin font-title1 {
     font-size: 60px;
     line-height: 70px;

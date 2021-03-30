@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     z-index: 900;
-    transition: background-color 0.5s ease;
+    transition: all 0.5s ease;
 
     &__top  {
 
@@ -58,7 +58,6 @@
         border-top: 1px solid rgba(223, 223, 223, 0.3);
         border-bottom: 1px solid rgba(223, 223, 223, 0.3);
         padding: 10px 0px;
-        transition: all 0.5s ease;
 
         .header__bottomNav {
             @include displayFlex(space-between);
@@ -83,6 +82,7 @@
 
             .header__bottomMenu {
                 flex: 1;
+
                 .header__bottomMenuList {
                     @include displayFlex(center);
                     
@@ -118,6 +118,7 @@
                             font-size: 13px;
                             color: $color-white;
                             opacity: 0.8;
+                            pointer-events: none;
                         }
 
                         .header__bottomMenuDropdownItemLink {
@@ -135,12 +136,14 @@
                     }
 
                     .showAllMenuDrop {
+                        perspective: 500px;
 
                         &:hover {
+
                             .header__bottomMenuDropdown{
                                 top: 45px;
                                 opacity: 1;
-                                pointer-events: auto;
+                                pointer-events: inherit;
                             }
                         }
 
@@ -151,11 +154,11 @@
                             top: 80px;
                             left: -100%;
                             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
-                            z-index: 1000;
+                            z-index: 900;
                             opacity: 0;
-                            transition: all 0.5s ease;
                             pointer-events: none;
-                            
+                            transition: all 0.5s ease;
+
                             .header__bottomMenuDropdownItem {
                                 position: relative;
                                 padding: 5px 0px 5px 20px;
@@ -174,7 +177,7 @@
                                     width: 200px;
                                     top: 20px;
                                     left: 100%;
-                                    z-index: 1000;
+                                    z-index: 900;
                                     background-color: $color-white;
                                     opacity: 0;
                                     transition: all 0.5s ease;
@@ -195,9 +198,10 @@
                     outline: none;
                     top: 0px;
                     width: 0px;
-                    transition: width 0.5s ease;
+                    opacity: 0;
+                    transition: all 0.5s ease;
                     position: absolute;
-                    right: 150%;
+                    right: 200%;
                     padding: 7px 0px;
 
                     &::placeholder {
@@ -215,9 +219,9 @@
                     transition: background 0.5s ease;
                     outline: none;
                     display: block;
-                    position: relative;
 
                     .header__bottomMenuBtnSearchIcon{
+                        pointer-events: none;
                         margin-right: 5px;
                         font-size: 15px;
                     }
@@ -232,10 +236,9 @@
             .showInput {
 
                 .header__bottomMenuInputSearch  {
-                    border: 1px solid $color-purple;
-                    animation: inputShow 1s forwards ease;
                     width: 550px;
                     padding: 7px 10px;
+                    opacity: 1;
                 }
 
             }
@@ -260,16 +263,6 @@
 
             }
         }
-    }
-
-    .fixedHeaderBottom {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        background-color: rgba($color: $color-white, $alpha: 0.9);
-        z-index: 900;
-        transition: all 0.5s ease;
     }
 } 
 
@@ -324,19 +317,15 @@
                     z-index: 992;
                     width: 100%;
                     left: 0px;
-                    top: 99px;
                     transform: translateX(-100%);
                     overflow-y: auto;
-                    @include heightCalc('100% - 99px');   
-                    display: block;    
+                    @include heightCalc('100% - 92px');   
                     background-color: $color-white;
                     transition: transform 0.5s ease;
-                    padding-bottom: 70px;
+                    padding-bottom: 10px;
 
                     .header__bottomMenuList {
-
                         display: block;
-                        transform: translateX(0px);
 
                         .header__bottomMenuListItem{
                             margin: 15px 0px 0px 0px;
@@ -351,6 +340,7 @@
                                 left: 58%;
                                 top: 9px;
                                 color: $color-purple;
+                                pointer-events: inherit;
                             }
 
                             .header__bottomMenuDropdown {
@@ -374,28 +364,11 @@
                             }
                         }
                     }
+                }
 
-                    .header__bottomMenuContainsForm{
-                        margin: 0px 0px 50px 0px;
-                        text-align: center;
-                        
-                        .header__bottomMenuInputSearch {
-                            border: 1px solid $color-purple;
-                            width: 95%;
-                            position: static;
-                            padding-left: 20px;
-                        }
-
-                        .header__bottomMenuBtnSearch  {
-                            color: $color-purple;
-                            border: 1px solid $color-purple;
-                            margin: 0px auto 10px auto;
-                            width: 95%;
-                            &:hover {
-                                color: $color-white;
-                            }
-                        }
-                    }
+                .changeHeight {
+                    @include heightCalc('100% - 51px');   
+          
                 }
 
                 .headerMenuToRight {
@@ -433,6 +406,10 @@
                         color: $color-purple;
                         border-color: $color-purple;
                         outline: none;
+
+                        .header__bottomMenuBtnSearchIcon {
+                            pointer-events: none;
+                        }   
                     }
 
                     .header__bottomMenuInputSearch {
@@ -440,6 +417,7 @@
                         width: 80%;
                         border: none;
                         outline: none;
+                        opacity: 1;
                     }
                 }
 
@@ -494,7 +472,6 @@
 
 @media screen and (max-width: 575px) {
     .header{
-        height: fit-content;
 
         &__bottom {
 
@@ -513,7 +490,7 @@
                     padding: 15px 14px;
 
                     .header__bottomMenuBtnSearch {
-                        font-size: 16px;
+                        font-size: 14px;
 
                         .header__bottomMenuBtnSearchIcon {
                             font-size: 14px;
@@ -528,6 +505,16 @@
 
             }
 
+        }
+    }
+}
+
+@media (max-height: 414px) {
+
+    .header {
+
+        &__bottom {
+            padding: 5px 0px;
         }
     }
 }

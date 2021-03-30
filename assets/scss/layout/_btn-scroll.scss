@@ -63,13 +63,16 @@
         right: 30px;
     }
     to {
-        right: -50;
+        right: -50px;
     }
 
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 812px) {
     .btnScrollTop {
         bottom: 80px;
+        &:hover {
+            bottom: 80px;
+        }
     }
 }

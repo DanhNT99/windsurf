@@ -14,22 +14,18 @@ $(document).ready(function(){
       //end
 
       //fixed header bottom
-      var indexHeadeBottom = $('.header__bottom').offset().top;
-      function fixedHeaderBottom(x) {
+      
+      function fixedHeaderBottom() {
 
-        let heightScrollWindow = $(window).scrollTop();
+        if($(window).width() <= 991) {
 
-        if($(window).width() < 991) {
-          console.log(indexHeadeBottom);
-          if(heightScrollWindow > x) {
-            $('.header__bottom').addClass('fixedHeaderBottom');
-            $('.header__bottom').animate({top: 0}, 5000);
-            $('.header').css({'position' : 'static'});
+          if($(window).scrollTop()> 0) {
+            let heightHeaderTop = $('.header__top').height();
+              $('.header').css({top: -heightHeaderTop});
           }
 
           else {
-            $('.header__bottom').removeClass('fixedHeaderBottom');
-            $('.header').css({'position' : 'fixed'});
+            $('.header').css({top: 0}, 500);
           }
 
         }
@@ -49,19 +45,25 @@ $(document).ready(function(){
         }
       }
 
-      //khoảng cách đến menu của form search and menu
     function aboutToHeader() {
 
-      if($(window).width() < 991) {
+      if($(window).width() <= 991) {
         $('.header__bottomMenu').css({top: $('.header').outerHeight()});
         $('.header__bottomMenuContainsForm').css({top: $('.header').outerHeight()});
 
-          if($(window).scrollTop() > 40) {
+
+          if($(window).scrollTop() > 0) {
             let heightHeaderBottom= $('.header__bottom').outerHeight() - 1 ;
-            $('.header__bottomMenu').css({top: heightHeaderBottom,height: '100%'});
+            $('.header__bottomMenu').css({top: heightHeaderBottom});
+            $('.header__bottomMenu').addClass('changeHeight');
             $('.header__bottomMenuContainsForm').css({top: heightHeaderBottom});
           }
-        }   
+          else {
+            $('.header__bottomMenu').removeClass('changeHeight');
+          }
+
+        }  
+
     }
 
     function toggleClassFormSearch() {
@@ -126,35 +128,47 @@ $(document).ready(function(){
 
       $('.header__bottomMenu').toggleClass('headerMenuToRight');
 
-      $('body').toggleClass('closeScrollBody');
+      $('html, body').toggleClass('closeScrollBody');
 
     })
     //end
 
     //click show input on desktop
     $('.header__bottomMenuBtnSearch').click(()=> {
-      $('.header__bottomMenu').animate({opacity: 0}, 100);
+      $('.header__bottomMenu').animate({opacity: 0}, 500);
       $('.header__bottomMenuContainsForm').addClass('showInput');
       $('.header__bottomMenuInputSearch').focus();
     })
 
     $(window).on('click',function(event){
       let clickNameClass =  '.' + event.target.className;
-      let flag = $(clickNameClass).hasClass('header__bottomMenuBtnSearch') || $(clickNameClass).hasClass('header__bottomMenuInputSearch');
+      let flag = $(clickNameClass).hasClass('header__bottomMenuBtnSearch') 
+                  || $(clickNameClass).hasClass('header__bottomMenuInputSearch')
+                  || clickNameClass.includes('header__bottomMenuBtnSearchIcon');
       if(!flag){
         $('.header__bottomMenuContainsForm').removeClass('showInput');
-        $('.header__bottomMenu').animate({opacity: 1}, 1000);
-      }
+        $('.header__bottomMenuContainsForm').removeClass('formSearchRightToLeft');
+        $('.header__bottomIcon').removeClass('changeIcon');
+        $('.header__bottomMenu').animate({opacity: 1}, 500);
+        $('body').removeClass('closeScrollBody');
+      } 
     })
     //end
 
     //show input on mobile
     $('.header__bottomIcon').click(function (e) { 
+
       e.preventDefault();
       $('.header__bottomIcon').toggleClass('changeIcon');
       $('.header__bottomMenuContainsForm').toggleClass('formSearchRightToLeft');
-      $('.header__bottomMenuInputSearch').focus();
-      $('body').toggleClass('closeScrollBody');
+      var flag = $('.header__bottomIcon').hasClass('changeIcon');
+      if(flag) {
+        $('.header__bottomMenuInputSearch').focus();
+      }
+      else {
+        $('.header__bottomMenuInputSearch').blur();
+      }
+
     });
 
     //click btn mouse on bannber to scroll down
@@ -164,7 +178,7 @@ $(document).ready(function(){
       let headerHeight = $('.header').outerHeight();
 
       if($(window).width() < 991) {
-        headerHeight = $('.header__bottom').outerHeight() - $('.header__top').outerHeight() - 1;
+        headerHeight = $('.header__bottom').outerHeight();
       }
 
       $('html, body').animate({ scrollTop:  indexVideo - headerHeight}, 1000);
@@ -192,7 +206,9 @@ $(document).ready(function(){
       speed: 500,
       slidesToShow:2, 
       slidesToScroll:2, 
+      autoplay: true,
       arrows : false,
+      
       responsive: [
           {
             breakpoint: 1024,
@@ -226,47 +242,9 @@ $(document).ready(function(){
           }
       ]
     });
+
     // slider of post
-    $('.showSilderPost').slick({
-      dots: true,
-      speed: 500,
-      slidesToShow:1, 
-      slidesToScroll:1,
-      prevArrow : false, 
-      nextArrow: false,
-      responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
-            },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-      ]
-    });
+
 
 //end  slide of slick
 
@@ -281,7 +259,7 @@ $(document).ready(function(){
       showBtnScrollTop();
 
       //fixed header bottom
-      fixedHeaderBottom(indexHeadeBottom);
+      fixedHeaderBottom();
 
       //khoảng cách đến menu của form search and menu
       aboutToHeader();

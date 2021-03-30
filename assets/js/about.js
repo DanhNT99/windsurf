@@ -3,7 +3,7 @@ $(document).ready(function(){
 //all funciton 
 
       //close slider on descktop
-      function closeSliderTeamOnDesk() {
+      function closeSliderTeamOnDesk(slide) {
         
         if($(window).width() < 576) {
 
@@ -25,6 +25,7 @@ $(document).ready(function(){
             $('.evaluate__itemBox:nth(2)').addClass('changeDiving');
         }
       }
+      
 //end funciton
 
 //all event Click
@@ -33,19 +34,11 @@ $(document).ready(function(){
 
 ///slider slick
 var slider = {
-  dots: false,
+  dots: true,
   speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   arrows : false,
-  responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true
-        }
-      }
-  ]
 }
 //end slider slick
 
@@ -54,14 +47,15 @@ var slider = {
       $(window).resize(function () { 
 
         //sliderTeam
-        closeSliderTeamOnDesk();
+        console.log('đã đổi');
+        closeSliderTeamOnDesk(slider);
         
       });
 
       $(window).on('load', function () {
 
          //sliderTeam
-        closeSliderTeamOnDesk();
+        closeSliderTeamOnDesk(slider);
 
       });
 

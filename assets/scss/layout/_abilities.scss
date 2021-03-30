@@ -17,7 +17,6 @@
             background-clip: content-box;
             z-index: 1;
             padding: 1px 16px;
-            border-radius: 8px;
         }
 
         .abilities__itemBox {
@@ -29,7 +28,6 @@
             &:hover {
                 transform: translate(-30px, -30px);
                 background-color: $color-white;
-                box-shadow: 0px 0px 5px 3px rgba($color: $bg-black, $alpha: 0.1);
             }
         }
 
@@ -103,7 +101,6 @@
                 &:hover {
                     transform: translate(0, 0);
                     background-color: transparent;
-                    box-shadow: none;
                 }
             }
 
@@ -116,7 +113,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 812px) {
     .abilities {
         padding: 40px 0px;
     }
@@ -126,10 +123,8 @@
 
     .abilities {
 
-
         &__item{
 
-            background-clip: content-box;
             
         }
     }

@@ -8,7 +8,7 @@
 
     .wrapUnderSearch  {
         position: absolute;
-        top: 130px;
+        top: 85px;
     }
     &__title {
         @include blog-title;
@@ -195,30 +195,30 @@
         flex-wrap: wrap;
 
         .tags__item {
-            margin-top: 20px;
-        }
+            margin-top: 12px;
 
-        .tags__itemLink {
-            display: block;
-            padding: 10px 25px;
-            background-color: $color-white;
-            color: $color-purple;
-            border-radius: 7px;
-            transition: all 0.5s ease;
-            margin-right: 10px;
+            .tags__itemLink {
+                display: block;
+                padding: 10px 25px;
+                background-color: $color-white;
+                color: $color-purple;
+                border-radius: 7px;
+                transition: all 0.5s ease;
+                margin-right: 10px;
 
-            &:hover {
-                color: $color-white;
-                background-color: $color-hover;
-                text-decoration: none
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-hover;
+                    text-decoration: none
+                }
+
+                .tags__itemLinkText {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
             }
-
-            .tags__itemLinkText {
-                font-size: 16px;
-                margin: 0;
-            }
-
-        }
+         }
 
     }
 }
@@ -503,6 +503,25 @@
             
                     }
                 }
+                .post__cmtItemText {
+                    overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+                    text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+                    -webkit-line-clamp: 2;// số dòng muốn hiển thị
+                    box-orient: vertical !important;
+                    -moz-box-orient: vertical;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box;
+                    transition: all 0.5s ease;
+                }
+                .post__cmtItemBtn {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    text-decoration: underline;
+                    color: #0b21bf;
+                    font-style: italic;
+                    
+                }
 
             }
 
@@ -512,14 +531,18 @@
         .post__cmtContainBtn {
             text-align: center;
     
-            .post__cmtBtnLoad {
+            .post__cmtBtnLoad, .post__cmtBtnClose {
                 outline: none;
                 color: white;
                 background: $color-hover;
                 border: none;
                 border-radius: 7px;
                 padding: 3px 10px;
-                margin-top: 20px;
+                margin: 20px auto;
+            }
+            .post__cmtBtnClose {
+                display: none;
+
             }
         }
     }
@@ -583,7 +606,6 @@
 
         .wrapUnderSearch  {
             position: static;
-            top: 130px;
         }
     }
 
@@ -713,10 +735,23 @@
         }
     }
 
+    .tags {
+        &__list {
+            
+            .tags__item {
+
+                .tags__itemLink {
+                    font-size: 14px;
+                    padding: 6px 20px;
+                }
+            }
+        }
+    }
+
     .gallery {
 
         &__item {
-
+            
             .gallery__itemLink {
                 height: 170px;
             }
