@@ -1,134 +1,103 @@
 .video {
-    padding: 80px 0px;
-    &__right {
-        position: relative;
-
-        .video__rightImage {
-            border-radius: 5px;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video__rightBtn {
-            @include displayFlex(center);
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            background-color: $color-hover;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: box-shadow 1.5s infinite ease;
-
-            &:hover {
-                text-decoration: none;
-            }
-
-            .video__rightBtnIcon{
-                font-size: 14px;
-                color: $color-white;
-            }
-
-            @keyframes box-shadow {
-                0% {
-                    box-shadow: 0 0 0 1px rgba(144, 203, 218, 0.4), 0 0 0 8px  rgba(192, 228, 237, 0.4),0 0 0 15px  rgba(192, 228, 237, 0.4);
-                }
-                100% {
-                    box-shadow: 0 0 0 8px rgba(144, 203, 218, 0.4), 0 0 0 15px rgba(144, 203, 218, 0.4), 0 0 0 22px rgba(144, 203, 218, 0.4);
-                }
-            }
-        }
+    padding: 100px 0;
+    display: block;
+    &-main {
+        display: flex;
+        grid-gap: 0 63px;
     }
-
-    &__containsClip {
-        position: fixed;
-        height: 80%;
-        width: 80%;
+    &-content {
+        max-width: 45%;
+    }
+    &-right {
+        position: relative;
+        top: 0;
+        left: 0;;
+    }
+    &-img {
+        border-radius: 6px;
+        min-height: 100%;
+    }
+    &-play {
+        position: absolute;
         top: 50%;
         left: 50%;
-        z-index: 999;
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        background-color: $green;
+        text-align: center;
         transform: translate(-50%, -50%);
-        transition: all 0.5s ease;
-        opacity: 0;
-        visibility: hidden;
-
-        .video__clip {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__overlayClip {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.8);
-        z-index: 998;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.5s ease;
-
-        .video__overlayClipBtnClose {
-            display: none;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-
-            i {
-                color: $color-white;
-                @include font-text1();
-                transition: all 0.5s ease;
-                opacity: 0.6;
-                &:hover {
-                    font-size: 30px;
-                    opacity: 1;
-                }
+        animation: box-shadow 1.5s infinite ease;
+        cursor: pointer;
+        @keyframes box-shadow {
+            0% {
+                box-shadow: 0 0 0 1px rgba(144, 203, 218, 0.4), 
+                            0 0 0 8px  rgba(192, 228, 237, 0.4),
+                            0 0 0 15px  rgba(192, 228, 237, 0.4);
+            }
+            100% {
+                box-shadow: 0 0 0 8px rgba(144, 203, 218, 0.4), 
+                            0 0 0 15px rgba(144, 203, 218, 0.4), 
+                            0 0 0 22px rgba(144, 203, 218, 0.4);
             }
         }
     }
-
-    .showClip {
-        opacity: 1;
-        visibility: inherit;
+    &-icon {
+        color: $white;
+        line-height: 65px;
     }
-
-    .showOverlay {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 1s ease;
+    @include maxw(1023px) {
+        &-main {
+            flex-wrap: wrap;
+            gap: 50px 0;
+        }
+        &-content {
+            max-width: 100%;
+        }
+        &-right {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
-
-}
-
-@media screen and (max-width: 1199px) {
-    .video {
-
-        &__right {
-            height: 300px;
+    @include maxw(767px) {
+        padding: 50px 0;
+        &-main {
+            gap: 30px 0;
+        }
+    }
+    @include maxw(374px) {
+        &-icon {
+            width: 50px;
+            height: 50px;
         }
     }
 }
 
-@media screen and (max-width: 812px) {
+// @media screen and (max-width: 1199px) {
+//     .video {
+
+//         &__right {
+//             height: 300px;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 812px) {
     
-    .video {
-        padding: 40px 0px;
-    }
+//     .video {
+//         padding: 40px 0px;
+//     }
 
-}
+// }
 
-@media screen and (max-width: 575px) {
+// @media screen and (max-width: 575px) {
 
-    .video {
+//     .video {
 
-       .showClip {
-           height: 50%;
-       }
+//        .showClip {
+//            height: 50%;
+//        }
 
-    }
+//     }
     
-} 
+// } 

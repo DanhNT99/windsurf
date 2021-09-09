@@ -1,0 +1,81 @@
+.feature {
+    $column: 4;
+    $gap: 30px;
+    padding: 100px 0;
+    background-color: $gray-light;
+    display: block;
+    &-caption, &-title{
+        text-align: center;
+    }
+    &-caption {
+        cursor: pointer;
+    }
+    &-list {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(#{$column}, 1fr);
+        grid-gap: 0 $gap;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 8px;
+        @include transition(0.3s);
+        &:hover {
+            background-color: $white;
+        }
+    }
+    &-img {
+        max-width: 60px;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+    &-item-title {
+        font-size: 26px;
+        line-height: 31px;
+        color: $purple;
+        margin: 27px 0 15px;
+        @include transition(0.3s);
+        word-break: break-all;
+        &:hover {
+            color: $green;
+        }
+    }
+    &-desc {
+        line-height: 28px;
+        margin-top: auto;
+        word-break: break-all;
+        display:-webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+    }
+    @include maxw(1199px) {
+        &-list {
+            grid-gap: 0  $gap;
+        }
+        &-item {
+            padding: 25px 20px;
+        }
+    }
+    @include maxw(1023px) {
+        $column: 2;
+        $gap: 0;
+        &-list {
+            grid-template-columns: repeat(#{$column} ,1fr);
+            grid-gap: $gap;
+        }
+    }
+    @include maxw(767px) {
+        padding: 50px 0;
+        $column: 1;
+        &-list {
+            margin-top: 30px;
+            grid-template-columns: repeat(#{$column} ,1fr);
+        }
+    }
+}

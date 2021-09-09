@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-secondary;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: $purple;
+    @include maxw(567px) {
+        font-size: 16px;
+    }
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-family: $font-primary;
+}
+input,
+button, 
+select,
+textarea{
+    outline: none;
+    font-family: $font-primary;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    @include  objectFit(cover);
+}
+h2, h3, h4 {
+    font-family: $font-primary;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.caption {
+    color: $gray;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @include maxw(767px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+.title {
+    font-size: 44px;
+    line-height: 50px;
+    @include maxw(767px) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+.desc {
+    margin: 24px 0 48px;
+    @include maxw(767px) {
+        margin: 18px 0 30px;
+    }
+}
+.btn {
+    display: inline-block;
+    color: $white;
+    padding: 13px 35px;
+    opacity: 0.9;
+    font-family: $font-primary;
+    border-radius: 6px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    @include transition(0.3s);
+    &--primary {
+        border: 1px solid $white;
+        background-color: rgba($color: $white, $alpha: 0.2);
+        &:hover {
+            opacity: 1;
+            background-color: $green;
+            border: 1px solid $green;
+        }
+    }
+    &--secondary {
+        border: 1px solid $green;
+        background-color: $green;
+        &:hover {
+            opacity: 1;
+            background-color: $green-dark;
+            border: 1px solid $green-dark;
+        }
+    }
+    @include maxw(767px) {
+        padding: 12px 26px;
+        font-size: 18px;
+    }
+    @include maxw(374px) {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+.input {
+    border-radius: 6px;
+    padding: 0 20px;
+    border: 1px solid $gray-dark;
+    display: block;
+    height: 60px;
+    color: $gray-darker;
+    font-size: 18px;
+    @include transition(0.3s);
+    &:focus {
+        border-color: $green;
+    }
+    @include maxw(767px) { 
+        padding: 0 10px;
+        height: 50px;
+    }
+}

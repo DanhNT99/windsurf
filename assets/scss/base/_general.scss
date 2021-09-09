@@ -1,11 +1,8 @@
 @import "../abstracts/variable";
 @import "../abstracts/mixin";
-@import "../compoment/wrapImgResize";
-@import "../vendor/bootstrap";
 @import "../vendor/fontAwesome";
+@import "../vendor/font";
 @import "../vendor/slick";
-@import "styleBase";
+@import "./base";
 @import "../layout/header";
-@import '../layout/scroll-header';
-@import "../layout/btn-scroll";
 @import "../layout/footer";

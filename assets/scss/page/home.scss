@@ -1,44 +1,15 @@
 @import "../base/general";
-
-//compoment
-@import "../compoment/title";
-@import "../compoment/sub";
-@import "../compoment/detail";
-@import "../compoment/btnLink";
-//end compoment
-
-//banner
-@import "../layout/banner";
-//end banner
-
-//video
+@import "../layout/hero";
 @import "../layout/video";
-//end video
+@import "../layout/feature";
+@import "../layout/stats";
+@import "../layout/aboutUs";
+@import "../layout/blog";
+@import "../layout/team";
+@import "../layout/experience";
+@import "../layout/progress";
+@import "../layout/review";
+@import "../layout/join";
+@import "../layout/contact";
+@import "../layout/btnScroll";
 
-//abilities
-@import "../layout/abilities";
-//end 
-
-//statistical
-@import "../layout/statistical";
-//end statistical
-
-//box
-@import "../layout/box";
-//end box
-
-//picture
-@import "../layout/picture";
-//end box
-
-//box-bg 
-@import "../layout/box-bg";
-
-//member
-@import "../layout/member";
-//end member
-
-
-//member
-@import "../layout/subscribe";
-//end member

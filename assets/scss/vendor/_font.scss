@@ -1,48 +1,19 @@
-@import '../abstracts/variable';
-
+@import "../abstracts/variable";
 @font-face {
-    font-family: $nameFont1;
-    src: url(../fonts/#{$nameFont1}-Regular.ttf);
-    font-weight: 400;
+    font-family: $font-primary;
+    src: url(../fonts/Jost/Jost-Regular.ttf);
 }
-
 @font-face {
-    font-family: $nameFont1;
-    src: url(../fonts/#{$nameFont1}-Bold.ttf);
-    font-weight: 700;
+    font-family: $font-primary-bold;
+    src: url(../fonts/Jost/Jost-SemiBold.ttf);
+    font-weight: 800;
 }
-
 @font-face {
-    font-family: $nameFont2;
-    src: url(../fonts/#{$nameFont2}-Regular.ttf);
-    font-weight: 400;
+    font-family: $font-secondary;
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
 }
-
 @font-face {
-    font-family: $nameFont2;
-    src: url(../fonts/#{$nameFont2}-Medium.ttf);
-    font-weight: 500;
+    font-family: $font-secondary-bold;
+    src: url(../fonts/OpenSans/OpenSans-ExtraBold.ttf);
 }
 
-@font-face {
-    font-family: $nameFont2;
-    src: url(../fonts/#{$nameFont2}-Bold.ttf);
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: $nameFont3;
-    src: url(../fonts/#{$nameFont3}-Regular.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: $nameFont3;
-    src: url(../fonts/#{$nameFont3}-Bold.ttf);
-    font-weight: 700;
-}
-
-body {
-    font-family: $nameFont1;
-    font-weight: 400;
-}

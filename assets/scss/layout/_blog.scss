@@ -1,0 +1,198 @@
+.blog {
+    display: block;
+    &-caption {
+        text-align: center;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 48px;
+    }
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &:nth-child(1) {
+            .blog-content {
+                background-color: #ffc845;
+            }
+        }
+        &:nth-child(2) {
+            .blog-content {
+                background-color:#f85a40;
+            }
+        }
+        &:nth-child(3) {
+            .blog-content {
+                background-color: #0cb9c1;
+            }
+        }
+        &:nth-child(4) {
+            .blog-content {
+                background-color: #f48924;
+            }
+        }
+    }
+    &-content {
+        padding: 52px 60px;
+        color: $white;
+    }
+    &-time {
+        font-size: 16px;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+    &-title {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 15px 0;
+        color: $white;
+    }
+    &-desc {
+        margin-bottom: 26px;
+    }
+    &-link {
+        font-size: 19px;
+        color: $white;
+    }
+    &-icon-right {
+        color: $purple;
+        vertical-align: middle;
+        font-weight: 900;
+    }
+    &-img-link{
+        display: block;
+    }
+    &-img {
+        height: 100%;
+    }
+    @include maxw(1199px) {
+        &-content {
+            padding: 30px 30px;
+        }
+    }
+    @include maxw(1023px) {
+        &-list {
+            grid-template-columns: 1fr;
+        }
+        &-content {
+            padding: 30px 30px;
+        }
+        &-img {
+            width: 100%;
+        }
+    }
+    @include maxw(767px) {
+        &-item {
+            grid-template-columns: 1fr;
+        }
+        &-list {
+            margin-top: 30px;
+        }
+        &-content {
+            padding: 15px 15px;
+        }
+        &-title {
+            font-size: 23px;
+            margin: 10px 0;
+        }
+        &-desc {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+// .picture {
+
+//     &__left {
+
+//             .picture__leftTime {
+//                 color: $color-white;
+//                 font-size: 16px;
+//                 text-transform: uppercase;
+//                 opacity: 0.8;
+//             }
+
+//             .picture__leftTitle {
+//                 color: $color-white;
+//             }
+
+//             .detail {
+//                 color: $color-white;
+//                 opacity: 0.8;
+//             }
+
+//             .picture__leftLink {
+//                 color: $color-white;
+//                 font-family: "Jost-Bold";
+//                 font-size: 17px;
+//                 transition: color 0.5s ease;
+//                 padding: 5px 20px;
+//                 border: 1px solid $color-white;
+
+//                 &:hover {
+//                     text-decoration: none;
+//                     color: $color-purple;
+//                 }
+
+//                 .picture__leftIcon{
+//                     transform: translate(5px, 2px);
+//                     color: $color-purple;
+//                     font-size: 14px;
+//                 }
+
+//             }
+//     }
+
+//     &__right {
+
+//         .picture__rightImage {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//         }
+
+//     }
+
+// }
+// @media screen and (max-width: 1199px) and (min-width: 992px){
+//     .picture {
+//         &__right {
+//                 padding: 30px 0px 30px 0px;
+//         }
+//     }
+// }
+// @media screen and (max-width: 1068px){
+//     .picture {
+//         &__left {
+
+//             .picture__leftTime {
+//                 font-size: 15px;
+//                 line-height: 25px;
+//             }
+
+//             .picture__leftTitle {
+//                 font-size: 23px;
+//                 line-height: 33px;
+//             }
+//             .detial {
+//                 font-size: 17px;
+//                 line-height: 27px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and(max-width: 767px) {
+//     .picture {
+            
+//         &__right {
+
+//             .picture__rightImage {
+//                     height: 300px;
+//             }
+
+//         }
+//     }
+// }

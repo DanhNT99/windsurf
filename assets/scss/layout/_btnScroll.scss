@@ -1,0 +1,58 @@
+.btn-scroll {
+    &-top {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: $green;
+        position: fixed;
+        bottom: 50px;
+        right: -50px;
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            bottom: 70px;
+        }
+        &-show {
+            animation: animateShow 0.5s forwards ease-in-out;
+        }
+        &-hide {
+            animation: animateClose 0.5s forwards ease-in-out;
+        }
+    }
+    @include maxw(1023px) {
+        &-top {
+            right: 15px;
+            bottom: 20px;
+        }
+    }
+}
+@keyframes animateShow {
+
+    0%{
+        right: -50px
+    }
+    50% {
+        right: 30px;
+    }
+    to {
+        right: 15px;
+    }
+
+}
+@keyframes animateClose {
+
+    0%{
+        right: 15px
+    }
+    50% {
+        right: 30px;
+    }
+    to {
+        right: -50px;
+    }
+
+}

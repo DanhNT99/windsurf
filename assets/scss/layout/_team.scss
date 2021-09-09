@@ -1,152 +1,251 @@
 .team {
-    background-color: $bg-grey;
-    padding: 80px 0px;
+    $column: 4;
+    $gap: 30px;
+    padding: 100px 0;
+    display: block;
+    &-caption, &-title {
+        text-align: center;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(#{$column}, 1fr);
+        grid-gap: 0 $gap;
+        margin-top: 50px;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        &:hover {
+            .team-name {
+                color: $green;
+            }
+        }
+    }
+    &-img-link {
+        display: block;
+        height: 300px;
+        flex-shrink: 0;
+    }
+    &-img {
+        border-radius: 6px;
+        height: 100%;
+        width: 100%;
+    }
+    &-infor {
+        margin: 25px 0 15px;
+        text-align: center;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &-infor-link {
+        display: block;
+        flex: 1;
+    }
+    &-name {
+        color: $purple;
+        margin-bottom: 10px;
+        @include transition(0.4s)
+    }
+    &-position {
+        color: $gray;
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        gap: 0 15px;
+        margin-top: auto;
+    }
+    &-social-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 100rem;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transition (0.5s);
+        &:hover {
+            background-color: $green;
+        }
+    }
+    &-social-link {
+        color: $white;
+    }
+    @include maxw(1023px) {
+        $column: 2;
+        $gap: 20px;
+        &-list {
+            grid-template-columns: repeat(#{$column}, 1fr);
+            grid-gap: $gap;
+        }
+    }
+    @include maxw(767px) {
+        $column: 1;
+        $gap: 15px;
+        padding: 50px 0;
+        &-list {
+            margin-top: 30px;
+            grid-template-columns: repeat(#{$column}, 1fr);
+            grid-gap: $gap 0;
+        }
+    }
 
-    &__item {
+}
 
-        .team__itemContainImage {
 
-            .team__itemImage {
-                width: 100%;
-                height: 300px;
-                border-radius: 5px;
-                object-fit: cover;
+
+// .team {
+//     background-color: $bg-grey;
+//     padding: 80px 0px;
+
+//     &__item {
+
+//         .team__itemContainImage {
+
+//             .team__itemImage {
+//                 width: 100%;
+//                 height: 300px;
+//                 border-radius: 5px;
+//                 object-fit: cover;
         
-            }
+//             }
 
-            &:hover{
-                + .team__itemContainInfor .team__itemLink {
-                    color: $color-hover;
-                    text-decoration: none;
-                }
+//             &:hover{
+//                 + .team__itemContainInfor .team__itemLink {
+//                     color: $color-hover;
+//                     text-decoration: none;
+//                 }
 
-            }
-        }
+//             }
+//         }
 
-        .team__itemLink {
-            color: $color-purple;
-            font-size: 19px;
-            transition: color 0.5s ease;
+//         .team__itemLink {
+//             color: $color-purple;
+//             font-size: 19px;
+//             transition: color 0.5s ease;
 
-            &:hover {
-                color: $color-hover;
-                text-decoration: none;
-            }
+//             &:hover {
+//                 color: $color-hover;
+//                 text-decoration: none;
+//             }
 
-        }
+//         }
 
-        .team__itemDetail {
-            color: $color-border;
-        }
+//         .team__itemDetail {
+//             color: $color-border;
+//         }
 
-        .team__listContact {
+//         .team__listContact {
 
-            .team__contactItem {
+//             .team__contactItem {
 
-                .team__contactItemLink {
-                    @include displayFlex(center);
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 100%;
-                    background-color: $bg-black;
-                    transition: all 0.5s ease;
+//                 .team__contactItemLink {
+//                     @include displayFlex(center);
+//                     width: 35px;
+//                     height: 35px;
+//                     border-radius: 100%;
+//                     background-color: $bg-black;
+//                     transition: all 0.5s ease;
                     
-                    &:hover {
-                        background-color: $color-hover;
-                        text-decoration: none;
-                    }
+//                     &:hover {
+//                         background-color: $color-hover;
+//                         text-decoration: none;
+//                     }
 
-                    .team__contactItemIcon {
-                        color: $color-white;
-                        font-size: 15px;
-                    }
+//                     .team__contactItemIcon {
+//                         color: $color-white;
+//                         font-size: 15px;
+//                     }
 
-                }
-            }
-        }
+//                 }
+//             }
+//         }
 
-    }
-}
+//     }
+// }
 
 
-@media (max-width: 812px) {
-    .team {
-        padding: 40px 0px;
-    }
-}
-@media screen and (max-width: 767px) {
+// @media (max-width: 812px) {
+//     .team {
+//         padding: 40px 0px;
+//     }
+// }
+// @media screen and (max-width: 767px) {
 
-    .team {
+//     .team {
 
-        &__item {
+//         &__item {
 
-            .team__itemContainImage {
-                .team__itemImage {
-                    width: 80%;
-                    height: 250px;
-                    margin: 0 auto;
-                }
-            }
-        }
+//             .team__itemContainImage {
+//                 .team__itemImage {
+//                     width: 80%;
+//                     height: 250px;
+//                     margin: 0 auto;
+//                 }
+//             }
+//         }
 
-        .showSliderTeam {
-            overflow: hidden;
+//         .showSliderTeam {
+//             overflow: hidden;
     
-           .slick-dots{
-                width: fit-content;
-                margin: 0 auto;
-                display: flex;
+//            .slick-dots{
+//                 width: fit-content;
+//                 margin: 0 auto;
+//                 display: flex;
     
-                .slick-active {
-                 width: 30px;
-                 height: 10px;
-                 background-color: $color-hover;
-                }
+//                 .slick-active {
+//                  width: 30px;
+//                  height: 10px;
+//                  background-color: $color-hover;
+//                 }
 
-                li {
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 10px;
-                    background-color: $color-border;
-                    cursor: pointer;
-                    margin-right: 20px;
-                    transition: all 0.5s ease;
+//                 li {
+//                     width: 10px;
+//                     height: 10px;
+//                     border-radius: 10px;
+//                     background-color: $color-border;
+//                     cursor: pointer;
+//                     margin-right: 20px;
+//                     transition: all 0.5s ease;
        
-                    &:hover {
-                        width: 30px;
-                        height: 10px;
-                        background-color: $color-hover;
-                    }
+//                     &:hover {
+//                         width: 30px;
+//                         height: 10px;
+//                         background-color: $color-hover;
+//                     }
        
-                }
+//                 }
        
-                button {
-                    display: none;
-                }
+//                 button {
+//                     display: none;
+//                 }
     
-             }
+//              }
 
     
-        }
+//         }
     
-    }
+//     }
     
-}
+// }
 
-@media screen and (max-height: 320px) {
-    .team {
+// @media screen and (max-height: 320px) {
+//     .team {
         
-        .team__item {   
-            @include displayFlex(left);
+//         .team__item {   
+//             @include displayFlex(left);
             
-            .team__itemContainImage {
-                width: 50%;
+//             .team__itemContainImage {
+//                 width: 50%;
 
-                .team__itemImage {
-                    height: 100%;
-                }
-            }
-        }
-    }
+//                 .team__itemImage {
+//                     height: 100%;
+//                 }
+//             }
+//         }
+//     }
     
-}
+// }

@@ -1,0 +1,126 @@
+.review {
+    padding: 100px 0px;
+    background-color: #f4f4f4;
+    display: block;
+    &-caption, &-title {
+        text-align: center;
+    }
+    &-item {
+        background-color: $white;
+        border-radius: 5px;
+        padding: 40px 30px;
+        &:nth-child(even) {
+            margin-left: 20px;
+        }
+    }
+    &-desc {
+        font-size: 21px;
+        &:before {
+            font-size: 50px;
+            color: $green;
+            font-family: "Merriweather", serif;
+        }
+    }
+    &-infor {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+    }
+    &-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &-name {
+        color: $purple;
+        font-size: 20px;
+        // font-weight: 800;
+    }
+    &-address {
+        color: $gray-darker;
+        font-size: 20px;
+    }
+    &-slider {
+        margin-top: 48px;
+        .slick-list {
+            display: -webkit-box;
+        }
+        .slick-slide {
+            margin: 0 10px;
+        }
+        ul {
+            width: fit-content;
+            margin: 40px auto 0px auto;
+            display: flex;
+            .slick-active {
+             width: 30px;
+             height: 10px;
+             background-color: $green;
+            }
+         }
+         li {
+             width: 10px;
+             height: 10px;
+             border-radius: 10px;
+             background-color: $gray-dark;
+             cursor: pointer;
+             margin-right: 20px;
+             transition: all 0.5s ease;
+             &:hover {
+                 width: 30px;
+                 height: 10px;
+                 background-color: $green;
+             }
+         }
+         button {
+             display: none;
+         }
+    }
+    @include maxw(1023px) {
+        &-desc {
+            font-size: 18px;
+        }
+        &-slider {
+            margin-top: 48px;
+            .slick-slide {
+                margin: 0;
+            }
+        }
+    }
+    @include maxw(767px) {
+        padding: 50px 0;
+        &-desc {
+            font-size: 16px;
+        }
+        &-item {
+            padding: 15px;
+        }
+    }
+}
+
+// @media screen and (max-width: 812px) {
+
+//     .member {
+//         padding: 40px 0px;
+
+//         .showSildeMember{
+
+//             ul {
+//                 margin-top: 40px;
+//                 margin-bottom: 0px;
+//             }
+
+//         }
+
+//     }
+// }
+// @media screen and (max-width: 480px) {
+//     .member {
+//         &__title {
+//             font-size: 25px;
+//             line-height: 35px;
+//         }
+//     }
+// }

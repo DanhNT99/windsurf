@@ -1,22 +1,10 @@
-@mixin linkActivity {
-        background-color: $color-hover;
-        border: 1px solid transparent;
-        margin-right: 10px;
-        &:hover {
-            background-color: #0bc1b8;
-        }
-}
+
 @mixin heightCalc($value) {
     height: calc(#{$value});
     height: -webkit-calc(#{$value});
     height: -moz-calc(#{$value});
     height: -ms-calc(#{$value});
     height: -o-calc(#{$value});
-}
-@mixin displayFlex ($jus){
-    display: flex;
-    align-items: center;
-    justify-content: $jus;
 }
 
 @mixin objectFit($value) {
@@ -59,4 +47,9 @@
     font-size: 28px;
     line-height: 38px;
     color: $color-purple;
+}
+@mixin maxw($breakpoint) {
+    @media screen and(max-width: $breakpoint) {
+        @content;
+    }
 }

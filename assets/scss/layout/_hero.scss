@@ -1,0 +1,266 @@
+.hero {
+    display: block;
+    position: relative;
+    background-color: rgba(0, 1, 15, 0.7);
+    padding: 216px 0 100px;
+    overflow: hidden;
+    &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        min-height: 100%;
+        animation: zoomImage 60s infinite ease;
+        @keyframes zoomImage {
+            0% {
+                transform:scale(1);
+            }
+            50% {
+                transform:scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+    &-main {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+        color: $white;
+    }
+    &-caption {
+        font-size: 60px;
+        font-family: $font-primary-bold;
+        line-height: 1.2;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 12px;
+    }
+    &-bottom {
+        position: relative;
+        cursor: pointer;
+        margin: 90px 0 0;
+    }
+    &-mouse {
+        width: 26px;
+        height: 45px;
+        border-radius: 18px;
+        border: 2px solid $green;
+        margin: 0 auto;
+    }
+    &-dot {
+        width: 6px;
+        height: 6px;
+        background-color: $green;
+        margin: 5px auto;
+        animation: dotMove 1.2s infinite ease;
+        @keyframes dotMove {
+            to {
+                opacity: 0;
+                margin-top: 16px;
+            }
+        }
+    }
+    &-arrow-item {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid $white;
+        border-right: 2px solid $green;
+        margin: 0 auto;
+        transform: rotate(45deg);
+        margin-top: 5px;
+        animation: opacityArrow 1.5s infinite ease-in 0.1s;
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        @keyframes opacityArrow {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    }
+    @include maxw(1023px) {
+        
+        &-caption {
+            font-size: 40px;
+        }
+    }
+    @include maxw(767px) {
+        padding: 150px 0 50px;
+        &-caption {
+            font-size: 32px;
+        }
+        &-bottom {
+            margin-top: 50px;
+        }
+    }
+    @include maxw(374px) {
+        &-caption {
+            font-size: 27px;
+        }
+        &-bottom {
+            margin-top: 30px;
+        }
+    }
+}
+        
+        // @media screen and (max-width: 1199px) {
+        
+        //     .banner {
+        //         height: auto;
+        //         min-height: 700px;
+        
+        //         &__content {
+        
+        //             .banner__contentTitle {
+        //                 font-size: 40px;
+        //                 line-height: 50px;
+        //             }
+        
+        //         }
+        
+        //     }
+        
+        // }
+        
+        // @media screen and (max-width: 991px) {
+        
+        //     .banner {
+        //         height: auto;
+        //         min-height: 580px;
+        
+        //         &__content {
+        
+        //             .banner__contentTitle {
+        //                 font-size: 40px;
+        //                 line-height: 50px;
+        //             }
+                    
+        //             .banner__contentDetail {
+        //                 margin: 20px 0px 25px 0px;
+        //             }
+        //         }
+        
+        //     }
+        
+        // }
+
+//    
+
+
+// @media screen and (max-width: 767px) {
+//     .banner {
+//         min-height: 500px;
+//         &__content {
+
+//             .banner__contentDetail {
+//                 margin: 15px 0px 15px 0px;
+//             }
+
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 575px) {
+
+//     .banner{
+//         min-height: 500px;
+
+//         &__content {
+//             transform: translate(-50%, -46%);
+
+//             .banner__contentTitle {
+//                 font-size: 30px;
+//                 line-height: 40px;
+//             }
+
+//             .banner__contentDetail {
+//                 font-size: 16px;
+//                 margin: 0;
+//             }
+
+//             .banner__contentContainsLink {
+//                 margin-top: 10px;
+
+//                 .banner__contentLink {
+//                     padding: 5px 10px;
+//                     font-size: 16px;
+//                 }
+
+//             }
+
+//         }
+
+//         &__bottom {
+//             top: 80%;
+
+//             .banner__bottomMouse {
+//                 width: 20px;
+//                 height: 30px;
+//                 border-radius: 10px;
+
+//                 .banner__bottomMouseDot {
+//                     width: 3px;
+//                     height: 3px;
+//                 }
+//             }
+
+//         }
+
+//     }
+
+// }
+
+// // @media screen and (max-width: 353px) {
+
+// //     .banner{
+
+// //         &__bottom {
+// //             top: 85%;
+// //         }
+        
+// //     }
+    
+// // }
+// @media screen and (max-height: 375px) {
+    
+//     .banner{
+//         min-height: 500px;
+
+//         &__content {
+//             transform: translate(-50%, -50%);
+
+//             .banner__contentContainsLink {
+
+//                 .banner__contentLink {
+//                     padding: 5px 10px;
+//                     font-size: 16px;
+//                 }
+
+//             }
+//         }
+
+//         &__bottom {
+//             top: 76%;
+//         }
+
+//     }
+// }
+
+// @media screen and (max-height: 320px) {
+    
+//     .banner{
+//         min-height: 400px;
+//         &__content {
+//             transform: translate(-50%, -40%);
+//         }
+
+//     }
+// }
